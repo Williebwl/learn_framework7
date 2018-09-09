@@ -1,0 +1,25 @@
+<div ng-controller="AppContainerCtrl" class="containers">
+    <div class="maintop maintop-icon">
+        <i class="personal-mark background-c fa fa-users" ng-class="background+' '+icon"></i>
+        <div class="maintop-title clearfix">
+            <h2>{{Info.AppName||''}}<span ng-if="Info.AppCode">（<span ng-bind="Info.AppCode"></span>）</span><i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="帮助"></i></h2>
+            <span>[来源：<em class="dangger">系统</em>]</span>
+        </div>
+        <p ng-bind="Info.Remark||'&nbsp;'"></p>
+    </div>
+    <div class="tabs">
+        <ul class="nav nav-pills nav-tabs-primary">
+            <li class="active" ng-click="fnRefreshParams()">应用参数</li>
+            <li ng-click="fnRefreshRole()">应用角色</li>
+            <li ng-click="fnRefreshOperate()">应用操作</li>
+            <li ng-click="fnRefreshDeploy()">应用配置</li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" ng-include="'System/App/app.params.html'" ng-controller="AppContainerParamsCtrl"></div>
+            <div class="tab-pane" ng-include="'System/App/app.role.html'" ng-controller="AppContainerRoleCtrl"></div>
+            <div class="tab-pane" ng-include="'System/App/app.operate.html'" ng-controller="AppContainerOperateCtrl"></div>
+            <div class="tab-pane" ng-include="'System/App/app.deploy.html'" ng-controller="AppContainerDeployCtrl"></div>
+        </div>
+    </div>
+</div>
+

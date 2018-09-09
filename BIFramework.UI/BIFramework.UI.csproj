@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4EB772F-3C56-4CEC-B87B-41AFCD843B8F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BIStudio.Framework.UI</RootNamespace>
+    <AssemblyName>BIFramework.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\OutPut\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\OutPut\BIFramework.UI.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\OutPut\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\OutPut\BIFramework.UI.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\AuthorizeMessageHandler.cs" />
+    <Compile Include="Authentication\AuthorizeAttribute.cs" />
+    <Compile Include="Authentication\WebApiContext.cs" />
+    <Compile Include="Common\TreeHelp.cs" />
+    <Compile Include="IService\IApplicationService.cs" />
+    <Compile Include="Router\HttpControllerTypeCache.cs" />
+    <Compile Include="Router\NamespaceHttpControllerSelector.cs" />
+    <Compile Include="Router\NamespaceHttpRouteConstraint.cs" />
+    <Compile Include="Service\ApplicationServiceOfEntity.cs" />
+    <Compile Include="Service\ApplicationService.cs" />
+    <Compile Include="Service\ApplicationServiceOfVM.cs" />
+    <Compile Include="ViewModel\Base\MarkAttribute.cs" />
+    <Compile Include="ViewModel\Base\ViewModelExt.cs" />
+    <Compile Include="ViewModel\Tree\ITreeVM.cs" />
+    <Compile Include="ViewModel\Sort\SortVM.cs" />
+    <Compile Include="ViewModel\Tree\TreeVM.cs" />
+    <Compile Include="ViewModel\Tree\SmartTreeVM.cs" />
+    <Compile Include="ViewModel\Base\IViewModel.cs" />
+    <Compile Include="ViewModel\Base\ViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BIFramework.Auth\BIFramework.Auth.csproj">
+      <Project>{ec5ab711-f24b-4dad-a49d-75cdc0fe48e2}</Project>
+      <Name>BIFramework.Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.Core\BIFramework.csproj">
+      <Project>{CF988D59-84E9-4B80-A5D4-2BF11338481D}</Project>
+      <Name>BIFramework</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.Data\BIFramework.Data.csproj">
+      <Project>{c69c4db1-3fac-4e06-b68f-d1465cc71813}</Project>
+      <Name>BIFramework.Data</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.Domain.EntityFramework\BIFramework.Domain.EntityFramework.csproj">
+      <Project>{35cbf0fc-2a76-4974-8e5d-7c4b4f3a7cdd}</Project>
+      <Name>BIFramework.Domain.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.Domain\BIFramework.Domain.csproj">
+      <Project>{8520b36a-073a-4c40-b968-5309fe6866f7}</Project>
+      <Name>BIFramework.Domain</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.Institution\BIFramework.Institution.csproj">
+      <Project>{bea91f8e-0962-4722-bd76-9d9adf4495b3}</Project>
+      <Name>BIFramework.Institution</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.Permission\BIFramework.Permission.csproj">
+      <Project>{3cd26828-f6fc-46b8-b78b-407b3d4d79b7}</Project>
+      <Name>BIFramework.Permission</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.Utils\BIFramework.Utils.csproj">
+      <Project>{F98DD6ED-B240-4561-875A-ADA2A91EFDFA}</Project>
+      <Name>BIFramework.Utils</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Filters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

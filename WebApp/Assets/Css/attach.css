@@ -1,0 +1,229 @@
+﻿@charset "utf-8";
+
+.webuploader-container {
+    position: relative;
+}
+
+.webuploader-element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+
+.webuploader-pick {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 40px;
+    height: 25px;
+    background: url('../Images/Attach/upload.gif') no-repeat;
+    /*background: #00b7ee;
+	padding: 10px 15px;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px;
+	overflow: hidden;*/
+}
+
+/*.webuploader-pick-hover {}*/
+
+.webuploader-pick-disable {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.attach {
+}
+
+    /*.attach > a {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        width: 40px;
+        height: 25px;
+        background: url('../Images/Attach/upload.gif') no-repeat;
+    }
+
+        .attach > a > input {
+            position: absolute;
+            left: -13px;
+            top: -6px;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }*/
+
+    .attach > ul {
+    }
+
+        .attach > ul > li {
+            line-height: 20px;
+        }
+
+
+
+            .attach > ul > li > em {
+                display: inline-block;
+                background: url('../Images/Attach/delete.gif') no-repeat;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                margin-left: 3px;
+                vertical-align: bottom;
+            }
+
+            .attach > ul > li > a {
+                color: #252525;
+            }
+
+            .attach > ul > li.error > a {
+                color: red;
+            }
+
+            .attach > ul > li > a > .ioc {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                background: url('../Images/Attach/fileico_v6.png') no-repeat;
+            }
+
+            .attach > ul > li > a > i.xls16 {
+                background-position: -32px 0px;
+            }
+
+            .attach > ul > li > a > i.xlsx16 {
+                background-position: -32px 0px;
+            }
+
+            .attach > ul > li > a > i.doc16 {
+                background-position: -64px 0px;
+            }
+
+            .attach > ul > li > a > i.docx16 {
+                background-position: -64px 0px;
+            }
+
+            .attach > ul > li > a > i.ppt16 {
+                background-position: -96px 0px;
+            }
+
+            .attach > ul > li > a > i.rar16 {
+                background-position: -160px 0px;
+            }
+
+            .attach > ul > li > a > i.html16 {
+                background-position: -288px 0px;
+            }
+
+            .attach > ul > li > a > i.js16 {
+                background-position: -320px 0px;
+            }
+
+            .attach > ul > li > a > i.css16 {
+                background-position: -352px 0px;
+            }
+
+            .attach > ul > li > a > i.exe16 {
+                background-position: -448px 0px;
+            }
+
+            .attach > ul > li > a > i.pdf16 {
+                background-position: -512px 0px;
+            }
+
+            .attach > ul > li > a > i.psd16 {
+                background-position: -544px 0px;
+            }
+
+            .attach > ul > li > a > i.ai16 {
+                background-position: -576px 0px;
+            }
+
+            .attach > ul > li > a > i.fi16 {
+                background-position: -608px 0px;
+            }
+
+            .attach > ul > li > a > i.swf16 {
+                background-position: -640px 0px;
+            }
+
+            .attach > ul > li > a > i.txt16 {
+                background-position: -672px 0px;
+            }
+
+            .attach > ul > li > a > i.avi16 {
+                background-position: -800px 0px;
+            }
+
+            .attach > ul > li > a > i.mp416 {
+                background-position: -864px 0px;
+            }
+
+            .attach > ul > li > a > i.wma16 {
+                background-position: -896px 0px;
+            }
+
+            .attach > ul > li > a > i.jpg16 {
+                background-position: 0 -32px;
+            }
+
+            .attach > ul > li > a > i.gif16 {
+                background-position: -32px -32px;
+            }
+
+            .attach > ul > li > a > i.png16 {
+                background-position: -64px -32px;
+            }
+
+            .attach > ul > li > a > i.bmp16 {
+                background-position: -96px -32px;
+            }
+
+            .attach > ul > li > a > i.tif16 {
+                background-position: -128px -32px;
+            }
+
+            .attach > ul > li > a > i.emf16 {
+                background-position: -160px -32px;
+            }
+
+            .attach > ul > li > a > i.wmf16 {
+                background-position: -192px -32px;
+            }
+
+            .attach > ul > li > a > i.ico16 {
+                background-position: -224px -32px;
+            }
+
+            .attach > ul > li > a > i.raw16 {
+                background-position: -256px -32px;
+            }
+
+            .attach > ul > li > a > i.other16 {
+                background-position: -288px -32px;
+            }
+
+            .attach > ul > li > a > span {
+            }
+
+            .attach > ul > li > .fileSize {
+                color: #999;
+                font-style: italic;
+            }
+
+            .attach > ul > li > .progress {
+                width: 100%;
+                height: 6px;
+                margin-top: 3px;
+            }
+
+                .attach > ul > li > .progress > .progress-bar {
+                    background: #00ff21;
+                    width: 0;
+                    height: 100%;
+                    display: inline-block;
+                }
+
+
+.Download {
+    display: none;
+}

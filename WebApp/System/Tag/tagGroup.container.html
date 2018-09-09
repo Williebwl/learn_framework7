@@ -1,0 +1,54 @@
+﻿<style type="text/css">
+    <!--
+
+    .floatfix:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .floatfix > li {
+        float: left;
+        width: 50%;
+    }
+
+    .groups > .group {
+        float: left;
+        width: 22%;
+        background: #F0F8FF;
+        border: 1px solid #BBC2CF;
+        margin: 3px 18px 3px 0px;
+        padding: 10px;
+    }
+
+        .groups > .group > .title {
+            font-size: 14px;
+            height: 30px;
+            line-height: 30px;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+
+        .groups > .group > ul {
+            margin: 3px 0px 10px;
+        }
+
+    .GroupContainer {
+        padding: 15px;
+    }
+    -->
+</style>
+<div class="GroupContainer" ng-controller="TagGroupContainerCtrl">
+    <div></div>
+    <div class="groups floatfix">
+        <div ng-repeat="group in PageInfo.Items" class="group">
+            <div class="title" ng-bind="group.GroupName">名称</div>
+            <ul class="floatfix">
+                <li><a href="javascript:;"><标签管理></a></li>
+                <li><a href="javascript:;"><标签项管理></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div bi-pagination conf="PageConfig"></div>
+</div>

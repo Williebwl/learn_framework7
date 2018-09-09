@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIStandard.Contact</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Standard.Contact.STDContact">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.FullName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.ShortName">
+            <summary>
+            用户简称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.BindTableName">
+            <summary>
+            联系人所有者
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.BindTableID">
+            <summary>
+            联系人所有者编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.BindTableIDValue">
+            <summary>
+            联系人所有者名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.Company">
+            <summary>
+            职务
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.Duty">
+            <summary>
+            公司
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.Dept">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.BirthDay">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.IDCard">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.Sex">
+            <summary>
+            职务
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.Mobile">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.Tel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.Fax">
+            <summary>
+            传真
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.IsDefault">
+            <summary>
+            是否默认联系人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.ContactType">
+            <summary>
+            联系人类型（多选）
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.IsValid">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.IsDelete">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.Inputer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.InputerID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.InputTime">
+            <summary>
+            录入时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.LastUpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.ContentXML">
+            <summary>
+            个人简历
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContact.UnitID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BIStudio.Standard.Contact.STDContactDetail">
+            <summary>
+            联系信息
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContactDetail.ContactID">
+            <summary>
+            联系人编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContactDetail.ContactMethod">
+            <summary>
+            沟通方式
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContactDetail.ContactMethodID">
+            <summary>
+            沟通方式
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContactDetail.ContactItemName">
+            <summary>
+            通讯方式名称（TagName）
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContactDetail.ContactItemID">
+            <summary>
+            通讯方式ID（TagID）
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContactDetail.ContactNumber">
+            <summary>
+            通讯方式内容
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContactDetail.Inputer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContactDetail.InputerID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContactDetail.InputTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Contact.STDContactDetail.UnitID">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

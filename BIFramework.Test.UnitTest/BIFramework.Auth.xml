@@ -1,0 +1,1249 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.Auth</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.Auth.AccountStatusEnum">
+            <summary>
+            通行证状态
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.AccountStatusEnum.Locking">
+            <summary>
+            锁定
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.AccountStatusEnum.Valid">
+            <summary>
+            有效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.AccountStatusEnum.Disable">
+            <summary>
+            停用
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.TokenGenerator">
+            <summary>
+            令牌生成服务
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.TokenGenerator.enableConcurrentSessions">
+            <summary>
+            是否允许并发会话
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.TokenGenerator.GeneralTocken(BIStudio.Framework.Auth.SYSAccessTokenDTO)">
+            <summary>
+            生成令牌
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.TokenGenerator.SaveToken(BIStudio.Framework.Auth.SYSAccessToken)">
+            <summary>
+            生成accesstocken之后操作存储
+            </summary>
+            <param name="accessToken">访问令牌</param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.AuthorizationCodeGenerator">
+            <summary>
+            访问令牌生成器
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationCodeGenerator.GeneralTocken(BIStudio.Framework.Auth.SYSAccessTokenDTO)">
+            <summary>
+            生成访问令牌
+            </summary>
+            <param name="accessToken"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.ClientCredentialsGenerator">
+            <summary>
+            客户端授权令牌生成器
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.ITokenGenerator">
+            <summary>
+            定义令牌生成器
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.ITokenGenerator.GeneralTocken(BIStudio.Framework.Auth.SYSAccessTokenDTO)">
+            <summary>
+            生成令牌
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.RefreshTokenGenerator">
+            <summary>
+            更新令牌生成器
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.RefreshTokenGenerator.GeneralTocken(BIStudio.Framework.Auth.SYSAccessTokenDTO)">
+            <summary>
+            生成更新令牌
+            </summary>
+            <param name="accessToken"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.SYSAccountRegistDTO">
+            <summary>
+            注册或更新会员账号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.SystemCode">
+            <summary>
+            系统代码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.UID">
+            <summary>
+            系统内部用户标识
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.Email">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.Tel">
+            <summary>
+            电话号码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.Homepage">
+            <summary>
+            主页
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.Latitude">
+            <summary>
+            地理位置纬度
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.Longitude">
+            <summary>
+            地理位置经度
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.Precision">
+            <summary>
+            地理位置精度
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccountRegistDTO.OpenID">
+            <summary>
+            外部系统用户唯一编码
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSAccountRegistResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSAccountRegistResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSAccountRegistResult.SystemCodeInvalid">
+            <summary>
+            系统代码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSAccountRegistResult.UIDInvalid">
+            <summary>
+            用户标识无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDPassworkForgetResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDPassworkForgetResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDPassworkForgetResult.EmailIncorrect">
+            <summary>
+            电子邮箱不正确
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.SYSAccessToken">
+            <summary>
+            客户端请求访问令牌返回值，用户委托客户端访问平台的令牌
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessToken.access_token">
+            <summary>
+            表示访问令牌
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessToken.token_type">
+            <summary>
+            表示令牌类型，该值大小写不敏感bearer
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessToken.expires_in">
+            <summary>
+            表示过期时间，单位为秒
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessToken.refresh_token">
+            <summary>
+            表示更新令牌
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessToken.scope">
+            <summary>
+            表示权限范围
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessToken.system_id">
+            <summary>
+            当前授权系统的id
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessToken.uid">
+            <summary>
+             当前授权用户的id，不填则为系统令牌
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.SYSAuthorize">
+            <summary>
+            客户端请求授权码返回值
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAuthorize.redirect_uri">
+            <summary>
+            授权回调地址
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAuthorize.code">
+            <summary>
+            用于调用access_token，接口获取授权后的access token
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAuthorize.state">
+            <summary>
+            如果传递参数，会回传该参数
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.SYSPassport">
+            <summary>
+            平台通行证
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassport.AutoUnlockMinutes">
+            <summary>
+            自动解锁时间(分钟)
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassport.MaxLoginError">
+            <summary>
+            连续登录异常次数
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassport.LoginName">
+            <summary>
+            登陆名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassport.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassport.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassport.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassport.LastLoginTime">
+            <summary>
+            上次登录时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassport.LastLoginError">
+            <summary>
+            连续登录异常
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassport.IsValid">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassport.IsLocked">
+            <summary>
+            是否密码锁定
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassport.Inputer">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassport.InputerID">
+            <summary>
+            创建人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassport.InputTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassport.VerificationCode">
+            <summary>
+            找回密码的验证码
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.SYSPassport.ComputePassword(System.String,System.String)">
+            <summary>
+            计算密码
+            </summary>
+            <param name="loginName"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.SYSPassport.CheckLock">
+            <summary>
+            检查登录锁定
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.SYSPassportChangePasswordDTO">
+            <summary>
+            更改通行证密码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassportChangePasswordDTO.LoginName">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassportChangePasswordDTO.OldPassword">
+            <summary>
+            原密码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassportChangePasswordDTO.NewPassword">
+            <summary>
+            新密码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassportChangePasswordDTO.ReNewPassword">
+            <summary>
+            重复新密码
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportChangePasswordResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportChangePasswordResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportChangePasswordResult.LoginNameDoesNotExist">
+            <summary>
+            登录名不存在
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportChangePasswordResult.PasswordIncorrect">
+            <summary>
+            原密码不正确
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportChangePasswordResult.PasswordTooWeak">
+            <summary>
+            新密码必需输入6~16个字符
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportChangePasswordResult.RePasswordIncorrect">
+            <summary>
+            两次输入的密码不一致
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.SYSPassportLinkDTO">
+            <summary>
+            通行证绑定系统账号
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportLinkResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportLinkResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportLinkResult.LoginNameOrUIDNotFound">
+            <summary>
+            未指定账号或用户标识
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportLinkResult.LoginNameInvalid">
+            <summary>
+            账号不存在
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportLinkResult.SystemCodeInvalid">
+            <summary>
+            系统代码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportLinkResult.UIDInvalid">
+            <summary>
+            用户标识无效
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.SYSAuthorizeDTO">
+            <summary>
+            请求授权码
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.SYSAuthorizeDTO.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            授权码模式
+            </summary>
+            <param name="client_id"></param>
+            <param name="redirect_uri"></param>
+            <param name="scope"></param>
+            <param name="state"></param>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAuthorizeDTO.response_type">
+            <summary>
+            授权类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAuthorizeDTO.client_id">
+            <summary>
+            申请应用时分配的AppKey
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAuthorizeDTO.redirect_uri">
+            <summary>
+            重定向URI
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAuthorizeDTO.scope">
+            <summary>
+            申请的权限范围
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAuthorizeDTO.state">
+            <summary>
+            客户端的当前状态
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAuthorizeDTO.uid">
+            <summary>
+             当前授权用户的id
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAuthorizeResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAuthorizeResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAuthorizeResult.ResponseTypeInvalid">
+            <summary>
+            ResponseType无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAuthorizeResult.ClientIDInvalid">
+            <summary>
+            ClientID无效
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.SYSPassportRegistDTO">
+            <summary>
+            通行证注册
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportRegistResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportRegistResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportRegistResult.LoginNameAlreadyExists">
+            <summary>
+            账号已存在
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportRegistResult.LoginNameInvalid">
+            <summary>
+            账号格式不正确
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportRegistResult.PasswordTooWeak">
+            <summary>
+            密码必需输入6~16个字符
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportRegistResult.RePasswordIncorrect">
+            <summary>
+            两次输入的密码不一致
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportRegistResult.EmailAlreadyExists">
+            <summary>
+            电子邮箱已被其他用户使用
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportRegistResult.EmailInvalid">
+            <summary>
+            电子邮箱格式不正确
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.SYSPassportRetrievePasswordDTO">
+            <summary>
+            找回密码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassportRetrievePasswordDTO.LoginName">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassportRetrievePasswordDTO.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSPassportRetrievePasswordDTO.ConfirmedPassword">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportRetrievePasswordResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportRetrievePasswordResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportRetrievePasswordResult.LoginNameDoesNotExist">
+            <summary>
+            登录名不存在
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.SYSPassportRetrievePasswordResult.EmailIncorrect">
+            <summary>
+            电子邮箱不正确
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.SYSAccessTokenDTO">
+            <summary>
+            创建应用令牌
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.SYSAccessTokenDTO.#ctor(System.String,System.String,System.String)">
+            <summary>
+            使用授权码换取访问令牌
+            </summary>
+            <param name="client_id"></param>
+            <param name="client_secret"></param>
+            <param name="code"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.SYSAccessTokenDTO.#ctor(System.String,System.String)">
+            <summary>
+            使用证书换取访问令牌
+            </summary>
+            <param name="client_id"></param>
+            <param name="client_secret"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.SYSAccessTokenDTO.#ctor(System.String)">
+            <summary>
+            使用更新令牌换取访问令牌
+            </summary>
+            <param name="refresh_token"></param>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessTokenDTO.grant_type">
+            <summary>
+            使用的授权模式
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessTokenDTO.client_id">
+            <summary>
+            申请应用时分配的AppKey
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessTokenDTO.client_secret">
+            <summary>
+            申请应用时分配的AppSecret
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessTokenDTO.code">
+            <summary>
+            上一步获得的授权码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessTokenDTO.redirect_uri">
+            <summary>
+            重定向URI
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccessTokenDTO.refresh_token">
+            <summary>
+            更新令牌
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAccessTokenResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAccessTokenResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAccessTokenResult.GrantTypeInvalid">
+            <summary>
+            GrantType无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAccessTokenResult.ClientIDOrSecretInvalid">
+            <summary>
+            ClientID或ClientSecret无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAccessTokenResult.CodeInvalid">
+            <summary>
+            Code无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAccessTokenResult.RedirectUriInvalid">
+            <summary>
+            RedirectUri无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAccessTokenResult.UIDInvalid">
+            <summary>
+            UID无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAccessTokenResult.AccountNotFount">
+            <summary>
+            未找到有效账号
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAuthorizeLoginResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAuthorizeLoginResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAuthorizeLoginResult.AuthorizeCodeInvalid">
+            <summary>
+            授权码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDAuthorizeLoginResult.AccountOrPasswordInvalid">
+            <summary>
+            账号或密码无效
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSVerifyAccessTokenDTO.access_token">
+            <summary>
+            表示访问令牌
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSVerifyAccessTokenDTO.scope">
+            <summary>
+            表示权限范围
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.STDVerifyAccessTokenResult">
+            <summary>
+            系统注册结果
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDVerifyAccessTokenResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDVerifyAccessTokenResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDVerifyAccessTokenResult.AcceccTokenExpired">
+            <summary>
+            证书已过期
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDVerifyAccessTokenResult.AccessTockenInvalid">
+            <summary>
+            证书无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.STDVerifyAccessTokenResult.AccessTockenAccessDenied">
+            <summary>
+            拒绝访问
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.SYSAccount">
+            <summary>
+            平台账号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.SystemID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.SystemName">
+            <summary>
+             服务提供商名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.UID">
+            <summary>
+            外部系统用户编码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.Email">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.Tel">
+            <summary>
+            电话号码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.Homepage">
+            <summary>
+            主页
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.Latitude">
+            <summary>
+            地理位置纬度
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.Longitude">
+            <summary>
+            地理位置经度
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.Precision">
+            <summary>
+            地理位置精度
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.OpenID">
+            <summary>
+            外部系统用户唯一编码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.PassportID">
+            <summary>
+            平台门户用户账号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.InputTime">
+            <summary>
+            请求时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSAccount.InputIP">
+            <summary>
+            请求IP
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Auth.SYSToken">
+            <summary>
+            身份令牌，既是app也是用户的tocken，通过是否指定uid来区分
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSToken.PassportID">
+            <summary>
+             通行证ID，冗余数据
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSToken.SystemID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSToken.AccountID">
+            <summary>
+            账号，冗余数据
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSToken.UID">
+            <summary>
+            外部系统用户编码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSToken.AccessToken">
+            <summary>
+            访问令牌
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSToken.RefreshToken">
+            <summary>
+            更新令牌，由系统自动生成
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSToken.ExpiresIn">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSToken.Scope">
+            <summary>
+            授予权限
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSToken.RequestTime">
+            <summary>
+            请求时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Auth.SYSToken.RequestIP">
+            <summary>
+            请求IP
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.TokenSpecification.#ctor(System.Int64,System.String,System.Boolean)">
+            <summary>
+            查找令牌
+            </summary>
+            <param name="systemID">系统编号</param>
+            <param name="accessToken">令牌代码，传NULL则查找系统令牌</param>
+            <param name="checkExpires">是否包含超时的令牌</param>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.TokenSpecification.#ctor(System.Int64,System.Nullable{System.Int64},System.Boolean)">
+            <summary>
+            查找令牌
+            </summary>
+            <param name="systemID">系统编号</param>
+            <param name="passportID">用户代码，传NULL则查找系统令牌</param>
+            <param name="checkExpires">是否包含超时的令牌</param>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.AuthorizationService.MasterSystemID">
+            <summary>
+            令牌管理系统ID
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.AuthorizationService.MasterTokenDurationMinutes">
+            <summary>
+            主令牌有效时间
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Auth.AuthorizationService.AppTokenDurationMinutes">
+            <summary>
+            应用令牌有效时间
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.AccountRegist(BIStudio.Framework.Auth.SYSAccountRegistDTO)">
+            <summary>
+            注册系统账号
+            </summary>
+            <param name="account"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.UnRegisterAccount(System.Int64,System.String)">
+            <summary>
+            删除系统账号
+            </summary>
+            <param name="systemId"></param>
+            <param name="uId"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.PassportRegist(BIStudio.Framework.Auth.SYSPassportRegistDTO)">
+            <summary>
+            注册通行证
+            </summary>
+            <param name="passport"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.PassportUnRegister(System.String)">
+            <summary>
+            注销通行证
+            </summary>
+            <param name="loginName"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.PassportLink(BIStudio.Framework.Auth.SYSPassportLinkDTO)">
+            <summary>
+            通行证绑定系统账号
+            </summary>
+            <param name="link"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.PassportUnlink(BIStudio.Framework.Auth.SYSPassportLinkDTO)">
+            <summary>
+            通行证解绑系统账号
+            </summary>
+            <param name="link"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.PassportChangePassword(BIStudio.Framework.Auth.SYSPassportChangePasswordDTO)">
+            <summary>
+            更改通行证密码
+            </summary>
+            <param name="changePassword"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.PassportForgot(System.String)">
+            <summary>
+            忘记密码
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.VerifyCode(System.String,System.String)">
+            <summary>
+            找回密码时候验证状态
+            </summary>
+            <param name="account"></param>
+            <param name="code">用户触发找回密码的时候会生成一个验证码，用于找回密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.PassportRetrievePassword(BIStudio.Framework.Auth.SYSPassportRetrievePasswordDTO)">
+            <summary>
+            找回通行证密码
+            </summary>
+            <param name="retrievePassword"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.PassportValid(System.String,System.Boolean)">
+            <summary>
+            更新账户状态
+            </summary>
+            <param name="loginName"></param>
+            <param name="isValid"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.PassportLock(System.String,System.Boolean)">
+            <summary>
+            更新密码锁定状态
+            </summary>
+            <param name="loginName"></param>
+            <param name="isLocked"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.Authorize(BIStudio.Framework.Auth.SYSAuthorizeDTO)">
+            <summary>
+            请求用户授权Token
+            </summary>
+            <param name="authorize"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.AuthorizeLogin(BIStudio.Framework.Auth.SYSAuthorizeLoginDTO)">
+            <summary>
+            使用授权Token登录
+            </summary>
+            <param name="authorizeLogin"></param>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.Login(System.String,System.String,BIStudio.Framework.Auth.SYSPassport@)">
+            <summary>
+            使用通行证登录系统
+            </summary>
+            <param name="loginName"></param>
+            <param name="password"></param>
+            <param name="passport">登陆成功以后返回实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.AccessToken(BIStudio.Framework.Auth.SYSAccessTokenDTO)">
+            <summary>
+             获取授权过的Access Token
+            </summary>
+            <param name="accessToken"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.VerifyAccess(BIStudio.Framework.Auth.SYSVerifyAccessTokenDTO)">
+            <summary>
+            验证tocken
+            </summary>
+            <param name="dto"></param>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.DestroyToken(System.String)">
+            <summary>
+            注销访问令牌
+            </summary>
+            <param name="accessToken"></param>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.AuthorizationService.DestroyToken(System.Int64,System.Int64)">
+            <summary>
+            注销访问令牌
+            </summary>
+            <param name="systemId"></param>
+            <param name="passportId"></param>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.AccountRegist(BIStudio.Framework.Auth.SYSAccountRegistDTO)">
+            <summary>
+            注册系统账号
+            </summary>
+            <param name="account"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.UnRegisterAccount(System.Int64,System.String)">
+            <summary>
+            删除系统账号
+            </summary>
+            <param name="systemId"></param>
+            <param name="uId"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.PassportRegist(BIStudio.Framework.Auth.SYSPassportRegistDTO)">
+            <summary>
+            注册通行证
+            </summary>
+            <param name="passport"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.PassportUnRegister(System.String)">
+            <summary>
+            注销通行证
+            </summary>
+            <param name="loginName"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.PassportLink(BIStudio.Framework.Auth.SYSPassportLinkDTO)">
+            <summary>
+            通行证绑定系统账号
+            </summary>
+            <param name="link"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.PassportUnlink(BIStudio.Framework.Auth.SYSPassportLinkDTO)">
+            <summary>
+            通行证解绑系统账号
+            </summary>
+            <param name="link"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.PassportChangePassword(BIStudio.Framework.Auth.SYSPassportChangePasswordDTO)">
+            <summary>
+            更改通行证密码
+            </summary>
+            <param name="changePassword"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.PassportForgot(System.String)">
+            <summary>
+            触发找回密码
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.VerifyCode(System.String,System.String)">
+            <summary>
+            找回密码的时候验证请求是否存在
+            </summary>
+            <param name="account"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.PassportRetrievePassword(BIStudio.Framework.Auth.SYSPassportRetrievePasswordDTO)">
+            <summary>
+            找回通行证密码
+            </summary>
+            <param name="retrievePassword"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.PassportValid(System.String,System.Boolean)">
+            <summary>
+            更新账户状态
+            </summary>
+            <param name="loginName"></param>
+            <param name="isValid"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.PassportLock(System.String,System.Boolean)">
+            <summary>
+            更新密码锁定状态
+            </summary>
+            <param name="loginName"></param>
+            <param name="isLocked"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.Authorize(BIStudio.Framework.Auth.SYSAuthorizeDTO)">
+            <summary>
+            请求用户授权Token
+            </summary>
+            <param name="authorize"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.AuthorizeLogin(BIStudio.Framework.Auth.SYSAuthorizeLoginDTO)">
+            <summary>
+            使用授权Token登录
+            </summary>
+            <param name="authorizeLogin"></param>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.AccessToken(BIStudio.Framework.Auth.SYSAccessTokenDTO)">
+            <summary>
+            获取授权过的Access Token
+            </summary>
+            <param name="authorize"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.VerifyAccess(BIStudio.Framework.Auth.SYSVerifyAccessTokenDTO)">
+            <summary>
+            验证令牌
+            </summary>
+            <param name="dto"></param>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.DestroyToken(System.String)">
+            <summary>
+            销毁访问令牌
+            </summary>
+            <param name="accessToken"></param>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Auth.IAuthorizationService.DestroyToken(System.Int64,System.Int64)">
+            <summary>
+            注销令牌
+            </summary>
+            <param name="systemId"></param>
+            <param name="passportId"></param>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+    </members>
+</doc>

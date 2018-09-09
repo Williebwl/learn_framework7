@@ -1,0 +1,500 @@
+﻿@charset "utf-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font: 14px/22px '微软雅黑', Helvetica, sans-serif;
+    background-color: #f8f8f8;
+    height: 100%;
+    min-height: 180px;
+    min-width: 800px;
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        overflow: auto !important;
+    }
+
+    body {
+        overflow: no-display !important;
+    }
+}
+
+@media screen and (max-height: 180px) {
+    html {
+        overflow: auto !important;
+    }
+
+    body {
+        overflow: no-display !important;
+    }
+}
+
+ul, ol {
+    list-style: none;
+}
+
+#preloader {
+    position: absolute;
+    background: #F8F8F8;
+    width: 100%;
+    height: 100%;
+    z-index: 6000;
+}
+
+    #preloader #status {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 50%;
+        top: 50%;
+        margin: -15px 0 0 -15px;
+        font-size: 32px;
+    }
+
+nav .mCustomScrollbar .mCSB_draggerContainer > .mCSB_dragger,
+content .mCustomScrollbar .mCSB_draggerContainer > .mCSB_dragger {
+    width: 4px;
+    right: 6px;
+    border-radius: 4px;
+    background: #488BE9;
+}
+
+aside, nav, content {
+    height: 100%;
+    float: left;
+}
+
+    aside:before, nav:before, content:before {
+        content: '';
+        clear: left;
+    }
+
+/** 边栏 start**/
+
+aside {
+    width: 70px;
+    background: #1D66CC;
+    position: relative;
+    z-index: 399;
+}
+
+    aside > .logo {
+        background: #0e4ea9;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+    }
+
+        aside > .logo > a {
+            color: #fff;
+            font-size: 16px;
+        }
+
+    aside > .user-portrait {
+        position: relative;
+        padding: 10px;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+        aside > .user-portrait > img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 5px auto;
+        }
+
+        aside > .user-portrait > div {
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        aside > .user-portrait > .user-message {
+            width: 20px;
+            height: 20px;
+            background: rgba(0,0,0,.6);
+            border-radius: 50%;
+            position: absolute;
+            right: 5px;
+            top: 12px;
+            text-align: center;
+            line-height: 18px;
+        }
+
+        aside > .user-portrait > a {
+            color: #fff;
+            font-size: 12px;
+        }
+
+    aside > .nav {
+        height: calc(100% - 156px);
+    }
+
+        aside > .nav ul {
+            list-style: none;
+        }
+
+            aside > .nav ul > li {
+                padding: 0px;
+            }
+
+                aside > .nav ul > li:hover,
+                aside > .nav ul > li.active {
+                    background: #0E4EA9;
+                }
+
+                aside > .nav ul > li > a {
+                    border-bottom: 1px solid rgba(255,255,255,0.1);
+                    padding: 8px 8px;
+                    display: block;
+                    text-align: center;
+                    text-decoration: none;
+                }
+
+                aside > .nav ul > li:hover > a,
+                aside > .nav ul > li.active > a {
+                    width: calc(100% - 5px);
+                    margin-left: 5px;
+                    background: #FFFFFF;
+                    border: 0px;
+                }
+
+                aside > .nav ul > li > a > i,
+                aside > .nav ul > li > a > span {
+                    color: #fff;
+                }
+
+                aside > .nav ul > li:hover > a > i,
+                aside > .nav ul > li.active > a > i,
+                aside > .nav ul > li:hover > a > span,
+                aside > .nav ul > li.active > a > span {
+                    color: #333;
+                }
+
+                aside > .nav ul > li > a > i {
+                    width: 100%;
+                    height: 20px;
+                    line-height: 20px;
+                    font-size: 16px;
+                }
+
+                aside > .nav ul > li > a > span {
+                    font-size: 13px;
+                    line-height: 1.5em;
+                }
+
+/** 边栏 end**/
+
+/** 导航 start**/
+
+nav.nav {
+    width: 200px;
+    border-right: 1px #DDDDDD solid;
+}
+
+    nav.nav:empty {
+        width: 0px;
+    }
+
+
+
+nav > div {
+    /*padding: 15px;*/
+    height: 100%;
+}
+
+    nav > div > .nav {
+        color: #666;
+        height: 40px;
+        font-size: 16px;
+        padding: 15px;
+    }
+
+        nav > div > .nav > a {
+            color: #333;
+            margin-right: 3px;
+        }
+
+            nav > div > .nav > a:focus,
+            a:active, a:hover {
+                outline: none;
+                text-decoration: none;
+            }
+
+    nav > div > .content {
+        overflow: inherit;
+        height: calc(100% - 40px);
+    }
+
+        nav > div > .content > .subtitle {
+            padding: 0px 15px;
+            font-size: 14px;
+            line-height: 2em;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+            nav > div > .content > .subtitle a {
+                line-height: 30px;
+                cursor: pointer;
+                color: #666;
+                font-size: 16px;
+            }
+
+        nav > div > .content > .subcontent {
+            padding: 15px;
+            padding-top: 0px;
+            height: calc(100% - 50px);
+        }
+
+            nav > div > .content > .subcontent .input {
+                display: table;
+                border-collapse: separate;
+                margin-bottom: 10px;
+            }
+
+            nav > div > .content > .subcontent ul > li {
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                margin-bottom: 3px;
+                font-size: 13px;
+                padding: 0 5px;
+                cursor: pointer;
+            }
+
+                nav > div > .content > .subcontent ul > li.active {
+                    background: #1D66CC;
+                    color: #fff;
+                }
+
+                    nav > div > .content > .subcontent ul > li.active a,
+                    nav > div > .content > .subcontent ul > li.active em {
+                        color: #fff;
+                    }
+
+                nav > div > .content > .subcontent ul > li:hover {
+                    background: #E4EFFF;
+                    color: #333333;
+                }
+
+                    nav > div > .content > .subcontent ul > li:hover a,
+                    nav > div > .content > .subcontent ul > li:hover em {
+                        color: #333333;
+                    }
+
+                nav > div > .content > .subcontent ul > li.disabled a,
+                nav > div > .content > .subcontent ul > li.disabled span,
+                nav > div > .content > .subcontent ul > li.disabled em {
+                    color: #999;
+                }
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.band-sys {
+    color: #999;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.sword {
+    font-size: 12px;
+    font-family: Arial;
+    color: #666;
+}
+
+@media screen and (max-width: 800px) {
+    nav.nav {
+        margin-left: -200px;
+    }
+}
+
+/** 导航 end**/
+
+nav.nav, content.content {
+    background: #FFFFFF;
+    position: relative;
+}
+
+/** 内容 start**/
+
+content {
+    width: calc(100% - 270px);
+    background: #FAFAFA;
+}
+
+nav.nav:empty + content {
+    width: calc(100% - 71px);
+}
+
+content > .toolbar, content > .container {
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+content > .toolbar {
+}
+
+content > .container, content > .container > div {
+    height: 100%;
+}
+
+    content > .container > div {
+        overflow: auto;
+    }
+
+    content > .container > .containers {
+        padding: 10px;
+    }
+
+content .header-bar > .toggle-menu:hover {
+    background: #1D66CC;
+}
+
+    content .header-bar > .toggle-menu:hover > i {
+        color: #fff;
+    }
+
+@media screen and (max-width: 800px) {
+    content {
+        width: calc(100% - 70px);
+        background: #FAFAFA;
+    }
+}
+
+/** 内容 end**/
+
+/** 通知 start**/
+
+content > #notice {
+    position: relative;
+}
+
+    content > #notice > div {
+        position: absolute;
+        zoom: 1;
+        z-index: 9999999;
+        width: 90%;
+    }
+
+        content > #notice > div > div {
+            text-align: center;
+        }
+
+            content > #notice > div > div > span {
+                min-width: 200px;
+                color: #E7FFD7;
+                display: inline-block;
+            }
+
+                content > #notice > div > div > span.info {
+                    background: #1D66CC;
+                }
+
+                content > #notice > div > div > span.warning {
+                    background: #ffd800;
+                }
+
+                content > #notice > div > div > span.error {
+                    background: #ff0000;
+                }
+
+                content > #notice > div > div > span.success {
+                    background: #68AF02;
+                }
+
+/** 通知 start**/
+
+/** drop start**/
+
+.drop {
+    position: relative;
+}
+
+    .drop > .dropdown-box {
+        position: absolute;
+        background: #fff;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        box-shadow: 0 0 8px #ccc;
+        z-index: 600;
+    }
+
+    .drop > .dropdown-right-bottom {
+        margin-left: 36px;
+        margin-top: -50px;
+    }
+
+        .drop > .dropdown-right-bottom:before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-right: 10px solid #fff;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            position: absolute;
+            left: -10px;
+            top: 22px;
+            z-index: 2;
+        }
+
+        .drop > .dropdown-right-bottom:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-right: 12px solid #ddd;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            position: absolute;
+            left: -12px;
+            top: 20px;
+            z-index: 1;
+        }
+
+    .drop > .dropdown-sm {
+        width: 800px;
+    }
+
+@media screen and (max-width: 800px) {
+    .drop > .dropdown-sm {
+        width: 600px;
+    }
+}
+
+/** drop end**/
+
+/** modal start*/
+
+/*.modal {
+    text-align: center;
+    overflow: hidden;
+    width: 800px;
+}
+*/
+.modal > .modal-box {
+    background: #fff;
+    width: 800px;
+    padding: 10px;
+}
+
+/*** modal end*/

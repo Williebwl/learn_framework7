@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BIFramework 7</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-stand">
+
+    <link rel="stylesheet" href="Skin/DefaultSkin/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="Skin/DefaultSkin/bootstrap/bootstrap-theme.css">
+    <link rel="stylesheet" href="Skin/DefaultSkin/fonts/font-awesome.min.css">
+
+    <link href="Assets/Css/scrollbar.css" rel="stylesheet" />
+    <link href="Skin/DefaultSkin/Css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="Skin/DefaultSkin/Css/index.css" rel="stylesheet" />
+    <link href="Skin/DefaultSkin/Css/common.css" rel="stylesheet" />
+
+    <script src="Assets/Js/Lib/require.mini.js" defer='defer' async='async' data-main="Core/Pages/main"></script>
+</head>
+<body ng-controller="indexCtrl">
+    <!--挡板 start-->
+    <div id="preloader">
+        <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
+    </div>
+    <!--挡板 end-->
+    <!--一级导航 start-->
+    <aside class="aside">
+        <div id="logo" class="logo">
+            <a href="javascript:;">OA</a>
+        </div>
+        <div id="user" class="user-portrait">
+            <img src="Assets/images/loggeduser.png" alt="" data-toggle="dropdown">
+            <a href="javascript:;" class="user-message"><i class="fa fa-envelope"></i></a>
+            <div data-toggle="dropdown">系统管理员</div>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:;">我的主页</a></li>
+                <li><a href="javascript:;">个人设置</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="javascript:;">退出登录</a></li>
+            </ul>
+        </div>
+        <div class="nav">
+            <ul>
+                <li ng-repeat="menu in Menus" ng-class="{active:(menu.PageRoute||menu.ID)==PageRoute}">
+                    <a href="{{'#'+(menu.PageRoute||menu.ID)+'?id='+menu.ID}}" data-nav="{{menu.ShortName||menu.MenuName}}">
+                        <i ng-class="menu.Icon||'fa fa-paper-plane'"></i>
+                        <span ng-bind="menu.ShortName||menu.MenuName"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!--一级左侧 end-->
+    <!--二级导航 start-->
+    <nav id="nav" class="nav" bi-nav></nav>
+    <!--二级导航 end-->
+    <!-- 主体 start -->
+    <content id="content" class="content">
+        <div id="notice" class="notice" ng-controller="NoticeCtrl">
+            <div><div ng-repeat="notice in Notices"><span ng-bind="notice.alert" ng-class="notice.class"></span></div></div>
+        </div>
+        <div id="toolbar" class="toolbar" bi-toolbar></div>
+        <div id="container" class="container" bi-container></div>
+    </content>
+    <!-- 主体 end -->
+</body>
+</html>

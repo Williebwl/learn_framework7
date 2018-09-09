@@ -1,0 +1,68 @@
+﻿<div class="toolbar clearfix toolbar-border-b">
+    <div class="pull-left">
+        <h3><i class="fa fa-hand-o-right"></i>基本信息</h3>
+    </div>
+    <div class="pull-right">
+        <!-- <a class="fa fa-pencil" href="" data-toggle="tooltip" data-placement="bottom" title="编辑"></a> -->
+        <button class="btn btn-icon" data-toggle="tooltip" title="编辑" ng-disabled="!Info.AppTypeID" ng-click="fnEdit()"><i class="fa fa-pencil"></i></button>
+    </div>
+</div>
+
+<div class="ul-responsive">
+    <ul>
+        <li>应用类型：<span ng-bind="AppInfo.AppType"></span></li>
+        <li>显示模式：<span ng-bind="MeunInfo.DisplayMode"></span></li>
+        <li class="col-sm-4">导航地址：<span ng-bind="MeunInfo.NavUrl"></span></li>
+        <li class="col-sm-4">内容区地址：<span ng-bind="MeunInfo.ContainerUrl"></span></li>
+        <li class="col-sm-4">工具条地址：<span ng-bind="MeunInfo.ToolBarUrl"></span></li>
+        <li>
+            应用授权：<p><span>全体人员（EVERYONY）</span>、<span>系统管理员（ADMIN）</span></p><i class="fa fa-plus-circle" data-toggle="tooltip" title="添加" data-dropdown=".dropdown01"></i>
+        </li>
+    </ul>
+</div>
+
+<br>
+
+<div class="toolbar clearfix toolbar-border-b">
+    <div class="pull-left">
+        <h3><i class="fa fa-hand-o-right"></i>应用菜单项</h3>
+    </div>
+    <div class="pull-right">
+        <button class="btn btn-icon" data-toggle="tooltip" title="排序" ng-click="fnSequence()"><i class="fa fa-list-ol"></i></button>
+        <button class="btn btn-icon" data-toggle="tooltip" title="添加"><i class="fa fa-plus-circle"></i></button>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th width="5%">序号</th>
+                <th width="15%">菜单名称</th>
+                <th width="25%">菜单主页地址</th>
+                <th width="15%">子菜单</th>
+                <th width="10%">排序</th>
+                <th width="10%">菜单权限</th>
+                <th width="20%">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="menu in MeunInfos">
+                <td ng-bind="$index+1"></td>
+                <td ng-bind="menu.MenuName" class="alignLeft"></td>
+                <td ng-bind="menu.ContainerUrl" class="alignLeft"></td>
+                <td ng-bind="menu.Layer?'是':'否'"></td>
+                <td><input type="number" ng-model="menu.Sequence" ng-change="menu.SChanged=View.CanSort=1" /></td>
+                <td>全体人员</td>
+                <td class="alignCenter">
+                    <div class="icon-group">
+                        <a href="javascript:;" class="icon-items fa fa-edit" data-toggle="tooltip" data-placement="bottom" title="编辑"></a>
+                        <a href="javascript:;" class="icon-items fa fa-trash" data-toggle="tooltip" data-placement="bottom" ng- title="删除" ng-click="menu.Layer&&fnDelete($index,menu.ID)"></a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div bi-dialog src="System/App/app.edit.html" class="modal fade bs-modal-sm" />

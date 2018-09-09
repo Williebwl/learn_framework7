@@ -1,0 +1,1142 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.Data</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.Data.IDBAdapter">
+            <summary>
+            数据适配器，仅供开发人员使用
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Data.DataEntityDefinition">
+            <summary>
+            数据实体定义
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DataEntityDefinition.Instance">
+            <summary>
+            数据实体实例
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DataEntityDefinition.Type">
+            <summary>
+            数据实体实例的类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DataEntityDefinition.PropertyInfos">
+            <summary>
+            数据实体实例的所有属性
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DataEntityDefinition.TableAttribute">
+            <summary>
+            在数据实体中设置的表的自定义属性，运行后可以动态更改表的属性
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DataEntityDefinition.ColumnAttributes">
+            <summary>
+            在数据实体中设置的表的自定义字段属性的数据字典集合，运行后可以动态更改字段属性
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DataEntityDefinition.DbParameters">
+            <summary>
+            当此数据实体作为查询对象时，需要的额外参数
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DataEntityDefinition.Item(System.String)">
+            <summary>
+            获取数据实体字段属性值
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataEntityDefinition.ChangeType(System.Object,System.Type)">
+            <summary>
+            转化类型包括可空类型
+            </summary>
+            <param name="value"></param>
+            <param name="conversionType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataEntityDefinition.GetValue(System.String)">
+            <summary>
+            根据字段名取值(DAO需要用的)
+            修改时会把数据库中相应字段置NULL
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataEntityDefinition.SetValue(System.String,System.Object)">
+            <summary>
+            根据字段名附值
+            </summary>
+            <param name="fieldName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataEntityDefinition.GetValueForTextBox(System.String)">
+            <summary>
+            为了给文本框付值，如果字段为空会返回空字符串
+            如果是日期类型只返回短日期字符串
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataEntityDefinition.SetValueByTextBox(System.String,System.Object,System.String)">
+            <summary>
+            主要为了从TextBox中取值如果是空字符串那么修改时会把数据库中相应字段置NULL
+            如果格式错误时抛出异常，异常的Source为TextBox的客户端ID为了出错时把相应输入框设置焦点
+            </summary>
+            <param name="fieldName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataEntityDefinition.IsDBNull(System.String)">
+            <summary>
+            获取字段是否为空
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataEntityDefinition.IsDBNull(System.String,System.Boolean)">
+            <summary>
+            设置字段是否为空
+            </summary>
+            <param name="fieldName"></param>
+            <param name="isDBNull"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataEntityDefinition.Where(System.String)">
+            <summary>
+            获取字段的查询条件
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataEntityDefinition.Where(System.String,System.String)">
+            <summary>
+            设置字段的查询条件
+            </summary>
+            <param name="fieldName"></param>
+            <param name="whereCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataEntityDefinition.Where(System.String,System.String,System.Object)">
+            <summary>
+            设置字段的查询条件
+            </summary>
+            <param name="fieldName"></param>
+            <param name="whereCondition"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Data.DataEntityUtils">
+            <summary>
+            数据实体工具类
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataEntityUtils.Entity``1">
+            <summary>
+            获取数据实体定义
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataEntityUtils.Entity(System.Type)">
+            <summary>
+            获取数据实体定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Data.IDataEntity">
+            <summary>
+            表示一个数据实体
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.IDataEntity.Property">
+            <summary>
+            数据实体定义
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.ColumnAttribute.IsIdentity">
+            <summary>
+            是否标识列(数据访问层暂时只考虑主键)
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.ColumnAttribute.IsExtend">
+            <summary>
+            是否忽略该字段的数据处理
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.ColumnAttribute.IsInherit">
+            <summary>
+            是否从父级实体继承
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.ColumnAttribute.IsDBNull">
+            <summary>
+            是否设置为DBNull，只为了修改时,把相应字段置空
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.ColumnAttribute.IsExact">
+            <summary>
+            是模糊查询还是精确查询
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.ColumnAttribute.Leng">
+            <summary>
+            字段的长度
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.ColumnAttribute.DateTimePart">
+            <summary>
+            查询时指出查询日期类型时是否在同一年还是同一个季度……
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.ColumnAttribute.WhereCondition">
+            <summary>
+            可以设置其它不方便设置的查询条件的表达式
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Data.DatePart">
+            <summary>
+            查询时指出查询日期类型时是否在同一年还是同一个季度……
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.TableAttribute.TableName">
+            <summary>
+            表名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.TableAttribute.PrimaryKeyType">
+            <summary>
+            主键类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.TableAttribute.PrimaryKey">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.TableAttribute.AssociateTable">
+            <summary>
+            关联的主表
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.TableAttribute.ForeignKey">
+            <summary>
+            外键
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.TableAttribute.IsForcein">
+            <summary>
+            是否强制添加一条新数据
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.TableAttribute.AutoLog">
+            <summary>
+            是否自动保存日志
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Data.PKIDType">
+            <summary>
+            MaxID 使用整型自动增加方式  GUID 全球唯一码主键  Custom自定义字符串 Identity 自增长
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Data.DataExtensions">
+            <summary>
+            将DbDataReader或DataTable转换为实体
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataExtensions.As``1(System.Data.DataRow)">
+            <summary>
+            将DataRow转换为数据传输对象
+            </summary>
+            <typeparam name="T">数据传输对象类型</typeparam>
+            <param name="dr">要转换的数据行</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataExtensions.ToList``1(System.Data.DataTable)">
+            <summary>
+            将DataTable转换为数据传输对象列表
+            </summary>
+            <typeparam name="T">数据传输对象类型</typeparam>
+            <param name="dt">要转换的数据表</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataExtensions.As``1(System.Data.Common.DbDataReader)">
+            <summary>
+            将DataReader转换为数据传输对象
+            </summary>
+            <typeparam name="T">数据传输对象类型</typeparam>
+            <param name="dr">要转换的数据流</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataExtensions.ToList``1(System.Data.Common.DbDataReader)">
+            <summary>
+            将DataReader转换为数据传输对象列表
+            </summary>
+            <typeparam name="T">数据传输对象类型</typeparam>
+            <param name="dr">要转换的数据流</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataExtensions.ToPagedList``1(System.Linq.IQueryable{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            获得分页数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <param name="currentPage"></param>
+            <param name="itemsPerPage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DataExtensions.ToPagedList``1(System.Linq.IQueryable{``0},BIStudio.Framework.Data.PagedQuery)">
+            <summary>
+            获得分页数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Data.PagedQuery">
+            <summary>
+            表示一次简单分页查询
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.PagedQuery.PageIndex">
+            <summary>
+            分页索引
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.PagedQuery.PageSize">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Data.Query">
+            <summary>
+            表示一次简单查询
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.Query.Key">
+            <summary>
+            查询信息
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Data.DBParameterList">
+            <summary>
+            参数列表
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBParameterList.AddExpandoParams(System.Object)">
+            <summary>
+            添加动态参数
+            </summary>
+            <param name="param"></param>
+        </member>
+        <member name="T:BIStudio.Framework.Data.PagedList`1">
+            <summary>
+                含分页信息的强类型数据实体集合
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+        </member>
+        <member name="P:BIStudio.Framework.Data.PagedList`1.CurrentPage">
+            <summary>
+                当前页码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.PagedList`1.TotalPages">
+            <summary>
+                总页码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.PagedList`1.TotalItems">
+            <summary>
+                总行数
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.PagedList`1.ItemsPerPage">
+            <summary>
+                每页行数
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.PagedList`1.Items">
+            <summary>
+                数据实体
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Data.PagedList">
+            <summary>
+                含分页信息的弱类型数据实体集合
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Data.GetPagedList`1">
+            <summary>
+                异步查询请求，支持分页、排序
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页行数</param>
+            <param name="rowCount">总行数</param>
+            <param name="sortExpression">排序字段</param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Data.GetPagedList">
+            <summary>
+                异步查询请求，支持分页、排序
+            </summary>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页行数</param>
+            <param name="rowCount">总行数</param>
+            <param name="sortExpression">排序字段</param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Data.IDBAnalyzer">
+            <summary>
+            数据分析器，仅供开发人员使用
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBAnalyzer.Init(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            初始化Sql语法解析器
+            </summary>
+            <param name="sql">输入字符串</param>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页大小</param>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBAnalyzer.Count">
+            <summary>
+            获得Count语句
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBAnalyzer.Select">
+            <summary>
+            获得SELECT语句
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Data.DBBuilder">
+            <summary>
+            表示一条SQL命令
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Data.DBBuilder.smartAnalyzing">
+            <summary>
+            语法分析
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DBBuilder.Sql">
+            <summary>
+            Sql语句
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DBBuilder.Parameters">
+            <summary>
+            Sql参数
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DBBuilder.CommandType">
+            <summary>
+            执行方式
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DBBuilder.Transaction">
+            <summary>
+            连接
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.#ctor(System.String,System.Object,System.Nullable{System.Data.CommandType},System.Collections.Generic.Dictionary{System.String,System.Func{BIStudio.Framework.Data.IDBAdapter,System.String}},System.Boolean)">
+            <summary>
+            使用语句和参数初始化SQL命令
+            </summary>
+            <param name="sql">查询语句</param>
+            <param name="param">查询参数，例如：new {UserID = 1, UserName = "张三"}</param>
+            <param name="commandType">命令类型</param>
+            <param name="fragmentArguments">片段参数</param>
+            <param name="smartAnalyzing">语法分析，禁用此选项规约系统可能无法正常工作</param>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.#ctor(BIStudio.Framework.Data.DBBuilder,System.String,System.Object,System.Collections.Generic.Dictionary{System.String,System.Func{BIStudio.Framework.Data.IDBAdapter,System.String}})">
+            <summary>
+            使用语句和参数初始化SQL命令
+            </summary>
+            <param name="dbBuilder"></param>
+            <param name="sql">查询语句</param>
+            <param name="param">查询参数，例如：new {UserID = 1, UserName = "张三"}</param>
+            <param name="fragmentArguments">片段参数</param>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.GetTableFields(System.String)">
+            <summary>
+            获得指定数据表的全部字段
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Define(BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            创建SQL片段
+            </summary>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Define(System.String,System.Object,System.Nullable{System.Data.CommandType},System.Collections.Generic.Dictionary{System.String,System.Func{BIStudio.Framework.Data.IDBAdapter,System.String}},System.Boolean)">
+            <summary>
+            创建SQL片段
+            </summary>
+            <param name="sql">查询语句</param>
+            <param name="param">查询参数，例如：new {UserID = 1, UserName = "张三"}</param>
+            <param name="commandType">命令类型</param>
+            <param name="fragmentArguments">片段参数</param>
+            <param name="smartAnalyzing">语法分析，禁用此选项规约系统可能无法正常工作</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Select(System.String,System.Object)">
+            <summary>
+            创建以select FieldName1,FieldName2 from TableName开头的SQL语句
+            </summary>
+            <param name="tablename">要查询的表名</param>
+            <param name="whereParam">要查询的字段名</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Update(System.String,System.Object,System.Object)">
+            <summary>
+            创建以update开头语的SQL语句
+            </summary>
+            <param name="tablename"></param>
+            <param name="setParam"></param>
+            <param name="whereParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Delete(System.String,System.Object)">
+            <summary>
+            创建以delete from开头语的SQL语句
+            </summary>
+            <param name="tablename"></param>
+            <param name="whereParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Insert(System.String,System.Object)">
+            <summary>
+            创建以insert into开头语的SQL语句
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DBBuilder.IsSelect">
+            <summary>
+            当前语句是否为查询语句
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DBBuilder.IsUpdate">
+            <summary>
+            当前语句是否为更新语句
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DBBuilder.IsDelete">
+            <summary>
+            当前语句是否为删除语句
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DBBuilder.IsInsert">
+            <summary>
+            当前语句是否为插入语句
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.DBBuilder.IsCommand">
+            <summary>
+            当前语句是否为命令语句
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Append(BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            向现有查询语句末尾增加新条件
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Append(System.String,System.Object,System.Collections.Generic.Dictionary{System.String,System.Func{BIStudio.Framework.Data.IDBAdapter,System.String}})">
+            <summary>
+            向现有查询语句末尾增加新条件
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <param name="fragmentArguments"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Clause(BIStudio.Framework.Data.DBBuilder,System.String,System.Boolean)">
+            <summary>
+            表示 Prefix (dbBuilder)
+            </summary>
+            <param name="dbBuilder"></param>
+            <param name="prefix"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Clause(System.Action{BIStudio.Framework.Data.DBBuilder},System.String,System.Boolean)">
+            <summary>
+            表示 Prefix (dbBuilder)
+            </summary>
+            <param name="dbBuilder"></param>
+            <param name="prefix"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Table(System.String,System.String[])">
+            <summary>
+            表示[TableName]([FieldName1],[FieldName2])
+            </summary>
+            <param name="tableName"></param>
+            <param name="fieldNames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Field(System.String,System.String[])">
+            <summary>
+            表示TableName.FieldName1,TableName.FieldName2
+            </summary>
+            <param name="tableName">数据表</param>
+            <param name="fieldNames">要查询的字段，*列出所有字段，-排除指定字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Field(System.String,System.String[],System.Boolean)">
+            <summary>
+            表示TableName.FieldName1,TableName.FieldName2
+            </summary>
+            <param name="tableName"></param>
+            <param name="fieldNames"></param>
+            <param name="outputTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Param(System.String[])">
+            <summary>
+            表示@ParamName1,@ParamName2
+            </summary>
+            <param name="paramNames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Param(System.Object)">
+            <summary>
+            表示@ParamName1,@ParamName2和参数值
+            </summary>
+            <param name="param">Append a whole object full of params to the dynamic EG: (new {A = 1, B = 2}) will add property A and B to the dynamic</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Value``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            表示Value1,Value2
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Value(System.Object[])">
+            <summary>
+            表示Value1,Value2
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Append(System.Func{BIStudio.Framework.Data.IDBAdapter,System.String})">
+            <summary>
+            在当前位置插入一个片段
+            </summary>
+            <param name="fragmentArgument">片段内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Append(System.String,System.Func{BIStudio.Framework.Data.IDBAdapter,System.String})">
+            <summary>
+            在当前位置插入一个片段
+            </summary>
+            <param name="fragmentKey">片段名称</param>
+            <param name="fragmentArgument">片段内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Replace(System.String,System.Func{BIStudio.Framework.Data.IDBAdapter,System.String})">
+            <summary>
+            更新已有的片段
+            </summary>
+            <param name="fragmentKey">片段名称</param>
+            <param name="fragmentArgument">片段内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Remove(System.String)">
+            <summary>
+            删除已有片段
+            </summary>
+            <param name="fragmentKey">片段名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Exists(System.String)">
+            <summary>
+            查询已有片段
+            </summary>
+            <param name="fragmentKey">片段名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Compile(BIStudio.Framework.Data.IDBAdapter)">
+            <summary>
+            执行所有片段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Where(System.Boolean)">
+            <summary>
+            表示where 1=1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Where(BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            表示where
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Where(System.Object)">
+            <summary>
+            表示where
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Where(System.String,System.Object)">
+            <summary>
+            表示where
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.From(System.String,System.String[])">
+            <summary>
+            表示TableName.FieldName1,TableName.FieldName2 from
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.OrderBy">
+            <summary>
+            表示order by
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Set(System.Object)">
+            <summary>
+            表示set
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.As">
+            <summary>
+            表示as
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Values(System.Object)">
+            <summary>
+            表示values
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Top(System.Int32,System.Boolean)">
+            <summary>
+            表示top [N] percent
+            </summary>
+            <param name="topN"></param>
+            <param name="usePercentValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Count(System.String)">
+            <summary>
+            表示count(*)
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Distinct">
+            <summary>
+            表示distinct
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.InnerJoin(System.String,System.String,System.String,System.String)">
+            <summary>
+            表示内连接
+            </summary>
+            <param name="srcTableName"></param>
+            <param name="srcFieldName"></param>
+            <param name="targetTableName"></param>
+            <param name="targetFieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.LeftJoin(System.String,System.String,System.String,System.String)">
+            <summary>
+            表示左连接
+            </summary>
+            <param name="srcTableName"></param>
+            <param name="srcFieldName"></param>
+            <param name="targetTableName"></param>
+            <param name="targetFieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.RightJoin(System.String,System.String,System.String,System.String)">
+            <summary>
+            表示右连接
+            </summary>
+            <param name="srcTableName"></param>
+            <param name="srcFieldName"></param>
+            <param name="targetTableName"></param>
+            <param name="targetFieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Operate(System.String,System.Object,System.String,System.String,System.Boolean)">
+            <summary>
+            表示ParamName1=@ParamValue1 and ParamName2=@ParamValue2
+            </summary>
+            <param name="tableName"></param>
+            <param name="param"></param>
+            <param name="symbol"></param>
+            <param name="joiner"></param>
+            <param name="useDirectOutput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Eq(System.Object,System.String,System.Boolean)">
+            <summary>
+            等于
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Eq(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            等于
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Ne(System.Object,System.String,System.Boolean)">
+            <summary>
+            不等于
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Ne(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            不等于
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Gt(System.Object,System.String,System.Boolean)">
+            <summary>
+            大于
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Gt(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            大于
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Lt(System.Object,System.String,System.Boolean)">
+            <summary>
+            小于
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Lt(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            小于
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Ge(System.Object,System.String,System.Boolean)">
+            <summary>
+            大于等于
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Ge(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            大于等于
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Le(System.Object,System.String,System.Boolean)">
+            <summary>
+            小于等于
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Le(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            小于等于
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Like(System.Object,System.String,System.Boolean)">
+            <summary>
+            Like
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.Like(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            Like
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.GetDate">
+            <summary>
+            获得当前时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.CharIndex(System.String,System.String)">
+            <summary>
+            获得指定表达式在字符串中的位置
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="strValue">搜索表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.CharIndex(System.String,System.String,System.String)">
+            <summary>
+            获得指定表达式在字符串中的位置
+            </summary>
+            <param name="tableName"></param>
+            <param name="fieldName">字段名称</param>
+            <param name="strValue">搜索表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.IsNull(System.String)">
+            <summary>
+            判断指定的字段是否为空
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.IsNotNull(System.String)">
+            <summary>
+            判断指定的字段是否为空
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.IsNull(System.String,System.Object)">
+            <summary>
+            判断指定的字段是否为空
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="objValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilder.IsNull(System.String,System.String,System.Object)">
+            <summary>
+            判断指定的字段是否为空
+            </summary>
+            <param name="tablename"></param>
+            <param name="fieldName">字段名称</param>
+            <param name="objValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Data.DBUtils">
+            <summary>
+            数据库工具类
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBUtils.GetDBAdapter(System.String)">
+            <summary>
+            获得指定数据库类型的数据适配器
+            </summary>
+            <param name="providerName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBUtils.RegisterDBAdapter(System.String,System.Type)">
+            <summary>
+            注册指定数据库类型的数据适配器
+            </summary>
+            <param name="providerName"></param>
+            <param name="dbAdapter"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBUtils.GetDBAnalyzer(System.String)">
+            <summary>
+            获得指定数据库类型的数据分析器
+            </summary>
+            <param name="providerName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBUtils.RegisterDBAnalyzer(System.String,System.Type)">
+            <summary>
+            注册指定数据库类型的数据分析器
+            </summary>
+            <param name="providerName"></param>
+            <param name="dbAnalyzer"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBUtils.HasDataTable(System.String)">
+            <summary>
+            判断指定的数据表是否存在
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBUtils.HasDataField(System.String,System.String)">
+            <summary>
+            判断指定的数据字段是否存在
+            </summary>
+            <param name="tableName"></param>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBQuery.Begin(System.Data.IDbTransaction)">
+            <summary>
+            使用现有连接开启事务
+            </summary>
+            <param name="transaction"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBQuery.Begin(System.String)">
+            <summary>
+            创建新连接开启事务
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBQuery.Commit">
+            <summary>
+            执行事务
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBQuery.Rollback">
+            <summary>
+            取消事务
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBQuery.ToList``1(BIStudio.Framework.Data.DBBuilder,System.Int32,System.Int32,System.String)">
+            <summary>
+            执行SQL语句并获取返回值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBQuery.ToListAsync``1(BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            执行SQL语句并获取返回值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.DBBuilderExtension.GetCommand(BIStudio.Framework.Data.DBBuilder,BIStudio.Framework.Data.IDBAdapter)">
+            <summary>
+            获得请求的命令
+            </summary>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Data.IDBQuery">
+            <summary>
+            数据库请求，仅供开发人员使用
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.ToDataTable(BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            执行SQL语句并获取返回值
+            </summary>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.ToDataTable(BIStudio.Framework.Data.DBBuilder,System.Int32,System.Int32,System.String)">
+            <summary>
+            执行SQL语句并获取返回值
+            </summary>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.ToDataTableAsync(BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            执行SQL语句并获取返回值
+            </summary>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.ToList``1(BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            执行SQL语句并获取返回值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.ToList``1(BIStudio.Framework.Data.DBBuilder,System.String)">
+            <summary>
+            执行SQL语句并获取返回值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.ToList``1(BIStudio.Framework.Data.DBBuilder,System.Int32,System.Int32,System.String)">
+            <summary>
+            执行SQL语句并获取返回值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.ToListAsync``1(BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            执行SQL语句并获取返回值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.ToScalar(BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            执行SQL语句并获取返回值
+            </summary>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.ToScalar``1(BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            执行SQL语句并获取返回值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.ToReader(BIStudio.Framework.Data.DBBuilder,System.Action{System.Data.IDataReader})">
+            <summary>
+            执行SQL语句并返回流
+            </summary>
+            <param name="dbBuilder"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.Execute(BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            执行SQL语句并获取影响的行数
+            </summary>
+            <param name="dbBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.Begin(System.Data.IDbTransaction)">
+            <summary>
+            使用现有连接开启事务
+            </summary>
+            <param name="transaction"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.Begin(System.String)">
+            <summary>
+            创建新连接开启事务
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.Commit">
+            <summary>
+            执行事务
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.IDBQuery.Rollback">
+            <summary>
+            取消事务
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Configuration.DataConfig">
+            <summary>
+            数据实体配置
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Configuration.DataConfig.RegisterDataMapping(BIStudio.Framework.CFConfig)">
+            <summary>
+            注册实体配置
+            </summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

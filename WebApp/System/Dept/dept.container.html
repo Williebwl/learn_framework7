@@ -1,0 +1,63 @@
+﻿<div class="contentpanel" ng-controller="DeptContainerCtrl">
+
+    <div class="maintop">
+        <div class="maintop-title clearfix">
+            <h2>软件开发部（<span>Software Development Dept</span>）</h2>
+        </div>
+        <p>所有用户公共的角色，新用户默认加入该角色，并拥有默认的功能和权限。</p>
+    </div>
+    <div class="tabs">
+        <ul class="nav nav-pills nav-tabs-default">
+            <li class="active">部门用户</li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="bmyh">
+                <div class="toolbar clearfix">
+                    <div class="pull-left">
+                        <span>该角色共有<strong class="dangger">80</strong>个用户</span>
+                        <a href="">[用户岗位分配]</a>
+                        <a href="">[排序]</a>
+                    </div>
+                    <div class="pull-right col-sm-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="用户名 | 真实姓名">
+                            <span class="input-group-btn"><button type="button" class="btn btn-default"><i class="fa fa-search"></i></button></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th width="5%">序号</th>
+                                <th width="25%" class="alignLeft">用户姓名</th>
+                                <th width="15%">所属部门</th>
+                                <th width="15%">下属</th>
+                                <th width="10%">排序</th>
+                                <th width="30%">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="alignLeft">肖俊日</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="alignCenter">
+                                    <div class="icon-group">
+                                        <a href="javascript:;" class="icon-items fa fa-star-o" data-toggle="tooltip" data-placement="bottom" title="关注"></a>
+                                        <a href="javascript:;" class="icon-items fa fa-qrcode" data-toggle="tooltip" data-placement="bottom" title="扫一扫"></a>
+                                        <a href="javascript:;" class="icon-items fa fa-envelope-o" data-toggle="tooltip" data-placement="bottom" title="发邮件"></a>
+                                        <a href="javascript:;" class="icon-items fa fa-newspaper-o" data-toggle="tooltip" data-placement="bottom" title="个人信息"></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

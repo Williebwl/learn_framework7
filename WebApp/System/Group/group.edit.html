@@ -1,0 +1,29 @@
+﻿<div ng-controller="GroupEditCtrl" class="modal-box">
+    <div class="dropdown-header">
+        <button class="close" type="button" data-close-self>&times;</button>
+        <h4>添加角色</h4>
+    </div>
+    <div class="dropdown-body">
+        <div class="wizard">
+            <ul class="wizard-header nav nav-justified nav-circle">
+                <li class="active"><span>基本信息</span><em>1</em></li>
+                <li><span>参数设置</span><em>2</em></li>
+                <li><span>应用设置</span><em>3</em></li>
+            </ul>
+            <div class="wizard-content">
+                <div class="wizard-pane active"></div>
+                <div class="wizard-pane"></div>
+                <div class="wizard-pane"></div>
+            </div>
+            <div class="wizard-footer">
+                <div class="pull-left">
+                    <button type="button" class="btn btn-white previous disabled">上一步</button>
+                </div>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-default next" ng-click="fnNext()">下一步</button>
+                    <button type="button" class="btn btn-default hide" ng-click="fnSave()">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

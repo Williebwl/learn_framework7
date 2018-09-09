@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.MQ</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.MQ.IMessageDispatcher">
+            <summary>
+            消息分派
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.IMessageDispatcher.Subscribe(System.Action{BIStudio.Framework.MQ.IMessage})">
+            <summary>
+            订阅消息
+            </summary>
+            <param name="handler">消息响应</param>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.IMessageDispatcher.Dispatch(BIStudio.Framework.MQ.IMessage)">
+            <summary>
+            发布消息
+            </summary>
+            <param name="message">消息</param>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.LocalMessageDispatcher">
+            <summary>
+            订阅本地消息
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.MessageDispatcher">
+            <summary>
+            订阅消息
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.MessageDispatcher.Subscribe(System.String,BIStudio.Framework.MQ.MessageListener)">
+            <summary>
+            订阅消息
+            </summary>
+            <param name="typeName">消息类型</param>
+            <param name="listener">消息响应</param>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.MessageDispatcher.Subscribe(System.Action{BIStudio.Framework.MQ.IMessage})">
+            <summary>
+            订阅消息
+            </summary>
+            <param name="handler">消息响应</param>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.MessageDispatcher.Dispatch(BIStudio.Framework.MQ.IMessage)">
+            <summary>
+            发布消息
+            </summary>
+            <param name="message">消息</param>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.RemoteMessageDispatcher">
+            <summary>
+            订阅远程消息
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.RemoteMessageDispatcher.Dispatch(BIStudio.Framework.MQ.IMessage)">
+            <summary>
+            发布消息
+            </summary>
+            <param name="message">消息</param>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.MessageListener">
+            <summary>
+            消息侦听器
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.MessageListener.Target">
+            <summary>
+            消息原始类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.MessageListener.Handler">
+            <summary>
+            消息响应
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.MessageService">
+            <summary>
+            消息管理
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.MessageService.Default">
+            <summary>
+            获得默认实例
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.MessageService.GetInstance">
+            <summary>
+            创建消息分派器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.RawMessageExtensions">
+            <summary>
+            使用NetMQ发送消息
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.ICommandHandler`1">
+            <summary>
+            为Command消息通道注册响应
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.IEventHandler`1">
+            <summary>
+            为Event消息通道注册响应
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.IMessageHandler`1">
+            <summary>
+            为指定的消息通道注册响应
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.IMessageHandler`1.Handle(`0)">
+            <summary>
+            消息响应
+            </summary>
+            <param name="evt"></param>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.ICommand">
+            <summary>
+            表示命令
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.IEvent">
+            <summary>
+            表示事件
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.Command">
+            <summary>
+            命令
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.IMessage">
+            <summary>
+            表示消息
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.IMessage.ID">
+            <summary>
+            消息标识
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.IMessage.TypeName">
+            <summary>
+            消息类别
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.IMessage.Timestamp">
+            <summary>
+            消息时间
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.Message.ID">
+            <summary>
+            消息标识
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.Message.TypeName">
+            <summary>
+            消息类别
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.Message.Timestamp">
+            <summary>
+            消息时间
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.Event">
+            <summary>
+            事件
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.Broker">
+            <summary>
+            消息代理
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.Broker.#ctor(BIStudio.Framework.MQ.MessageChannel,BIStudio.Framework.MQ.MessageChannel)">
+            <summary>
+            定义消息代理
+            </summary>
+            <param name="producerPort">允许接入的生产者地址，允许所有ip地址填*</param>
+            <param name="consumerPort">允许接入的消费者地址，允许所有ip地址填*</param>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.Broker.#ctor(System.Collections.Generic.IEnumerable{BIStudio.Framework.MQ.MessageChannel},System.Collections.Generic.IEnumerable{BIStudio.Framework.MQ.MessageChannel})">
+            <summary>
+            定义消息代理
+            </summary>
+            <param name="producerPort">允许接入的生产者地址，允许所有ip地址填*</param>
+            <param name="consumerPort">允许接入的消费者地址，允许所有ip地址填*</param>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.Broker.Start">
+            <summary>
+            启动消息代理
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.Broker.Start(BIStudio.Framework.MQ.MessageChannel,BIStudio.Framework.MQ.MessageChannel)">
+            <summary>
+            创建消息代理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.RawMessage">
+            <summary>
+            通讯消息
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.RawMessage.Topic">
+            <summary>
+            消息主题
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.RawMessage.Header">
+            <summary>
+            消息信头
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.RawMessage.Body">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.MessageChannel">
+            <summary>
+            消息通道
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.MessageChannel.Protocol">
+            <summary>
+            通讯协议
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.MessageChannel.Address">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.MQ.MessageChannel.Port">
+            <summary>
+            IP端口
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.MessageChannel.ForProducer(System.String,System.Int32,BIStudio.Framework.MQ.MessageProtocol)">
+            <summary>
+            定义生产端口
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.MessageChannel.ForProducer(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            定义生产端口
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.MessageChannel.ForConsumer(System.String,System.Int32,BIStudio.Framework.MQ.MessageProtocol)">
+            <summary>
+            定义消费端口
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.MessageChannel.ForConsumer(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            定义消费端口
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.MessageActor">
+            <summary>
+            消息通讯端口
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.MQ.MessageActor.Producer">
+            <summary>
+            生产者
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.MQ.MessageActor.Consumer">
+            <summary>
+            消费者
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.MessageProtocol">
+            <summary>
+            消息通讯协议
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.MQ.MessageProtocol.tcp">
+            <summary>
+            在多台主机之间通讯
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.MQ.MessageProtocol.ipc">
+            <summary>
+            在同一台主机的多个进程之间通讯（NetMQ不支持）
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.MQ.MessageProtocol.inproc">
+            <summary>
+            在同一个进程的多个线程之间通讯
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.MQ.MessageProtocol.pgm">
+            <summary>
+            使用MSMQ进行通讯
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.Consumer">
+            <summary>
+            定义消息消费
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.Consumer.#ctor(BIStudio.Framework.MQ.MessageChannel)">
+            <summary>
+            定义消息消费
+            </summary>
+            <param name="brokerAddressForConsumer">需要接入的代理者地址</param>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.Consumer.Connect">
+            <summary>
+            启动消息消费
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.Consumer.Receive(System.Action{BIStudio.Framework.MQ.RawMessage})">
+            <summary>
+            订阅消息
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.Consumer.Connect(BIStudio.Framework.MQ.MessageChannel)">
+            <summary>
+            连接到消息代理
+            </summary>
+            <param name="brokerAddressForConsumer"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.MQ.Producer">
+            <summary>
+            定义消息生产
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.Producer.#ctor(BIStudio.Framework.MQ.MessageChannel)">
+            <summary>
+            定义消息生产
+            </summary>
+            <param name="brokerAddressForProducer">需要接入的代理者地址</param>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.Producer.Connect">
+            <summary>
+            启动消息生产
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.Producer.Send(BIStudio.Framework.MQ.RawMessage)">
+            <summary>
+            发送消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BIStudio.Framework.MQ.Producer.Connect(BIStudio.Framework.MQ.MessageChannel)">
+            <summary>
+            连接到消息代理
+            </summary>
+            <param name="brokerAddressForProducer"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Configuration.MQConfig">
+            <summary>
+            消息总线配置
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Configuration.MQConfig.RegisterMessageBroker(BIStudio.Framework.CFConfig,System.String)">
+            <summary>
+            启动消息代理端
+            </summary>
+            <param name="config"></param>
+            <param name="clientIP">允许接入的客户端地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Configuration.MQConfig.RegisterMessageDispatcher(BIStudio.Framework.CFConfig,System.String)">
+            <summary>
+            启动消息客户端
+            </summary>
+            <param name="config"></param>
+            <param name="brokerIP">远程消息代理</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

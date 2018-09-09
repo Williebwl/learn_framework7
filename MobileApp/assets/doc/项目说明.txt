@@ -1,0 +1,14 @@
+﻿·启用jsx with es6支持：
+打开 C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Web Tools\External\react-server\server.js文件
+将var transformed = reactTools.transformWithDetails(code, { elementMap: true }); 
+替换为var transformed = reactTools.transformWithDetails(code, { elementMap: true, es6module: "--es6module", harmony: "--harmony" }); 
+重启VS2015
+
+·禁用语法提示
+工具 -> 选项 -> 文本编辑器 -> JavaScript -> IntelliSense -> 显示语法错误
+
+·安装转译器
+安装最新版nodejs
+打开C:\Program Files\nodejs目录，执行npm update npm
+打开项目目录，执行npm install webpack -g
+运行watch.bat

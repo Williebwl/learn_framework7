@@ -1,0 +1,35 @@
+（1）在SQL Server配置管理器中打开SQL Server数据库引擎的属性窗口，切换到FILESTREAM选项卡，选中“针对Transact-SQL访问启用FILESTREAM”复选框，其他的选项是针对Windows进行读写的，可以都选中。
+（2）打开SSMS连接到数据库实例，右击数据库实例，选择“属性”选项，切换的“高级”选项页，在文件流访问级别下拉列表框中选择“已启用完全访问”选项。
+（3）创建FILESTREAM文件组，然后创建_file文件。
+（4）在数据库服务器上创建账号sqlclient（Administrators组），并分配数据库访问权限
+（5）在IIS服务器上创建账号sqlclient（Administrators组），并修改WebConfig配置
+
+STDAttach表结构：
+CREATE TABLE [dbo].[STDAttach](
+	[ID] [BIGINT] NOT NULL,
+	[BindTableName] [VARCHAR](50) NULL,
+	[BindTableID] [BIGINT] NULL,
+	[FileName] [NVARCHAR](200) NULL,
+	[FileSize] [INT] NULL,
+	[FileType] [VARCHAR](100) NULL,
+	[Mode] [INT] NOT NULL CONSTRAINT [DF_STDAttach_Mode]  DEFAULT ((0)),
+	[FilePath] [NVARCHAR](255) NULL,
+	[FileContent] [VARBINARY](MAX) FILESTREAM  NULL,
+	[RowGuid] UNIQUEIDENTIFIER NOT NULL ROWGUIDCOL UNIQUE DEFAULT NEWID(),
+	[InputerID] [BIGINT] NULL,
+	[Inputer] [NVARCHAR](100) NULL,
+	[InputTime] [DATETIME] NOT NULL CONSTRAINT [DF_STDAttach_InputTime]  DEFAULT (GETDATE()),
+	[CustomType] [INT] NULL CONSTRAINT [DF__STDAttach__Custo__0E04126B]  DEFAULT ((0)),
+ CONSTRAINT [PK_STDATTACH] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+WebConfig配置：
+<connectionStrings>
+  <add name="CnStr" connectionString="data source=192.168.0.246\sql2008;initial catalog=BIFramework;user id=sql2008;password=123456;Integrated Security=true;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />
+</connectionStrings>
+<system.web>
+  <identity impersonate="true" userName="sqlclient" password="Password!"/>
+</system.web>

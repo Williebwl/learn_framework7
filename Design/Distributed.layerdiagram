@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9cb5955c-1278-4e2d-9cc5-6a80303578d9" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="b56f4b20-1f4e-4cff-8ea0-4e76004b232b" name="Producer&#xD;&#xA;发起请求&#xD;&#xA;member.bitech.cn">
+      <childLayers>
+        <layer Id="87d38030-cae1-46c8-8fd2-45275c2d0e30" name="RemoteMessageDispatcher&#xD;&#xA;发送命令">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="172e2962-3c0c-4956-91a7-c1121e401ce5" direction="Forward">
+              <layerMoniker Id="1a3a3adf-be54-46ec-a497-3941279cf9d1" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="93bbd069-d268-46b5-9e33-3c617dfc9e97" name="CreateUserCommand&#xD;&#xA;注册用户">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="25c97e1f-3ddc-4c6c-b66e-cb73c9c05ee3" direction="Forward">
+              <layerMoniker Id="87d38030-cae1-46c8-8fd2-45275c2d0e30" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="4322faa2-8da5-45eb-b22f-396b585fd048" name="RemoteMessageAdapter&#xD;&#xA;接收事件">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="ec826ab1-2095-4d99-a6fb-41101b96e20f" direction="Forward">
+              <layerMoniker Id="7c7dda65-41e6-420c-89d0-9f63e8e813b8" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="7c7dda65-41e6-420c-89d0-9f63e8e813b8" name="LocalMessageDispatcher&#xD;&#xA;查找订阅">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="1e01667b-a797-4017-98fa-cf9c3c4e0a10" direction="Forward">
+              <layerMoniker Id="b9c91278-3263-426f-bdb5-a977a9d1d4f2" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="b9c91278-3263-426f-bdb5-a977a9d1d4f2" name="UserCreatedEventHandler&#xD;&#xA;注册用户已完成">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="3d5c9c02-cb54-4ce8-9dfa-91f925643688" direction="Forward">
+              <layerMoniker Id="32a17433-8d83-47f9-96db-8d97ee5002e8" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="32a17433-8d83-47f9-96db-8d97ee5002e8" name="UI&#xD;&#xA;用户操作">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="08243d92-fa3d-421b-9d31-efd9d2aa04df" direction="Forward">
+              <layerMoniker Id="93bbd069-d268-46b5-9e33-3c617dfc9e97" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="663b373a-9876-447d-80d2-6dc321f1737a" name="Broker&#xD;&#xA;服务代理&#xD;&#xA;mq.bitech.cn">
+      <childLayers>
+        <layer Id="1a3a3adf-be54-46ec-a497-3941279cf9d1" name="ZeroMQ&#xD;&#xA;消息队列">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="56ac2f0e-7400-45b9-b1cd-578ac76ee4af" direction="Forward">
+              <layerMoniker Id="95ad3cdd-21d2-4a68-8dda-e43b5b6e3791" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="4bd2919c-dafb-42e0-92e2-5a3edb41688b" direction="Forward">
+              <layerMoniker Id="4322faa2-8da5-45eb-b22f-396b585fd048" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="b13943f2-ce08-4b12-841c-532f66fe7b5c" name="Consumer&#xD;&#xA;处理请求&#xD;&#xA;passport.bitech.cn">
+      <childLayers>
+        <layer Id="95ad3cdd-21d2-4a68-8dda-e43b5b6e3791" name="RemoteMessageAdapter&#xD;&#xA;接收命令">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="a6626bb3-6e6d-4c7e-a1e2-fe3dcfa78f9d" direction="Forward">
+              <layerMoniker Id="2a489ed1-6980-45ef-8ea1-56a4d3528ed6" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="84f909e8-ca07-4be7-99a7-aa678139bc4f" name="CreateUserCommandHandler&#xD;&#xA;注册用户已请求">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="c92c22b1-f971-4832-9142-8b61c277614d" direction="Forward">
+              <layerMoniker Id="2398bad5-13bc-48a1-9c6b-3732b895df23" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="2a489ed1-6980-45ef-8ea1-56a4d3528ed6" name="LocalMessageDispatcher&#xD;&#xA;查找订阅">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="a424b47d-1276-4922-80bc-0c157940a917" direction="Forward">
+              <layerMoniker Id="84f909e8-ca07-4be7-99a7-aa678139bc4f" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="2398bad5-13bc-48a1-9c6b-3732b895df23" name="CreateUserService&#xD;&#xA;领域服务">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="fea02dac-cfb5-47a9-90e7-2cc7955b1a3a" direction="Forward">
+              <layerMoniker Id="5c2a6538-b7b7-4881-9db6-4f3d25982729" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="fbd9373c-44b7-4464-b43a-79cedc30ea7b" name="RemoteMessageDispatcher&#xD;&#xA;发送事件">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="d4cf8b90-f837-4d3f-ba63-72b17e43e6dc" direction="Forward">
+              <layerMoniker Id="1a3a3adf-be54-46ec-a497-3941279cf9d1" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="5c2a6538-b7b7-4881-9db6-4f3d25982729" name="UserAggregateRoot&#xD;&#xA;聚合根">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="4b3f48f8-7e32-4fc4-8870-dacfad822729" direction="Forward">
+              <layerMoniker Id="796a7cae-9b28-40fa-83c2-925fb605452f" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="796a7cae-9b28-40fa-83c2-925fb605452f" name="UserCreatedEvent&#xD;&#xA;领域事件">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="b76b5d59-8121-4848-91f4-f065e2579c28" direction="Forward">
+              <layerMoniker Id="fbd9373c-44b7-4464-b43a-79cedc30ea7b" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{267CFDB6-A1DF-41F9-B0CE-FC498C2BCE44}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BIStudio.Framework.Tenant</RootNamespace>
+    <AssemblyName>BIFramework.Tenant</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\OutPut\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\OutPut\BIFramework.Tenant.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppModule.cs" />
+    <Compile Include="Entity\SYSApp.cs" />
+    <Compile Include="Entity\SYSAppAccess.cs" />
+    <Compile Include="Entity\SYSMenu.cs" />
+    <Compile Include="Entity\SYSSystem.cs" />
+    <Compile Include="Entity\SYSSystemCertificate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AppService.cs" />
+    <Compile Include="Service\IAppService.cs" />
+    <Compile Include="Service\IMenuService.cs" />
+    <Compile Include="Service\MenuService.cs" />
+    <Compile Include="Specification\AppMenuNameSpec.cs" />
+    <Compile Include="ValueObject\EnumSYS.cs" />
+    <Compile Include="ValueObject\SYSAppRegistDTO.cs" />
+    <Compile Include="ValueObject\SYSSystemCertificateIssueDTO.cs" />
+    <Compile Include="ValueObject\SYSSystemRegistDTO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BIFramework.Core\BIFramework.csproj">
+      <Project>{cf988d59-84e9-4b80-a5d4-2bf11338481d}</Project>
+      <Name>BIFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.Data\BIFramework.Data.csproj">
+      <Project>{c69c4db1-3fac-4e06-b68f-d1465cc71813}</Project>
+      <Name>BIFramework.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.Domain\BIFramework.Domain.csproj">
+      <Project>{8520b36a-073a-4c40-b968-5309fe6866f7}</Project>
+      <Name>BIFramework.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.Utils\BIFramework.Utils.csproj">
+      <Project>{f98dd6ed-b240-4561-875a-ada2a91efdfa}</Project>
+      <Name>BIFramework.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,178 @@
+﻿<div ng-controller="AppEditCtrl" class="modal-box">
+    <div class="dropdown-header">
+        <button class="close" type="button" data-close-self>&times;</button>
+        <h4>添加应用</h4>
+    </div>
+    <div class="dropdown-body">
+        <div class="wizard">
+            <ul class="wizard-header nav nav-justified nav-circle">
+                <li class="active"><span>基本信息</span><em>1</em></li>
+                <li><span>参数设置</span><em>2</em></li>
+                <li><span>应用设置</span><em>3</em></li>
+            </ul>
+            <div class="wizard-content">
+                <div class="wizard-pane active">
+                    <form class="form-horizontal re-hidden" name="app" bi-Form-Validate="AppVM">
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label"><span class="dangger">*</span>应用名称：</label>
+                            <div class="col-lg-6">
+                                <input type="text" name="AppName" placeholder="应用名称不能为空！" class="form-control" ng-model="editInfo.App.AppName">
+                            </div>
+                            <div class="app-icon set-app-icon col-lg-2 col-lg-offset-9" data-prop-class=".prop1">
+                                <i class="personal-mark" ng-class="editInfo.icon.background+' '+editInfo.icon.icon"></i>
+                                <span ng-bind="editInfo.icon.name"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">应用代码：</label>
+                            <div class="col-lg-6">
+                                <input type="text" name="AppCode" placeholder="应用代码不能为空！" class="form-control" ng-model="editInfo.App.AppCode">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">应用类型：</label>
+                            <div class="col-lg-6">
+                                <select name="AppType" class="form-control" ng-model="AppType" ng-options="appType.TagName for appType in AppTypes"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">排序号：</label>
+                            <div class="col-lg-6">
+                                <input type="text" name="Sequence" placeholder="排序号" class="form-control" ng-model="editInfo.App.Sequence">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">应用说明：</label>
+                            <div class="col-lg-10">
+                                <textarea name="Remark" class="form-control" rows="4" placeholder="应用说明" ng-model="editInfo.App.Remark"></textarea>
+                            </div>
+                        </div>
+                        <div class="prop-slider fullwidth box-bordered prop1" data-prop-direction="right">
+                            <div class="prop-content">
+                                <div class="app-icon-list">
+                                    <ul>
+                                        <li class="col-sm-3" data-close-slider="self" ng-repeat="icon in Icons" ng-click="editInfo.icon=icon">
+                                            <i class="personal-mark" ng-class="icon.background+' '+icon.icon"></i>
+                                            <span ng-bind="icon.name"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="wizard-pane">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">显示模式：</label>
+                            <div class="col-lg-9">
+                                <div class="radio radio-inline radio-default">
+                                    <label ng-repeat="mode in DisplayModes">
+                                        <input type="radio" name="xsms" ng-model="editInfo.DisplayMode" ng-value="mode">{{mode.n}}
+                                        <i class="fa fa-circle-o"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-show="editInfo.DisplayMode.v!=2">
+                            <label class="col-lg-2 control-label"><span class="dangger">*</span>导航模板：</label>
+                            <div class="col-lg-7">
+                                <input type="text" ng-model="editInfo.Menu.NavUrl" ng-readonly="!editInfo.DisplayMode.v" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group" ng-show="editInfo.DisplayMode.v==2">
+                            <label class="col-lg-2 control-label">外部地址：</label>
+                            <div class="col-lg-7">
+                                <input type="text" ng-model="editInfo.Menu.OutsideUrl" class="form-control" ng-value="'http://'">
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="checkbox checkbox-inline checkbox-primary">
+                                    <label>
+                                        <input type="checkbox" name="tc" ng-model="editInfo.IsPopUp">弹出
+                                        <i class="fa fa-square-o"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-show="editInfo.DisplayMode.v!=2||!editInfo.IsPopUp">
+                            <label class="col-lg-2 control-label">内容区模板：</label>
+                            <div class="col-lg-7">
+                                <input type="text"
+                                       placeholder="{{editInfo.DisplayMode.v?'':'可不设置'}}"
+                                       ng-readonly="editInfo.DisplayMode.v!=1"
+                                       class="form-control"
+                                       ng-model="editInfo.Menu.ContainerUrl">
+                                <span class="help-block" ng-hide="editInfo.DisplayMode.v>0">内容区模板默认读取导航中第一个菜单的模板</span>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-show="editInfo.DisplayMode.v!=2">
+                            <label class="col-lg-2 control-label">内容条工具：</label>
+                            <div class="col-lg-9">
+                                <div class="radio radio-inline radio-default">
+                                    <label>
+                                        <input type="radio" name="nrgjt" ng-model="editInfo.IsToolbar" ng-value="false">无
+                                        <i class="fa fa-circle-o"></i>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="nrgjt" ng-model="editInfo.IsToolbar" ng-value="true">有
+                                        <i class="fa fa-circle-o"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-show="editInfo.IsToolbar&&editInfo.DisplayMode.v!=2">
+                            <label class="col-lg-2 control-label"></label>
+                            <div class="col-lg-7">
+                                <input ng-model="editInfo.Menu.ToolBarUrl" class="form-control" />
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="wizard-pane">
+                    <div class="select-connect">
+                        <div class="select-list">
+                            <div class="select-list-top clearfix">
+                                <div class="pull-left select-list-top-l">
+                                    <i class="fa fa-inbox"></i>
+                                    <span>全部角色</span>
+                                </div>
+                                <a href="javascript:;" class="pull-right select-list-all" ng-click="fnAddAllGroup()">[全选]</a>
+                            </div>
+                            <div class="select-list-content">
+                                <ul id="select-list-a" class="selectconnect-item">
+                                    <li ng-repeat="group in GroupInfo.AllGroups" ng-click="fnAddGroup(group)"><i class="fa fa-gavel color-a"></i>{{group.GroupName}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="select-exchange"><i class="fa fa-exchange"></i></div>
+                        <div class="select-list">
+                            <div class="select-list-top clearfix">
+                                <div class="pull-left select-list-top-l">
+                                    <i class="fa fa-inbox"></i>
+                                    <span>授权角色</span>
+                                </div>
+                                <a href="javascript:;" class="pull-right select-list-clear" ng-click="fnDelAllGroup()">[清空]</a>
+                            </div>
+                            <div class="select-list-content">
+                                <ul id="select-list-b" class="selectconnect-item">
+                                    <li ng-repeat="group in GroupInfo.AppGroups" ng-click="fnDelGroup(group)"><i class="fa fa-gavel color-a"></i>{{group.GroupName}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wizard-footer">
+                <div class="pull-left">
+                    <button type="button" class="btn btn-white previous disabled">上一步</button>
+                </div>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-default next" ng-click="fnNext()">下一步</button>
+                    <button type="button" class="btn btn-default hide" ng-click="fnSave()">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

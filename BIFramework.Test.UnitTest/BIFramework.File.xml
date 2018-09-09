@@ -1,0 +1,474 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.File</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.File.STDAttachBO">
+            <summary>
+            附件管理
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.File.STDAttachBO.Save(System.String,BIStudio.Framework.File.SYSAttach[])">
+            <summary>
+            保存附件信息
+            </summary>
+            <param name="delIDs">需要删除的附件ids</param>
+            <param name="infos">附件信息</param>
+            <returns>是否保存成功</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.STDAttachBO.GetInfos(System.String,System.Int64,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="tableName"></param>
+            <param name="tableID"></param>
+            <param name="customType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.STDAttachBO.GetInfos(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.STDAttachBO.GetInfo(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.STDAttachBO.ReadFile(System.Action{System.IO.Stream},BIStudio.Framework.File.SYSAttach[])">
+            <summary>
+            
+            </summary>
+            <param name="action"></param>
+            <param name="infos"></param>
+        </member>
+        <member name="T:BIStudio.Framework.File.ModeEnum">
+            <summary>
+            决定存储方式的枚举
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.ModeEnum.数据库存储">
+            <summary>
+            数据库存储
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.ModeEnum.硬盘存储">
+            <summary>
+            硬盘存储
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.ModeEnum.虚拟目录存储">
+            <summary>
+            虚拟目录存储
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.File.CoverAttachEnum">
+            <summary>
+            决定上传文件是否覆盖的枚举
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.CoverAttachEnum.不覆盖">
+            <summary>
+            不覆盖
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.CoverAttachEnum.覆盖并且删除数据">
+            <summary>
+            覆盖并且删除数据
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.CoverAttachEnum.覆盖但不删除数据">
+            <summary>
+            覆盖但不删除数据
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.File.EnumShowMode">
+            <summary>
+            附件展现形式
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.EnumShowMode.普通模式">
+            <summary>
+            普通模式
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.EnumShowMode.块状列表模式">
+            <summary>
+            块状列表模式
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.EnumShowMode.大图模式">
+            <summary>
+            大图模式
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.EnumShowMode.最简模式">
+            <summary>
+            最简模式
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.File.EnumSaveMode">
+            <summary>
+            附件保存模式
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.EnumSaveMode.页面提交时存储附件操作">
+            <summary>
+            页面提交时存储附件操作
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.EnumSaveMode.直接操作附件">
+            <summary>
+            直接操作附件
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.File.IBiAttach">
+            <summary>
+            附件管理
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.File.IBiAttach.Save(System.String,BIStudio.Framework.File.SYSAttach[])">
+            <summary>
+            保存附件信息
+            </summary>
+            <param name="delIDs">需要删除的附件ids</param>
+            <param name="infos">附件信息</param>
+            <returns>是否保存成功</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.IBiAttach.Remove(System.String,System.Int64,System.Int32)">
+            <summary>
+            删除附件信息
+            </summary>
+            <param name="tableName">业务表名称</param>
+            <param name="tableID">业务表id</param>
+            <param name="customType">拓展类型</param>
+            <returns>是否删除成功</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.IBiAttach.Remove(System.String)">
+            <summary>
+            删除附件信息
+            </summary>
+            <param name="ids">附件ids</param>
+            <returns>是否删除成功</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.IBiAttach.GetInfos(System.String[])">
+            <summary>
+            查询附件信息
+            </summary>
+            <param name="attachKeys">业务表名称</param>
+            <returns>附件信息</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.IBiAttach.GetInfos(System.String,System.Int64,System.Int32)">
+            <summary>
+            查询附件信息
+            </summary>
+            <param name="tableName">业务表名称</param>
+            <param name="tableID">业务表id</param>
+            <param name="customType">拓展类型</param>
+            <returns>附件信息</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.IBiAttach.GetInfos(System.String)">
+            <summary>
+            查询附件信息
+            </summary>
+            <param name="ids">附件ids</param>
+            <returns>附件信息</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.IBiAttach.GetInfo(System.Int64)">
+            <summary>
+            查询附件信息
+            </summary>
+            <param name="id">附件id</param>
+            <returns>附件信息</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.IBiAttach.ReadFile(System.Action{System.IO.Stream},BIStudio.Framework.File.SYSAttach[])">
+            <summary>
+            读取文件
+            </summary>
+            <param name="action">文件流操作</param>
+            <param name="infos">文件信息</param>
+        </member>
+        <member name="T:BIStudio.Framework.File.SYSAttach">
+            <summary>
+            系统附件
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.SYSAttach.BindTableName">
+            <summary>
+            自定义类型(适用多表)
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.SYSAttach.BindTableID">
+            <summary>
+            父编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.SYSAttach.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.SYSAttach.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.SYSAttach.FileType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.SYSAttach.Mode">
+            <summary>
+            存储模式（0-数据库存储；1-硬盘存储）
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.SYSAttach.FilePath">
+            <summary>
+            文件相对路径（文件存储在硬盘时）
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.SYSAttach.CustomType">
+            <summary>
+            自定义类型，用于扩展
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.SYSAttach.InputerID">
+            <summary>
+            上传用户编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.SYSAttach.Inputer">
+            <summary>
+            上传用户名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.SYSAttach.InputTime">
+            <summary>
+            上传日期
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.SYSAttach.FileStream">
+            <summary>
+            附件内容
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.File.SYSAttach.ReadFile(System.Nullable{System.Int64},System.Action{System.IO.Stream},BIStudio.Framework.Domain.IUnitOfWork)">
+            <summary>
+            附件读取
+            </summary>
+            <param name="id">附件id</param>
+            <param name="action">文件流操作</param>
+            <param name="unitOfWork">操作单元</param>
+        </member>
+        <member name="M:BIStudio.Framework.File.SYSAttach.WriteFile(System.IO.Stream,System.Nullable{System.Int64})">
+            <summary>
+            保存文件
+            </summary>
+            <param name="outputStream">需要保存的文件</param>
+            <param name="id">附件id</param>
+            <param name="unitOfWork">操作单元</param>
+        </member>
+        <member name="T:BIStudio.Framework.File.ChunkInfo">
+            <summary>
+            文件分块信息
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.ChunkInfo.Chunk">
+            <summary>
+            分块序号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.ChunkInfo.ChunkSize">
+            <summary>
+            分块大小
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.ChunkInfo.Chunks">
+            <summary>
+            分块数量
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.ChunkInfo.Merged">
+            <summary>
+            已经合并的数量
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.ChunkInfo.ChunkUrl">
+            <summary>
+            分块资源流
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.ChunkInfo.ChunkStream">
+            <summary>
+            分块资源流
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.File.FileInfo">
+            <summary>
+            文件信息
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.FileInfo.AttachKey">
+            <summary>
+            附件标示
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.FileInfo.UploadKey">
+            <summary>
+            上传标示
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.FileInfo.FileID">
+            <summary>
+            文件标示
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.FileInfo.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.FileInfo.FileType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.FileInfo.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.FileInfo.LastModifiedDate">
+            <summary>
+            文件最后修改时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.FileInfo.CacheFileFullName">
+            <summary>
+            文件缓存路径
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.File.MergeInfo">
+            <summary>
+            文件合并信息
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.MergeInfo.Expires">
+            <summary>
+            过期时间默认为6小时
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.MergeInfo.Merged">
+            <summary>
+            已经合并的文件数量
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.File.MergeProvider">
+            <summary>
+            合并文件
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.File.MergeProvider.#ctor(System.String)">
+            <summary>
+            合并文件
+            </summary>
+            <param name="url">文件缓存地址</param>
+        </member>
+        <member name="M:BIStudio.Framework.File.MergeProvider.Merge(BIStudio.Framework.File.ChunkInfo)">
+            <summary>
+            合并文件
+            </summary>
+            <param name="chunk">文件分段信息</param>
+            <returns>文件分段信息</returns>
+        </member>
+        <member name="T:BIStudio.Framework.File.MergeProviderFactory">
+            <summary>
+            合并文件
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.File.MergeProviderFactory.BaseUrl">
+            <summary>
+            文件缓存目录
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.File.MergeProviderFactory.MergeInfo">
+            <summary>
+            文件合并信息
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.File.MergeProviderFactory.Merge(BIStudio.Framework.File.ChunkInfo)">
+            <summary>
+            合并文件
+            </summary>
+            <param name="chunk">文件分段信息</param>
+            <returns>文件信息</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.MergeProviderFactory.RefreshMergeInfo(BIStudio.Framework.File.ChunkInfo)">
+            <summary>
+            刷新文件合并信息
+            </summary>
+            <param name="chunk">文件分段信息</param>
+            <returns>文件分段信息</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.MergeProviderFactory.CreateUrl(BIStudio.Framework.File.ChunkInfo)">
+            <summary>
+            创建文件缓存路径
+            </summary>
+            <param name="chunk">文件分段信息</param>
+            <returns>文件缓存路径</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.MergeProviderFactory.Clear">
+            <summary>
+            清理缓存和文件合并信息
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.File.MergeProviderFactory.GetUrl(System.DateTime,System.String,System.String)">
+            <summary>
+            获取文件合并缓存地址
+            </summary>
+            <param name="date">当前日期</param>
+            <param name="attachKey">附件标示</param>
+            <param name="uploadKey">文件上传标示</param>
+            <returns>文件合并缓存地址</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.MergeProviderFactory.GetUrl(System.DateTime)">
+            <summary>
+            获取文件缓存地址
+            </summary>
+            <param name="date">当前日期</param>
+            <returns>文件缓存地址</returns>
+        </member>
+        <member name="T:BIStudio.Framework.File.MergeService">
+            <summary>
+            合并文件
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.File.MergeService.Merge(BIStudio.Framework.File.ChunkInfo)">
+            <summary>
+            合并文件
+            </summary>
+            <param name="chunk">需要合并的文件片段信息</param>
+            <returns>合并后的文件信息</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.MergeService.GetFileStream(BIStudio.Framework.File.FileInfo)">
+            <summary>
+            根据文件信息获取文件流
+            </summary>
+            <param name="info">文件信息</param>
+            <returns>文件流</returns>
+        </member>
+        <member name="M:BIStudio.Framework.File.MergeService.Move(BIStudio.Framework.File.FileInfo,System.String)">
+            <summary>
+            根据文件信息移动文件到指定目录
+            </summary>
+            <param name="info">文件信息</param>
+            <param name="destFileName">目标目录</param>
+        </member>
+    </members>
+</doc>

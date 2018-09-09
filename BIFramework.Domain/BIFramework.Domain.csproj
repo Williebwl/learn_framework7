@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8520B36A-073A-4C40-B968-5309FE6866F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BIStudio.Framework.Domain</RootNamespace>
+    <AssemblyName>BIFramework.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\OutPut\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\OutPut\BIFramework.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\OutPut\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\OutPut\BIFramework.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audit\IDeleteAudited.cs" />
+    <Compile Include="Audit\ITenantAudited.cs" />
+    <Compile Include="Audit\ISoftDelete.cs" />
+    <Compile Include="Audit\IUpdateAudited.cs" />
+    <Compile Include="Audit\IInputAudited.cs" />
+    <Compile Include="Context\IContextResolver.cs" />
+    <Compile Include="Context\Impl\DomainResolver.cs" />
+    <Compile Include="Context\IDomainResolver.cs" />
+    <Compile Include="Context\Impl\ContextResolver.cs" />
+    <Compile Include="Entity\ExtendFields.cs" />
+    <Compile Include="Entity\IAggregateRoot.cs" />
+    <Compile Include="Entity\IEntity.cs" />
+    <Compile Include="Entity\Impl\AggregateRoot.cs" />
+    <Compile Include="Entity\Impl\Entity.cs" />
+    <Compile Include="Event\DomainEvent.cs" />
+    <Compile Include="Event\IDomainEvent.cs" />
+    <Compile Include="Repository\IRepositoryProvider.cs" />
+    <Compile Include="Repository\RepositoryExtension.cs" />
+    <Compile Include="Repository\RepositoryUtils.cs" />
+    <Compile Include="Repository\Impl\RepositoryBase.cs" />
+    <Compile Include="Repository\Impl\Repository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repository\RepositoryHandler.cs" />
+    <Compile Include="Service\IDomainService.cs" />
+    <Compile Include="Service\Impl\DomainService.cs" />
+    <Compile Include="Context\Impl\TransientDependency.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Sort\DefaultSortExpression.cs" />
+    <Compile Include="Specification\Direct\EntitySpec.cs" />
+    <Compile Include="Specification\Direct\FalseSpec.cs" />
+    <Compile Include="UnitOfWork\Impl\UnitOfWorkBase.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="Specification\Extension\SpecificationExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specification\Composite\AndSpecification.cs" />
+    <Compile Include="Specification\Composite\CompositeSpecification.cs" />
+    <Compile Include="Specification\Direct\Spec.cs" />
+    <Compile Include="Sort\SortExpression.cs" />
+    <Compile Include="Specification\Direct\IDSpec.cs" />
+    <Compile Include="Specification\Direct\FieldSpec.cs" />
+    <Compile Include="Specification\Utils\ExpressionBuilder.cs" />
+    <Compile Include="Specification\Base\ISpecification.cs" />
+    <Compile Include="Specification\Composite\NotSpecification.cs" />
+    <Compile Include="Specification\Composite\OrSpecification.cs" />
+    <Compile Include="Specification\Utils\ParametersRebinder.cs" />
+    <Compile Include="Specification\Base\SpecificationBase.cs" />
+    <Compile Include="Specification\Direct\TrueSpec.cs" />
+    <Compile Include="Context\ITransientDependency.cs" />
+    <Compile Include="Context\Impl\BoundedContext.cs" />
+    <Compile Include="Context\IBoundedContext.cs" />
+    <Compile Include="UnitOfWork\UnitOfWorkOptions.cs" />
+    <Compile Include="Validator\ModelValidator.cs" />
+    <Compile Include="Validator\IModelValidator.cs" />
+    <Compile Include="Validator\ModelValidatorExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BIFramework.Core\BIFramework.csproj">
+      <Project>{cf988d59-84e9-4b80-a5d4-2bf11338481d}</Project>
+      <Name>BIFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.Data\BIFramework.Data.csproj">
+      <Project>{c69c4db1-3fac-4e06-b68f-d1465cc71813}</Project>
+      <Name>BIFramework.Data</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.MQ\BIFramework.MQ.csproj">
+      <Project>{beab2d46-66d5-4fd7-980f-91bbef385f47}</Project>
+      <Name>BIFramework.MQ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BIFramework.Utils\BIFramework.Utils.csproj">
+      <Project>{f98dd6ed-b240-4561-875a-ada2a91efdfa}</Project>
+      <Name>BIFramework.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

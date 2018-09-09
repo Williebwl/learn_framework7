@@ -1,0 +1,76 @@
+﻿<div ng-controller="AccountNavCtrl">
+    <div class="nav breadcrumb-wrapper">
+        <a href="">通行证</a>/<span>有效的用户</span>
+    </div>
+
+    <div class="content scroller scrollerbar-primary">
+        <h2 class="subtitle open-subtitle">安装太筛选用户</h2>
+        <div class="subcontent nav-list">
+            <ul>
+                <li ng-repeat="status in AllStatus" ng-class="{active:status==Search.Active}" data-search=".search1">
+                    <a href="javascript:;" ng-click="fnSelected(status)" ng-bind="status.Key+'的用户'"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="search_panel scroller scrollerbar-primary search1">
+        <h2 class="open-subtitle">设置查询条件</h2>
+        <form>
+            <div class="serach_row">
+                <div class="search_category">流程类型：</div>
+                <div class="search_terms">
+                    <select>
+                        <option>所有</option>
+                        <option>人事-请假单</option>
+                        <option>项目-项目交接单</option>
+                        <option>采购-采购申请单</option>
+                    </select>
+                </div>
+            </div>
+            <div class="serach_row">
+                <div class="search_category">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：</div>
+                <div class="search_terms">
+                    <input type="text" class="form-control" />
+                </div>
+            </div>
+            <div class="serach_row">
+                <div class="search_category">创&nbsp;&nbsp;建&nbsp;&nbsp;人：</div>
+                <div class="search_terms">
+                    <input type="text" class="form-control" id="cteater" />
+                </div>
+            </div>
+            <div class="serach_row">
+                <div class="search_category">创建时间：</div>
+                <div class="search_terms">
+                    <input type="text" class="form-control myDate" onclick="WdatePicker()" />
+                </div>
+            </div>
+            <div class="serach_row">
+                <div class="search_category">状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态：</div>
+                <div class="search_terms">
+                    <select>
+                        <option>所有</option>
+                        <option>办理中</option>
+                        <option>已结束</option>
+                    </select>
+                </div>
+            </div>
+            <div class="serach_row">
+                <div class="search_category">紧急程度：</div>
+                <div class="search_terms">
+                    <select>
+                        <option>所有</option>
+                        <option>无</option>
+                        <option>急件</option>
+                        <option>加急件</option>
+                    </select>
+                </div>
+            </div>
+            <div class="search_btn">
+                <span class="btn btn-green" data-search-close>查询</span>
+                <span class="btn btn-white" data-search-close>清空</span>
+            </div>
+        </form>
+    </div>
+</div>

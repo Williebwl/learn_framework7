@@ -1,0 +1,32 @@
+﻿<div ng-controller="GroupNavCtrl">
+    <div class="nav breadcrumb-wrapper">
+        <a href="">角色</a>/<span ng-bind="Active.GroupName">全体成员</span>
+    </div>
+    <div class="content scroller scrollerbar-primary">
+        <div class="subtitle">
+            角色列表
+            <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="提示信息在这"></i>
+
+            <div class="right drop">
+                <a class="fa fa-plus-circle" data-toggle="tooltip" data-placement="bottom" title="添加" ng-click="fnAdd()"></a>
+                <div bi-dialog src="System/Group/group.edit.html" class="dropdown-box dropdown-right-bottom dropdown-sm" />
+            </div>
+        </div>
+        <div class="subcontent">
+            <div class="input">
+                <input type="text" class="form-control" placeholder="角色名称|代码">
+                <span class="input-group-btn"><button type="button" class="btn btn-default"><i class="fa fa-search"></i></button></span>
+            </div>
+            <ul>
+                <li ng-repeat="group in Groups" ng-click="fnActive(group)" ng-class="{active:group.ID===Active.ID}">
+                    <span>{{group.GroupName}}(<em class="dangger" ng-bind="group.UserCount"></em>)</span>
+                    <div class="band-sys right" ng-hide="app.GroupTypeID" ng-bind="'['+group.GroupType+']'"></div>
+                    <div class="icon-group right" ng-show="app.GroupTypeID">
+                        <a href="javascript:;" class="icon-items fa fa-edit" data-toggle="tooltip" data-placement="bottom" title="编辑"></a>
+                        <a href="javascript:;" class="icon-items fa fa-close" data-toggle="tooltip" data-placement="bottom" title="删除"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

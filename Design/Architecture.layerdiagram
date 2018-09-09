@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9855b667-b100-49f4-80ec-efb9fc5b2494" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="d2f39832-7fc4-4674-bc5c-1de93b1e83d8" name="System&#xD;&#xA;租户&#xD;&#xA;api.bitech.cn/OA">
+      <childLayers>
+        <layer Id="fede70f9-6e40-477c-b84e-0fcf51937e8b" name="Application&#xD;&#xA;应用&#xD;&#xA;BIFramework.Domain">
+          <childLayers>
+            <layer Id="52c2f3b3-5c76-4497-b0a5-1ac546c0b0ac" name="DomainService&#xD;&#xA;领域服务&#xD;&#xA;IDomainService">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="510d9d53-8d98-487f-a8ef-0a5e53b8f282" direction="Forward">
+                  <layerMoniker Id="89c544a7-4ff6-491d-972c-e04f18e1cf2e" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="a08986a9-b3e5-4ca4-ba36-80c6762d755d" direction="Forward">
+                  <layerMoniker Id="a1cc51a3-559a-402f-9197-338226f41b09" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+            <layer Id="2a050dee-089e-4aaa-aef8-bcc8a6295512" name="Module&#xD;&#xA;模块&#xD;&#xA;ApplicationModule" />
+          </childLayers>
+        </layer>
+        <layer Id="41fc1c11-4e60-49c5-a2f8-6785516eb4d2" name="Permission&#xD;&#xA;策略&#xD;&#xA;BIFramework.Permission">
+          <childLayers>
+            <layer Id="9fa8e068-3ba0-4141-8d60-2024ab30ff6e" name="Operation&#xD;&#xA;操作&#xD;&#xA;IPermissionService" />
+            <layer Id="0d8a2687-9dda-41d2-9038-10e728bd12e4" name="Filter&#xD;&#xA;过滤器&#xD;&#xA;IPolicyService">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="d487b51b-6cbc-4353-9e3e-992251f76a8b" direction="Forward">
+                  <layerMoniker Id="fede70f9-6e40-477c-b84e-0fcf51937e8b" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="d422e06a-86f4-4b4d-b8b8-3beb51a91177" name="BoundedContext&#xD;&#xA;限界上下文&#xD;&#xA;api.bitech.cn/OA/SYSApp:POST">
+      <childLayers>
+        <layer Id="88f8dbf6-58d7-4463-a7ab-57e63fd3ba0a" name="CoreDomain&#xD;&#xA;核心域&#xD;&#xA;">
+          <childLayers>
+            <layer Id="8e3900b9-086f-498d-bb15-85dec8ffc928" name="Repository&#xD;&#xA;仓储&#xD;&#xA;IRepository&lt;&gt;">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="271cd3a3-69c2-4881-89ec-f0f519ebd46d" direction="Forward">
+                  <layerMoniker Id="7f7bc37e-21ef-431e-94d2-96a5e894e02c" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+            <layer Id="ecf3ed9d-ef87-457b-957c-daf586038659" name="DomainEvent&#xD;&#xA;领域事件" />
+            <layer Id="3618f878-ff1b-4b72-9e3f-7c48b18bac25" name="AggregateRoot&#xD;&#xA;聚合根" />
+          </childLayers>
+        </layer>
+        <layer Id="c219fc8d-e7b8-4fb7-9e9c-a85637fe4196" name="SupportingDomain&#xD;&#xA;支撑域">
+          <childLayers>
+            <layer Id="f5953d08-2a11-4a77-9495-96aefae0fcff" name="TransientDependency&#xD;&#xA;瞬态依赖" />
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="571aaebd-ec40-432a-b11f-1d31b1444316" name="Domain&#xD;&#xA;领域&#xD;&#xA;api.bitech.cn/OA/SYSApp">
+      <childLayers>
+        <layer Id="89c544a7-4ff6-491d-972c-e04f18e1cf2e" name="Message&#xD;&#xA;消息&#xD;&#xA;BIFramework.MQ">
+          <childLayers>
+            <layer Id="066d94d2-0c54-4b1a-afd2-5d979b9df4a2" name="Command&#xD;&#xA;命令&#xD;&#xA;MQCommand" />
+            <layer Id="d439963a-1365-497a-a9fe-db212a4f10f4" name="DTO&#xD;&#xA;传输对象">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="15f57233-d39e-48f4-beec-143d290a8f4b" direction="Forward">
+                  <layerMoniker Id="88f8dbf6-58d7-4463-a7ab-57e63fd3ba0a" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+          </childLayers>
+        </layer>
+        <layer Id="a1cc51a3-559a-402f-9197-338226f41b09" name="Specification&#xD;&#xA;规约&#xD;&#xA;Spec&lt;&gt;、EntitySpec&lt;&gt;、FieldSpec&lt;&gt;">
+          <childLayers>
+            <layer Id="a7af5dc9-fd8c-47f5-8763-d2692a0c6862" name="Lambda&#xD;&#xA;查询表达式&#xD;&#xA;Expression&lt;&gt;">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="bda85086-2046-48a9-be88-db07d92b1bd2" direction="Forward">
+                  <layerMoniker Id="88f8dbf6-58d7-4463-a7ab-57e63fd3ba0a" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+            <layer Id="184dc3ed-2314-4336-b7f4-ba2fd8d27f61" name="SQL&#xD;&#xA;查询语句&#xD;&#xA;DBBuilder" />
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="96739b00-740d-4cfb-bc43-e83a23a4cf4c" name="Application&#xD;&#xA;应用&#xD;&#xA;api.bitech.cn">
+      <childLayers>
+        <layer Id="af186e5f-2286-4ac6-8892-f0d666890f20" name="Request&#xD;&#xA;请求&#xD;&#xA;BIFramework.UI">
+          <childLayers>
+            <layer Id="ae9920e1-b729-431b-9f22-2a3e2fb74dc3" name="QueryObject&#xD;&#xA;查询对象&#xD;&#xA;PagedQuery" />
+            <layer Id="c99f825a-53f8-4961-af03-44fbb79ff10f" name="ViewModel&#xD;&#xA;视图模型&#xD;&#xA;IViewModel">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="c3d61a38-18e1-4cc1-a23e-ff03fb153899" direction="Forward">
+                  <layerMoniker Id="1557340f-2273-4342-aee6-9a0632d37ce5" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+          </childLayers>
+        </layer>
+        <layer Id="1557340f-2273-4342-aee6-9a0632d37ce5" name="Authorization&#xD;&#xA;鉴权&#xD;&#xA;BIFramework.Authorization">
+          <childLayers>
+            <layer Id="10763fe7-81bb-4d63-8dfd-775c56dcbc79" name="IdentityContext&#xD;&#xA;身份上下文" />
+            <layer Id="b261d026-0058-4a83-b4e0-c6f0435ddee9" name="ApplicationService&#xD;&#xA;应用服务">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="6fb8d837-1dc1-4e6e-9be5-b618e1e40101" direction="Forward">
+                  <layerMoniker Id="41fc1c11-4e60-49c5-a2f8-6785516eb4d2" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="b1cbe66c-3c00-40a1-b1c2-ad88b2c8b2ac" name=" Infrastructure&#xD;&#xA;基础设施">
+      <childLayers>
+        <layer Id="7f7bc37e-21ef-431e-94d2-96a5e894e02c" name="ORM&#xD;&#xA;数据持久化&#xD;&#xA;BIFramework.Data">
+          <childLayers>
+            <layer Id="8e04d754-905d-42c0-ac35-b5d567327ad9" name="UnitOfWork&#xD;&#xA;工作单元&#xD;&#xA;IUnitOfWork" />
+            <layer Id="851d186b-94cd-4d01-8307-8bcc98de698f" name="DataAccess&#xD;&#xA;数据访问&#xD;&#xA;IDBQuery" />
+          </childLayers>
+        </layer>
+        <layer Id="0d965c99-d599-4e6a-b439-bcb01f754002" name="AOP&#xD;&#xA;方面&#xD;&#xA;BIFramework">
+          <childLayers>
+            <layer Id="21391c02-2fd4-4619-af67-0edb773790bd" name="IOC&#xD;&#xA;服务注册&#xD;&#xA;CFAspect" />
+            <layer Id="1502a76d-a9a5-46ec-8050-714673ded570" name="ORO&#xD;&#xA;对象映射&#xD;&#xA;CFMapper" />
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="0d6de0d6-53b4-46c9-bf23-dc112cac3049" name="Presentation&#xD;&#xA;展现">
+      <childLayers>
+        <layer Id="7c2f43de-c575-4a13-b2b6-50e65bd8d9a6" name="Web&#xD;&#xA;网页应用">
+          <childLayers>
+            <layer Id="1613bef4-a368-4ab0-98ec-eefe1e493d74" name="PC&#xD;&#xA;网站&#xD;&#xA;AngularJS">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="3e86a145-66a7-447c-8b5e-e5e700ba971f" direction="Forward">
+                  <layerMoniker Id="af186e5f-2286-4ac6-8892-f0d666890f20" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+            <layer Id="eb7ffed6-bd22-40e3-bcea-a6b29ebbef74" name="APP&#xD;&#xA;移动&#xD;&#xA;ReactJS" />
+          </childLayers>
+        </layer>
+        <layer Id="4edf316d-bf52-4633-9af1-ed315e33b957" name="Embed&#xD;&#xA;集成应用">
+          <childLayers>
+            <layer Id="0b9f730e-baa1-40b2-9d5c-43ac5bcd85ca" name="SNS&#xD;&#xA;微信&#xD;&#xA;企业号">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="e42e9585-0727-478a-9eef-ea85693e953c" direction="Forward">
+                  <layerMoniker Id="af186e5f-2286-4ac6-8892-f0d666890f20" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+            <layer Id="93db6a7f-40d1-4303-bb90-c22aaf425052" name="SAAS&#xD;&#xA;云端&#xD;&#xA;阿里云" />
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

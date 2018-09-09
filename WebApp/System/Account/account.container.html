@@ -1,0 +1,48 @@
+﻿<div ng-controller="AccountContainerCtrl">
+    <div class="header-bar">
+        <div class="toggle-menu"><i class="fa fa-caret-left"></i></div>
+        <div class="header-toolbar">
+            <button class="btn btn-primary"><i class="fa fa-pencil-square-o"></i><span>新建用户</span></button>
+            <button class="btn btn-white">批量导入</button>
+            <button class="btn btn-white">注销</button>
+        </div>
+        <div class="help-info">
+            <a href="" class="fa fa-question-circle" data-toggle="tooltip" data-placement="left" title="帮助中心"></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="输入关键字">
+            <span class="fa fa-search" data-search=".search1"></span>
+        </div>
+    </div>
+    <div class="contentpanel">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th width="5%">序号</th>
+                        <th width="20%" class="alignLeft">用户名称</th>
+                        <th width="30%" class="alignLeft">电子邮件</th>
+                        <th width="20%">上次登录时间</th>
+                        <th width="10%">状态</th>
+                        <th width="15%">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in items">
+                        <td>{{$index+1}}</td>
+                        <td class="alignLeft">{{item.RealName}}（{{item.LoginName}}）</td>
+                        <td class="alignLeft">{{item.Email}}</td>
+                        <td>{{item.LastLoginTime | date:'yyyy-MM-dd HH:mm'}}</td>
+                        <td><span ng-show="item.IsValid">有效</span><span ng-hide="item.IsValid">无效</span></td>
+                        <td>
+                            <div class="icon-group">
+                                <a href="javascript:;" class="icon-items fa fa-edit" data-toggle="tooltip" data-placement="bottom" title="编辑"></a>
+                                <a href="javascript:;" class="icon-items fa fa-trash-o" data-toggle="tooltip" data-placement="bottom" title="删除"></a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,766 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.Permission</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.Permission.EnumFilterOperation">
+            <summary>
+            过滤器操作
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.IFilterProvider">
+            <summary>
+            申明过滤器
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IFilterProvider.Init(BIStudio.Framework.Permission.SYSFilter)">
+            <summary>
+            使用预定配置初始化过滤器
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IFilterProvider.Compile``1">
+            <summary>
+            将过滤器编译成规约
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.BasicFilterProvider">
+            <summary>
+            定义基础过滤器
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.BasicFilterProvider.Compile``1">
+            <summary>
+            这里需要处理object的类型
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.FilterProviderAttribute">
+            <summary>
+            表示当前类是过滤器
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.FilterProviderService">
+            <summary>
+            查找过滤器
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPolicyService.GetOperations(System.Int64,System.Nullable{System.DateTime},System.String)">
+            <summary>
+            获得用户可用操作
+            </summary>
+            <param name="accountId"></param>
+            <param name="time"></param>
+            <param name="ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPolicyService.GetFilter``1(System.String)">
+            <summary>
+            获得操作过滤器
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="operationCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPolicyService.ApplyFilter``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            对数据源应用过滤器
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="source"></param>
+            <param name="operationCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PolicyService.GetOperations(System.Int64,System.Nullable{System.DateTime},System.String)">
+            <summary>
+            获得用户可用操作
+            </summary>
+            <param name="accountId"></param>
+            <param name="time"></param>
+            <param name="ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PolicyService.GetFiltersByOperation(System.String,System.String)">
+            <summary>
+            根据操作代码获取过滤器
+            </summary>
+            <param name="operationCode"></param>
+            <param name="entityType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PolicyService.GetFilter``1(System.String)">
+            <summary>
+            获得操作过滤器
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="operationCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PolicyService.ApplyFilter``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            对数据源应用过滤器
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="source"></param>
+            <param name="operationCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSFilterInjectDTO">
+            <summary>
+            将过滤器附加到资源点
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSFilterInjectResult">
+            <summary>
+            将过滤器附加到资源点
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSFilterInjectResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSFilterInjectResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSFilterInjectResult.SystemCodeInvalid">
+            <summary>
+            系统代码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSFilterInjectResult.NameOrCodeNotFound">
+            <summary>
+            未指定操作名称或代码
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSFilterInjectResult.ResourceTagInvalid">
+            <summary>
+            资源点无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSFilterInjectResult.CodeAlreadyExists">
+            <summary>
+            操作代码已存在
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSOperationFilterAssignDTO">
+            <summary>
+            分配过滤器到操作
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSOperationFilterAssignResult">
+            <summary>
+            将过滤器附加到操作
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSOperationFilterAssignResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSOperationFilterAssignResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSOperationFilterAssignResult.SystemCodeInvalid">
+            <summary>
+            系统代码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSOperationFilterAssignResult.FilterNotFound">
+            <summary>
+            过滤器未找到
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSOperationFilterAssignResult.OperationNotFound">
+            <summary>
+            策略未找到
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSOperationFilterAssignResult.OperationFilterAlreadyExist">
+            <summary>
+            策略未找到
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSOperationDTO">
+            <summary>
+            将操作附加到资源点
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSOperationInjectResult">
+            <summary>
+            将操作附加到资源点
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSOperationInjectResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSOperationInjectResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSOperationInjectResult.SystemCodeInvalid">
+            <summary>
+            系统代码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSOperationInjectResult.NameOrCodeNotFound">
+            <summary>
+            未指定操作名称或代码
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSOperationInjectResult.ResourceTagInvalid">
+            <summary>
+            资源点无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSOperationInjectResult.CodeAlreadyExists">
+            <summary>
+            操作代码已存在
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSStrategyDTO">
+            <summary>
+            分配用户角色
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSStrategyResult">
+            <summary>
+            将操作附加到资源点
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyResult.SystemCodeInvalid">
+            <summary>
+            系统代码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyResult.NameOrCodeNotFound">
+            <summary>
+            未指定操作名称或代码
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyResult.ResourceTagInvalid">
+            <summary>
+            资源点无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyResult.CodeAlreadyExists">
+            <summary>
+            操作代码已存在
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSStrategyGroupAssignDTO">
+            <summary>
+            分配用户角色
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSStrategyGroupAssignResult">
+            <summary>
+            将用户组附加到策略
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyGroupAssignResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyGroupAssignResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyGroupAssignResult.SystemCodeInvalid">
+            <summary>
+            系统代码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyGroupAssignResult.GroupNotFound">
+            <summary>
+            角色未找到
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyGroupAssignResult.StrategyNotFound">
+            <summary>
+            账户未找到
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyGroupAssignResult.StrategyGroupAlreadyExist">
+            <summary>
+            策略和用户组已存在
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSStrategyOperationAssignDTO">
+            <summary>
+            分配用户角色
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSStrategyOperationAssignResult">
+            <summary>
+            将用户组附加到策略
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyOperationAssignResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyOperationAssignResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyOperationAssignResult.SystemCodeInvalid">
+            <summary>
+            系统代码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyOperationAssignResult.OperationNotFound">
+            <summary>
+            角色未找到
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyOperationAssignResult.StrategyNotFound">
+            <summary>
+            账户未找到
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Permission.SYSStrategyOperationAssignResult.StrategyOperationAlreadyExist">
+            <summary>
+            操作策略已经存在
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.GetOperation(System.Int64)">
+            <summary>
+            根据id获取操作
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.OperationInject(BIStudio.Framework.Permission.SYSOperationDTO)">
+            <summary>
+            将操作附加到资源点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.Remove(BIStudio.Framework.Permission.SYSOperation)">
+            <summary>
+            删除资源点操作
+            </summary>
+            <param name="operation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.FilterInject(BIStudio.Framework.Permission.SYSFilterInjectDTO)">
+            <summary>
+            将过滤器附加到资源点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.Remove(BIStudio.Framework.Permission.SYSFilter)">
+            <summary>
+            删除资源点过滤器
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.StrategyInject(BIStudio.Framework.Permission.SYSStrategyDTO)">
+            <summary>
+            添加策略
+            </summary>
+            <param name="strategyGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.Remove(BIStudio.Framework.Permission.SYSStrategy)">
+            <summary>
+            删除策略
+            </summary>
+            <param name="strategyGroup"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.StrategyGroupAssign(BIStudio.Framework.Permission.SYSStrategyGroupAssignDTO)">
+            <summary>
+            关联策略和用户组
+            </summary>
+            <param name="strategyGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.Remove(BIStudio.Framework.Permission.SYSStrategyGroup)">
+            <summary>
+            撤销策略和用户组的关联
+            </summary>
+            <param name="strategyGroup"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.StrategyOperationAssign(BIStudio.Framework.Permission.SYSStrategyOperationAssignDTO)">
+            <summary>
+            关联策略和操作
+            </summary>
+            <param name="strategyOperation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.Remove(BIStudio.Framework.Permission.SYSStrategyOperation)">
+            <summary>
+            撤销策略和操作的关联
+            </summary>
+            <param name="strategyOperation"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.OperationFilterAssign(BIStudio.Framework.Permission.SYSOperationFilterAssignDTO)">
+            <summary>
+            关联策略和过滤器
+            </summary>
+            <param name="strategyFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.IPermissionService.Remove(BIStudio.Framework.Permission.SYSOperationFilter)">
+            <summary>
+            撤销策略和过滤器的关联
+            </summary>
+            <param name="strategyFilter"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.GetOperation(System.Int64)">
+            <summary>
+            根据id获取操作
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.OperationInject(BIStudio.Framework.Permission.SYSOperationDTO)">
+            <summary>
+            将操作附加到资源点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.Remove(BIStudio.Framework.Permission.SYSOperation)">
+            <summary>
+            删除资源点
+            </summary>
+            <param name="operation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.FilterInject(BIStudio.Framework.Permission.SYSFilterInjectDTO)">
+            <summary>
+            将过滤器附加到资源点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.Remove(BIStudio.Framework.Permission.SYSFilter)">
+            <summary>
+            删除过滤器
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.OperationFilterAssign(BIStudio.Framework.Permission.SYSOperationFilterAssignDTO)">
+            <summary>
+            关联策略和过滤器
+            </summary>
+            <param name="operationFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.Remove(BIStudio.Framework.Permission.SYSOperationFilter)">
+            <summary>
+            撤销策略和过滤器的关联
+            </summary>
+            <param name="operationFilter"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.StrategyInject(BIStudio.Framework.Permission.SYSStrategyDTO)">
+            <summary>
+            添加策略
+            </summary>
+            <param name="strategy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.Remove(BIStudio.Framework.Permission.SYSStrategy)">
+            <summary>
+            删除策略
+            </summary>
+            <param name="strategyGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.StrategyGroupAssign(BIStudio.Framework.Permission.SYSStrategyGroupAssignDTO)">
+            <summary>
+            关联策略和用户组
+            </summary>
+            <param name="strategyGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.Remove(BIStudio.Framework.Permission.SYSStrategyGroup)">
+            <summary>
+            撤销策略和用户组的关联
+            </summary>
+            <param name="strategyGroup"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.StrategyOperationAssign(BIStudio.Framework.Permission.SYSStrategyOperationAssignDTO)">
+            <summary>
+            关联策略和操作
+            </summary>
+            <param name="strategyOperation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.PermissionService.Remove(BIStudio.Framework.Permission.SYSStrategyOperation)">
+            <summary>
+            撤销策略和操作的关联
+            </summary>
+            <param name="strategyOperation"></param>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSFilter">
+            <summary>
+            权限资源
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.SystemID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.AppID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.FilterName">
+            <summary>
+            筛选器名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.FilterCode">
+            <summary>
+            筛选器代码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.EntityType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.PropertyName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.FilterOperation">
+            <summary>
+            操作符
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.FilterValue">
+            <summary>
+            操作值
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.Sequence">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.Inputer">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.InputerID">
+            <summary>
+            创建人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSFilter.InputTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSOperationFilter.FilterID">
+            <summary>
+            过滤器id
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSOperation">
+            <summary>
+            权限操作
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSOperation.SystemID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSOperation.AppID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSOperation.OperationName">
+            <summary>
+            操作名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSOperation.OperationCode">
+            <summary>
+            操作代码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSOperation.OperationFlag">
+            <summary>
+            所有者标志
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSOperation.OperationFlagID">
+            <summary>
+            所有者标志代码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSOperation.Sequence">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSOperation.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSOperation.Inputer">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSOperation.InputerID">
+            <summary>
+            创建人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSOperation.InputTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSStrategy">
+            <summary>
+            策略
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.SystemID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.AppID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.StrategyCode">
+            <summary>
+            策略代码 必须的
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.StrategyName">
+            <summary>
+            策略名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.Sequence">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.StartTime">
+            <summary>
+            时间段
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.EndTime">
+            <summary>
+            时间段
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.StartIP">
+            <summary>
+            IP段 '000.000.000.000'
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.EndIP">
+            <summary>
+            IP段 '255.255.255.255'
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.Inputer">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.InputerID">
+            <summary>
+            创建人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategy.InputTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSStrategyGroup">
+            <summary>
+            策略管理用户组
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategyGroup.GroupID">
+            <summary>
+            用户组id
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Permission.SYSStrategyOperation">
+            <summary>
+            策略关联操作
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.SYSStrategyOperation.OperationID">
+            <summary>
+            操作id
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.PermissionDTO.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Permission.PermissionDTO.Filters">
+            <summary>
+            key标识类型名称，
+            filter用来做筛选
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Permission.SYSFilterRepository.Add(BIStudio.Framework.Permission.SYSFilterInjectDTO)">
+            <summary>
+            将操作附加到资源点
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

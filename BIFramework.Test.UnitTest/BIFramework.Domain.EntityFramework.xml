@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.Domain.EntityFramework</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.Configuration.EFConfig">
+            <summary>
+            EntityFramework数据实体配置
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Configuration.EFConfig.RegisterEFRepository(BIStudio.Framework.CFConfig)">
+            <summary>
+            注册EntityFramework实体配置
+            </summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.EntityFramework.EFRepository`1">
+            <summary>
+            EF仓储
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.EntityFramework.EFUnitOfWork">
+            <summary>
+            工作单元
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.EntityFramework.EFUnitOfWork.Commit">
+            <summary>
+            执行事务
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.EntityFramework.EFUnitOfWork.Rollback">
+            <summary>
+            取消事务
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.EntityFramework.EFUnitOfWorkExtensions.GetDBContext(BIStudio.Framework.Domain.IUnitOfWork)">
+            <summary>
+            获得数据上下文
+            </summary>
+            <param name="unitOfWork"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

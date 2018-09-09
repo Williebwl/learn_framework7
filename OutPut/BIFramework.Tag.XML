@@ -1,0 +1,2739 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.Tag</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.Tag.Internal.OperateSpecification`1">
+            <summary>
+            规约--操作数据
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.Internal.OperateSpecification`1.OperateType">
+            <summary>
+            操作类型
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.Internal.OperateSpecification`1.UserID">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.Internal.OperateSpecification`1.authorities">
+            <summary>
+            当前用户可用权限
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTagGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagGroup.SystemID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagGroup.GroupName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagGroup.GroupCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagGroup.Sequence">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagGroup.Views">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagGroup.Remark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagGroup.Inputer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagGroup.InputerID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagGroup.InputTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.ITag.SystemID">
+            <summary>
+            单位编号
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.FindBySpecification``1(System.Collections.Generic.List{``0})">
+            <summary>
+                筛选符合规约的数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="infos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.FindBySpecification``1(``0)">
+            <summary>
+                筛选符合规约的数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.ITag.TagDisplayLevels">
+            <summary>
+                返回全部标签类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagDisplayLevel(System.Int32)">
+            <summary>
+                返回指定标签类型的名称
+            </summary>
+            <param name="tagDisplayLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagNodesByGroupCode(System.String)">
+            <summary>
+                返回全部标签节点
+            </summary>
+            <param name="tagGroupCode">标签组代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagNodesByGroupCode(System.String,BIStudio.Framework.Tag.EnumSYSTagNodeType)">
+            <summary>
+                返回全部标签节点
+            </summary>
+            <param name="tagGroupCode">标签组代码</param>
+            <param name="nodeType">标签节点类型,使用OR逻辑连接多个查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagNodesByGroupCode(System.String,BIStudio.Framework.Tag.EnumSYSTagNodeType,System.Boolean)">
+            <summary>
+                返回全部标签节点
+            </summary>
+            <param name="tagGroupCode">标签组代码</param>
+            <param name="nodeType">标签节点类型,使用OR逻辑连接多个查询条件</param>
+            <param name="fixBrokenNodes">是否自动修复断开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagNodesByGroupCode(System.String,BIStudio.Framework.Tag.EnumSYSTagNodeType,System.Boolean,System.Nullable{System.Int32})">
+            <summary>
+                返回全部标签节点
+            </summary>
+            <param name="tagGroupCode">标签组代码</param>
+            <param name="nodeType">标签节点类型,使用OR逻辑连接多个查询条件</param>
+            <param name="fixBrokenNodes">是否自动修复断开的节点</param>
+            <param name="displayLevel">标签类型,EnumTagDisplayLevel</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagGroups">
+            <summary>
+                返回全部标签组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagGroup(System.Int64)">
+            <summary>
+                返回制定的标签组
+            </summary>
+            <param name="tagGroupID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagGroup(System.String)">
+            <summary>
+                返回制定的标签组
+            </summary>
+            <param name="tagGroupCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagClasses">
+            <summary>
+                返回全部标签
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagClasses(System.Collections.Generic.List{System.Int64})">
+            <summary>
+                返回指定的标签
+            </summary>
+            <param name="tagClassIDs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagClassesByGroupCode(System.String)">
+            <summary>
+                返回指定标签组内的全部标签
+            </summary>
+            <param name="tagGroupCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagClassesByGroupCode(System.String,System.Nullable{System.Int32})">
+            <summary>
+                返回指定标签组内的全部标签
+            </summary>
+            <param name="tagGroupCode"></param>
+            <param name="displayLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagClass(System.Int64)">
+            <summary>
+                返回指定的标签
+            </summary>
+            <param name="tagClassID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagClass(System.String)">
+            <summary>
+                返回指定的标签
+            </summary>
+            <param name="tagClassCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagClassByName(System.String)">
+            <summary>
+                返回指定的标签
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagClass(BIStudio.Framework.Tag.SYSTagClass)">
+            <summary>
+                返回指定的标签
+            </summary>
+            <param name="tagClassInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTags">
+            <summary>
+                返回全部标签项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTags(System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+                返回多个指定的标签项
+            </summary>
+            <param name="tagIDs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagsByParentID(System.Int64)">
+            <summary>
+                返回指定标签的下级选项
+            </summary>
+            <param name="parentTagID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagsByGroupCode(System.String)">
+            <summary>
+                返回指定标签组内的全部标签项
+            </summary>
+            <param name="tagGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagsByGroupCode(System.String,System.Nullable{System.Int32})">
+            <summary>
+                返回指定标签组内的全部标签项
+            </summary>
+            <param name="tagGroupName"></param>
+            <param name="displayLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagsByClassID(System.Int64)">
+            <summary>
+                返回指定标签的全部选项
+            </summary>
+            <param name="tagClassID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagsByClassID(System.Int64,System.Int64)">
+            <summary>
+                返回指定标签的下级选项
+            </summary>
+            <param name="tagClassID"></param>
+            <param name="parentTagID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagsByClassID(System.Int64,System.String)">
+            <summary>
+                返回指定标签的下级选项
+            </summary>
+            <param name="tagClassID"></param>
+            <param name="parentTagName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagsByClassCode(System.String)">
+            <summary>
+                返回指定标签的全部选项
+            </summary>
+            <param name="tagClassCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagsByClassCode(System.String,System.Int64)">
+            <summary>
+                返回指定标签的下级选项
+            </summary>
+            <param name="tagClassCode"></param>
+            <param name="parentTagID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagsByClassCode(System.String,System.String)">
+            <summary>
+                返回指定标签的下级选项
+            </summary>
+            <param name="tagClassCode"></param>
+            <param name="parentTagName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTag(System.Int64)">
+            <summary>
+                返回指定的标签项
+            </summary>
+            <param name="tagID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTag(System.String,System.String)">
+            <summary>
+                返回指定的标签项
+            </summary>
+            <param name="tagClassCode">标签代码</param>
+            <param name="tagName">标签项名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTag(System.Int64,System.String)">
+            <summary>
+                返回指定的标签项
+            </summary>
+            <param name="tagClassID">标签编号</param>
+            <param name="tagName">标签项名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagByName(System.String,System.String)">
+            <summary>
+                返回指定的标签项
+            </summary>
+            <param name="tagClassCode">标签代码</param>
+            <param name="tagName">标签项名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagByName(System.Int64,System.String)">
+            <summary>
+                返回指定的标签项
+            </summary>
+            <param name="tagClassID">标签编号</param>
+            <param name="tagName">标签项名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTag(System.String,System.Int64)">
+            <summary>
+                返回指定的标签项
+            </summary>
+            <param name="tagClassCode">标签代码</param>
+            <param name="tagValue">标签项值</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagByCode(System.String,System.String)">
+            <summary>
+                返回指定的标签项
+            </summary>
+            <param name="tagClassCode">标签代码</param>
+            <param name="tagCode">标签项代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagByCode(System.Int64,System.String)">
+            <summary>
+                返回指定的标签项
+            </summary>
+            <param name="tagClassID">标签编号</param>
+            <param name="tagCode">标签项代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTag(System.Int64,System.Int32)">
+            <summary>
+                返回指定的标签项
+            </summary>
+            <param name="tagClassID">标签编号</param>
+            <param name="tagValue">标签项值</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagByValue(System.String,System.String)">
+            <summary>
+                返回指定的标签项
+            </summary>
+            <param name="tagClassCode">标签代码</param>
+            <param name="tagValue">标签项值</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagByValue(System.Int64,System.String)">
+            <summary>
+                返回指定的标签项
+            </summary>
+            <param name="tagClassID">标签编号</param>
+            <param name="tagValue">标签项值</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagApplies``1(``0)">
+            <summary>
+                返回指定实体已贴入的标签项编号
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <returns>已贴入实体的标签项编号</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagApplyInfos``1(``0)">
+            <summary>
+                返回指定实体已贴入的标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <returns>已贴入实体的标签项</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagApplyInfos``1(``0,BIStudio.Framework.Tag.SYSTagClass)">
+            <summary>
+                返回指定实体已贴入的标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <param name="tagClassInfo">查询条件，需要指定ID或ClassCode或ClassName属性</param>
+            <returns>已贴入实体的标签项</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagApplyInfos``1(``0,BIStudio.Framework.Tag.SYSTagGroup)">
+            <summary>
+                返回指定实体已贴入的标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <param name="tagGroupInfo">查询条件，需要指定ID或GroupCode或GroupName属性</param>
+            <returns>已贴入实体的标签项</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagApplyInfos``1(``0,BIStudio.Framework.Tag.SYSTagGroup,System.Nullable{BIStudio.Framework.Tag.EnumSYSTagDisplayLevel})">
+            <summary>
+                返回指定实体已贴入的标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <param name="tagGroupInfo">查询条件，需要指定ID或GroupCode或GroupName属性</param>
+            <param name="displayLevel">标签类型</param>
+            <returns>已贴入实体的标签项</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagApplyInfos``1(``0,BIStudio.Framework.Tag.SYSTagGroup,System.Nullable{System.Int32})">
+            <summary>
+                返回指定实体已贴入的标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <param name="tagGroupInfo">查询条件，需要指定ID或GroupCode或GroupName属性</param>
+            <param name="displayLevel">标签类型</param>
+            <returns>已贴入实体的标签项</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagLogs``1(BIStudio.Framework.Tag.SYSTag,``0)">
+            <summary>
+                返回指定实体已贴入的标签日志
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="tagInfo">标签，需要指定ID属性</param>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagLogs``1(BIStudio.Framework.Tag.SYSTagClass,``0)">
+            <summary>
+                返回指定实体已贴入的标签组日志
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="tagClassInfo">查询条件，需要指定ID或ClassCode或ClassName属性</param>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagLogs(BIStudio.Framework.Tag.SYSTagLogs)">
+            <summary>
+                返回指定条件的标签日志
+            </summary>
+            <param name="tagLogsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagAuthority(System.Int64)">
+            <summary>
+                返回指定的标签权限
+            </summary>
+            <param name="tagAuthorityID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetTagAuthorities(BIStudio.Framework.Tag.SYSTagAuthority)">
+            <summary>
+                返回指定的标签权限
+            </summary>
+            <param name="tagAuthorityInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.SetTagAuthority(BIStudio.Framework.Tag.SYSTagConferAuthorityDTO)">
+            <summary>
+                授予标签权限
+            </summary>
+            <param name="dto"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.SetTagAuthority(BIStudio.Framework.Tag.SYSTagConferAuthorityDTO,System.Boolean)">
+            <summary>
+                授予标签权限
+            </summary>
+            <param name="dto"></param>
+            <param name="conferOrRevoke">是授予权限True,还是取消权限False</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.FixBrokenNodes(System.Collections.Generic.List{BIStudio.Framework.Tag.SYSTagNodeDTO})">
+            <summary>
+                修复断开的节点
+            </summary>
+            <param name="nodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.FixBrokenNodes(System.Collections.Generic.List{BIStudio.Framework.Tag.SYSTagGroup})">
+            <summary>
+                修复断开的节点
+            </summary>
+            <param name="nodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.FixBrokenNodes(System.Collections.Generic.List{BIStudio.Framework.Tag.SYSTagClass})">
+            <summary>
+                修复断开的节点
+            </summary>
+            <param name="nodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.FixBrokenNodes(System.Collections.Generic.List{BIStudio.Framework.Tag.SYSTag})">
+            <summary>
+                修复断开的节点
+            </summary>
+            <param name="nodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.Delete(BIStudio.Framework.Tag.SYSTagClass)">
+            <summary>
+                删除指定的标签，标签选项，标签日志，标签Apply数据
+            </summary>
+            <param name="tagClassInfo">查询条件，需要指定ID或ClassCode或ClassName属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.Delete(BIStudio.Framework.Tag.SYSTag)">
+            <summary>
+                删除指定的标签项，子级标签项，标签日志，标签Apply数据
+            </summary>
+            <param name="tagInfo">查询条件，需要指定ID或TagCode或TagName属性</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.Delete(BIStudio.Framework.Tag.SYSTagAuthority)">
+            <summary>
+                删除指定的标签权限
+            </summary>
+            <param name="tagAuthorityInfo"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.Save(BIStudio.Framework.Tag.SYSTagGroup)">
+            <summary>
+                保存指定的标签组
+            </summary>
+            <param name="tagGroupInfo"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.Save(BIStudio.Framework.Tag.SYSTagClass)">
+            <summary>
+                保存指定的标签
+            </summary>
+            <param name="tagClassInfo"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.Save(BIStudio.Framework.Tag.SYSTag)">
+            <summary>
+                保存指定的标签项
+            </summary>
+            <param name="tagInfo"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.Save(BIStudio.Framework.Tag.SYSTagAuthority)">
+            <summary>
+                保存指定的标签权限
+            </summary>
+            <param name="tagAuthorityInfo"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.Save(BIStudio.Framework.Tag.SYSTagLogs[])">
+            <summary>
+                保存标签日志
+            </summary>
+            <param name="tagLogsInfo"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.UpdateTagSequence(System.Collections.Generic.Dictionary{System.Int64,System.Int32})">
+            <summary>
+                更新标签项排序
+            </summary>
+            <param name="idAndSequence"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.UpdateTagClassSequence(System.Collections.Generic.Dictionary{System.Int64,System.Int32})">
+            <summary>
+                更新标签排序
+            </summary>
+            <param name="idAndSequence"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.UpdateTagGroupSequence(System.Collections.Generic.Dictionary{System.Int64,System.Int32})">
+            <summary>
+                更新标签组排序
+            </summary>
+            <param name="idAndSequence"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.Apply``1(BIStudio.Framework.Tag.SYSTag,``0)">
+            <summary>
+                将指定的标签项贴入实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="tagInfo">标签，需要指定ID属性</param>
+            <param name="entity">要贴入标签的实体，需要指定ID属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.Apply``1(System.Collections.Generic.List{BIStudio.Framework.Tag.SYSTag},``0)">
+            <summary>
+                将指定的标签项批量贴入实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="tagInfo">标签，需要指定ID属性</param>
+            <param name="entity">要贴入标签的实体，需要指定ID属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.Apply``1(System.Collections.Generic.IEnumerable{System.Int64},``0)">
+            <summary>
+                将指定的标签项批量贴入实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="tagInfos"></param>
+            <param name="entity">要贴入标签的实体，需要指定ID属性</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.Apply``1(BIStudio.Framework.Tag.SYSTag,System.Collections.Generic.List{``0})">
+            <summary>
+                将指定的标签项贴入多个实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="tagInfo">标签，需要指定ID属性</param>
+            <param name="entity">要贴入标签的实体，需要指定ID属性</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.UnApply``1(``0,BIStudio.Framework.Tag.SYSTag)">
+            <summary>
+                删除已贴入实体的标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">要取消贴入标签的实体，需要指定ID属性</param>
+            <param name="tagInfo">查询条件，需要指定ID或TagCode或TagName属性</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.UnApply``1(``0,BIStudio.Framework.Tag.SYSTagClass)">
+            <summary>
+                删除已贴入实体的标签
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">要取消贴入标签的实体，需要指定ID属性</param>
+            <param name="tagClassInfo">查询条件，需要指定ID或ClassCode或ClassName属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.UnApply``1(``0,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+                删除已贴入实体的标签
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">要取消贴入标签的实体，需要指定ID属性</param>
+            <param name="tagClassIDs">标签ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.UnApply``1(``0,BIStudio.Framework.Tag.SYSTagGroup)">
+            <summary>
+                删除已贴入实体的标签
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">要取消贴入标签的实体，需要指定ID属性</param>
+            <param name="tagGroupInfo">查询条件，需要指定ID或GroupCode或GroupName属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.UnApply``1(``0)">
+            <summary>
+                删除已贴入实体的全部标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">要取消贴入标签的实体，需要指定ID属性</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.CreateSearch(System.String)">
+            <summary>
+                设置查询主表
+            </summary>
+            <param name="tableName">数据表名</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.CreateSearch(System.String,System.Int64[])">
+            <summary>
+                设置查询主表，并筛选出已贴入指定标签项的数据
+            </summary>
+            <param name="tableName">数据表名</param>
+            <param name="tagIDs">标签项ID列表</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.CreateSearch(System.String,BIStudio.Framework.Tag.EnumSYSTagSearch,System.Int64[])">
+            <summary>
+                设置查询主表，并筛选出已贴入指定标签项的数据
+            </summary>
+            <param name="tableName">数据表名</param>
+            <param name="matchType">匹配方式 EnumTagSearch</param>
+            <param name="tagIDs">标签项ID列表</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.CreateTarget(System.String)">
+            <summary>
+                返回指定表名的贴入对象编号
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.ITag.GetSpecification``1(System.Nullable{BIStudio.Framework.Tag.EnumSYSTagOperate})">
+            <summary>
+                获得指定类型的契约，如果目标包含多个类型，则使用AND连接
+            </summary>
+            <param name="operates"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.CreateOperateSpecification`1">
+            <summary>
+            规约--创建数据
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.DeleteOperateSpecification`1">
+            <summary>
+            规约--删除数据
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.ReadOperateSpecification`1">
+            <summary>
+            规约--读取数据
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.FullControlOperateSpecification`1">
+            <summary>
+            规约--完全控制数据
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.FontReadOperateSpecification`1">
+            <summary>
+            规约--前台读取数据
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.TagSpecificationBO.GetSpecification``1(System.Nullable{BIStudio.Framework.Tag.EnumSYSTagOperate},System.Nullable{System.Int64})">
+            <summary>
+            获得指定类型的契约，如果目标包含多个类型，则使用AND连接
+            </summary>
+            <param name="operates"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.UpdateOperateSpecification`1">
+            <summary>
+            规约--更新数据
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.GetTargetObjectIDByTargetIDAndTagIDs(System.Int64,System.Int64[])">
+            <summary>
+            根据贴入对象和标签值查找标签贴入数据
+            </summary>
+            <param name="targetID"></param>
+            <param name="tagIDs"></param>
+            <returns>查询语句</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.GetTargetObjectIDWithMatchRateByTargetIDAndTagIDs(System.Int64,System.Int64[])">
+            <summary>
+            根据贴入对象和标签值查找标签贴入数据和匹配程度(按匹配程度匹配)
+            </summary>
+            <param name="targetID"></param>
+            <param name="tagIDs"></param>
+            <returns>查询语句</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.GetTargetObjectIDWithGroupByTargetIDAndTagIDs(System.Int64,System.Int64[],System.Int32@)">
+            <summary>
+            根据贴入对象和标签值查找标签贴入数据和匹配程度
+            </summary>
+            <param name="targetID"></param>
+            <param name="tagIDs"></param>
+            <returns>查询语句</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.GetTagIDsByTargetIDAndTargetObjectID(System.Int64,System.Int64)">
+            <summary>
+            查找指定对象已贴入的标签项编号
+            </summary>
+            <param name="targetID"></param>
+            <param name="targetObjectID"></param>
+            <returns>查询语句</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.GetTagIDValuesByTargetIDAndTargetObjectID(System.Int64,System.Int64)">
+            <summary>
+            查找指定对象已贴入的标签项编号
+            </summary>
+            <param name="targetID"></param>
+            <param name="targetObjectID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.GetTagsByTargetIDAndTargetObjectID(System.Int64,System.Int64,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32})">
+            <summary>
+            查找指定对象已贴入的标签项
+            </summary>
+            <param name="targetID"></param>
+            <param name="targetObjectID"></param>
+            <param name="tagClassID"></param>
+            <param name="tagGroupID"></param>
+            <param name="DisplayLevel"></param>
+            <returns>查询语句</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.Save(BIStudio.Framework.Tag.SYSTagApply)">
+            <summary>
+            贴入新标签
+            </summary>
+            <param name="applyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.Save(System.Collections.Generic.List{BIStudio.Framework.Tag.SYSTagApply})">
+            <summary>
+            批量贴入新标签
+            </summary>
+            <param name="applyInfos"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.DeleteByCompanyID(System.Int64,System.Int64)">
+            <summary>
+            删除全部已贴入标签
+            </summary>
+            <param name="targetID"></param>
+            <param name="targetObjectID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.DeleteByTagID(System.Int64)">
+            <summary>
+            删除指定标签的贴入数据
+            </summary>
+            <param name="tagID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.DeleteByCompanyIDAndTagID(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            删除已贴入标签项
+            </summary>
+            <param name="targetID"></param>
+            <param name="targetObjectID"></param>
+            <param name="tagID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.DeleteByCompanyIDAndTagClassID(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            删除已贴入标签
+            </summary>
+            <param name="targetID"></param>
+            <param name="targetObjectID"></param>
+            <param name="tagClassID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagApplyBO.DeleteByCompanyIDAndTagGroupID(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            删除已贴入标签
+            </summary>
+            <param name="targetID"></param>
+            <param name="targetObjectID"></param>
+            <param name="tagGroupID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTagAuthorityBO">
+            <summary>
+            标签权限管理
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagAuthorityBO.GetAuthorityByCurrentUser(BIStudio.Framework.Tag.EnumSYSTagOperate)">
+            <summary>
+            得到当前用户可用权限
+            </summary>
+            <param name="tagOperate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagAuthorityBO.GetAuthorityByCurrentUser(BIStudio.Framework.Tag.EnumSYSTagOperate,System.Int64)">
+            <summary>
+            得到指定用户可用权限
+            </summary>
+            <param name="tagOperate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagAuthorityBO.SetTagAuthority(BIStudio.Framework.Tag.SYSTagConferAuthorityDTO)">
+            <summary>
+            授予标签权限
+            </summary>
+            <param name="dto"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagAuthorityBO.SetTagAuthority(BIStudio.Framework.Tag.SYSTagConferAuthorityDTO,System.Boolean)">
+            <summary>
+            授予标签权限
+            </summary>
+            <param name="dto"></param>
+            <param name="conferOrRevoke"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagAuthorityBO.getInfo(BIStudio.Framework.Tag.SYSTagConferAuthorityDTO,System.Boolean)">
+            <summary>
+            解析授予的权限
+            </summary>
+            <param name="dto"></param>
+            <param name="conferOrRevoke"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagAuthorityBO.getNodes(BIStudio.Framework.Tag.SYSTagConferAuthorityDTO)">
+            <summary>
+            解析被授权的标签
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagClassBO.getIDByTagClassName(System.String)">
+            <summary>
+            根据TagClass名称获得ID
+            </summary>
+            <param name="TagClassCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagClassBO.getIDByTagClassCode(System.String)">
+            <summary>
+            根据TagClass编号获得ID
+            </summary>
+            <param name="TagClassCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagClassBO.GetIDByTagClass(BIStudio.Framework.Tag.SYSTagClass)">
+            <summary>
+            根据TagClass获得ID
+            </summary>
+            <param name="tagClassInfo">需指定ID或ClassCode或ClassName属性</param>
+            <returns>标签ID或NULL</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagClassBO.GetTagClass">
+            <summary>
+            得到全部标签
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagClassBO.GetTagClass(System.String,System.Nullable{System.Int32})">
+            <summary>
+            得到指定标签组，指定标签类型的标签
+            </summary>
+            <param name="classCodePrefix">目录前缀</param>
+            <param name="displayLevel">标签类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagClassBO.Save(BIStudio.Framework.Tag.SYSTagClass)">
+            <summary>
+            更新标签
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagGroupBO.GetIDByTagGroup(BIStudio.Framework.Tag.SYSTagGroup)">
+            <summary>
+            根据TagGroup获得ID
+            </summary>
+            <param name="tagGroupInfo">需指定ID或GroupCode或GroupName属性</param>
+            <returns>标签ID或NULL</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagGroupBO.getIDByTagGroupName(System.String)">
+            <summary>
+            根据TagGroup名称获得ID
+            </summary>
+            <param name="tagGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagGroupBO.getIDByTagGroupCode(System.String)">
+            <summary>
+            根据TagGroup编号获得ID
+            </summary>
+            <param name="tagGroupCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagLogsBO.DeleteByTagID(System.Int64)">
+            <summary>
+            删除指定标签的贴入日志
+            </summary>
+            <param name="tagID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTagNodeBO">
+            <summary>
+            标签节点管理
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagNodeBO.FixBrokenNodes(System.Collections.Generic.List{BIStudio.Framework.Tag.SYSTagNodeDTO})">
+            <summary>
+            修复断开的节点
+            </summary>
+            <param name="nodes"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeBO.TagNodeComparer">
+            <summary>
+            标签节点比较器
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.Tag.SystemID">
+            <summary>
+            单位编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.Tag.tagNodeBO">
+            <summary>
+            标签节点管理
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.Tag.tagGroupBO">
+            <summary>
+            标签组管理
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.Tag.tagClassBO">
+            <summary>
+            标签管理
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.Tag.tagBO">
+            <summary>
+            标签项管理
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.Tag.tagTargetBO">
+            <summary>
+            标签贴入对象管理
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.Tag.tagApplyBO">
+            <summary>
+            标签贴入数据管理
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.Tag.tagAuthorityBO">
+            <summary>
+            标签权限管理
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.Tag.tagLogsBO">
+            <summary>
+            标签贴入日志管理
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.Tag.tagSpecificationBO">
+            <summary>
+            契约管理
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.FindBySpecification``1(System.Collections.Generic.List{``0})">
+            <summary>
+            筛选符合规约的数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="infos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.FindBySpecification``1(``0)">
+            <summary>
+            筛选符合规约的数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.Tag.TagDisplayLevels">
+            <summary>
+            返回全部标签类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagDisplayLevel(System.Int32)">
+            <summary>
+            返回指定标签类型的名称
+            </summary>
+            <param name="tagDisplayLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagNodesByGroupCode(System.String)">
+            <summary>
+            返回全部标签节点
+            </summary>
+            <param name="tagGroupCode">标签组代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagNodesByGroupCode(System.String,BIStudio.Framework.Tag.EnumSYSTagNodeType)">
+            <summary>
+            返回全部标签节点
+            </summary>
+            <param name="tagGroupCode">标签组代码</param>
+            <param name="nodeType">标签节点类型,使用OR逻辑连接多个查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagNodesByGroupCode(System.String,BIStudio.Framework.Tag.EnumSYSTagNodeType,System.Boolean)">
+            <summary>
+            返回全部标签节点
+            </summary>
+            <param name="tagGroupCode">标签组代码</param>
+            <param name="nodeType">标签节点类型,使用OR逻辑连接多个查询条件</param>
+            <param name="fixBrokenNodes">是否自动修复断开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagNodesByGroupCode(System.String,BIStudio.Framework.Tag.EnumSYSTagNodeType,System.Boolean,System.Nullable{System.Int32})">
+            <summary>
+            返回全部标签节点
+            </summary>
+            <param name="tagGroupCode">标签组代码</param>
+            <param name="nodeType">标签节点类型,使用OR逻辑连接多个查询条件</param>
+            <param name="fixBrokenNodes">是否自动修复断开的节点</param>
+            <param name="displayLevel">标签类型,EnumTagDisplayLevel</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagGroups">
+            <summary>
+            返回全部标签组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagGroup(System.Int64)">
+            <summary>
+            返回制定的标签组
+            </summary>
+            <param name="tagGroupID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagGroup(System.String)">
+            <summary>
+            返回制定的标签组
+            </summary>
+            <param name="tagGroupCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagClasses">
+            <summary>
+            查询全部标签
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagClasses(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            返回指定的标签
+            </summary>
+            <param name="tagClassIDs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagClassesByGroupCode(System.String)">
+            <summary>
+            返回指定标签组内的全部标签
+            </summary>
+            <param name="tagGroupCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagClassesByGroupCode(System.String,System.Nullable{System.Int32})">
+            <summary>
+            返回指定标签组内的全部标签
+            </summary>
+            <param name="tagGroupCode"></param>
+            <param name="displayLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagClass(System.Int64)">
+            <summary>
+            返回指定的标签
+            </summary>
+            <param name="tagClassID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagClass(System.String)">
+            <summary>
+            返回指定的标签
+            </summary>
+            <param name="tagClassCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagClass(BIStudio.Framework.Tag.SYSTagClass)">
+            <summary>
+            返回指定的标签
+            </summary>
+            <param name="tagClassInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTags">
+            <summary>
+            返回全部标签项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTags(System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            返回多个指定的标签项
+            </summary>
+            <param name="tagIDs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagsByParentID(System.Int64)">
+            <summary>
+            返回指定标签的下级选项
+            </summary>
+            <param name="parentTagID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagsByGroupCode(System.String)">
+            <summary>
+            返回指定标签组内的全部标签项
+            </summary>
+            <param name="tagGroupCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagsByGroupCode(System.String,System.Nullable{System.Int32})">
+            <summary>
+            返回指定标签组内的全部标签项
+            </summary>
+            <param name="tagGroupCode"></param>
+            <param name="displayLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagsByClassID(System.Int64)">
+            <summary>
+            返回指定标签的全部选项
+            </summary>
+            <param name="tagClassID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagsByClassID(System.Int64,System.Int64)">
+            <summary>
+            返回指定标签的下级选项
+            </summary>
+            <param name="tagClassID"></param>
+            <param name="parentTagID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagsByClassID(System.Int64,System.String)">
+            <summary>
+            返回指定标签的下级选项
+            </summary>
+            <param name="tagClassID"></param>
+            <param name="parentTagName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagsByClassCode(System.String)">
+            <summary>
+            返回指定标签的全部选项
+            </summary>
+            <param name="tagClassCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagsByClassCode(System.String,System.Int64)">
+            <summary>
+            返回指定标签的下级选项
+            </summary>
+            <param name="tagClassCode"></param>
+            <param name="parentTagID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagsByClassCode(System.String,System.String)">
+            <summary>
+            返回指定标签的下级选项
+            </summary>
+            <param name="tagClassCode"></param>
+            <param name="parentTagName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTag(System.Int64)">
+            <summary>
+            返回指定的标签项
+            </summary>
+            <param name="tagID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTag(System.String,System.String)">
+            <summary>
+            返回指定的标签项
+            </summary>
+            <param name="tagClassCode">标签代码</param>
+            <param name="tagName">标签项名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTag(System.Int64,System.String)">
+            <summary>
+            返回指定的标签项
+            </summary>
+            <param name="tagClassID">标签编号</param>
+            <param name="tagName">标签项名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagByName(System.String,System.String)">
+            <summary>
+            返回指定的标签项
+            </summary>
+            <param name="tagClassCode">标签代码</param>
+            <param name="tagName">标签项名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagByName(System.Int64,System.String)">
+            <summary>
+            返回指定的标签项
+            </summary>
+            <param name="tagClassID">标签编号</param>
+            <param name="tagName">标签项名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTag(System.String,System.Int64)">
+            <summary>
+            返回指定的标签项
+            </summary>
+            <param name="tagClassCode">标签代码</param>
+            <param name="tagValue">标签项值</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagByCode(System.String,System.String)">
+            <summary>
+            返回指定的标签项
+            </summary>
+            <param name="tagClassCode">标签代码</param>
+            <param name="tagCode">标签项代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagByCode(System.Int64,System.String)">
+            <summary>
+            返回指定的标签项
+            </summary>
+            <param name="tagClassID">标签编号</param>
+            <param name="tagCode">标签项代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTag(System.Int64,System.Int32)">
+            <summary>
+            返回指定的标签项
+            </summary>
+            <param name="tagClassID">标签编号</param>
+            <param name="tagValue">标签项值</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagByValue(System.String,System.String)">
+            <summary>
+            返回指定的标签项
+            </summary>
+            <param name="tagClassCode">标签代码</param>
+            <param name="tagValue">标签项值</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagByValue(System.Int64,System.String)">
+            <summary>
+            返回指定的标签项
+            </summary>
+            <param name="tagClassID">标签编号</param>
+            <param name="tagValue">标签项值</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagApplies``1(``0)">
+            <summary>
+            返回指定实体已贴入的标签项编号
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">贴入标签的实体，必须指定ID</param>
+            <returns>已贴入实体的标签项编号</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagApplyInfos``1(``0)">
+            <summary>
+            返回指定实体已贴入的标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">贴入标签的实体，必须指定ID</param>
+            <returns>已贴入实体的标签项</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagApplyInfos``1(``0,BIStudio.Framework.Tag.SYSTagClass)">
+            <summary>
+            返回指定实体已贴入的标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">贴入标签的实体，需指定ID属性</param>
+            <param name="tagClassInfo">查询条件，需要指定ID或ClassCode或ClassName属性</param>
+            <returns>已贴入实体的标签项</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagApplyInfos``1(``0,BIStudio.Framework.Tag.SYSTagGroup)">
+            <summary>
+            返回指定实体已贴入的标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <param name="tagGroupInfo">查询条件，需要指定ID或GroupCode或GroupName属性</param>
+            <returns>已贴入实体的标签项</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagApplyInfos``1(``0,BIStudio.Framework.Tag.SYSTagGroup,System.Nullable{BIStudio.Framework.Tag.EnumSYSTagDisplayLevel})">
+            <summary>
+            返回指定实体已贴入的标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <param name="tagGroupInfo">查询条件，需要指定ID或GroupCode或GroupName属性</param>
+            <param name="displayLevel">标签类型</param>
+            <returns>已贴入实体的标签项</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagApplyInfos``1(``0,BIStudio.Framework.Tag.SYSTagGroup,System.Nullable{System.Int32})">
+            <summary>
+            返回指定实体已贴入的标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <param name="tagGroupInfo">查询条件，需要指定ID或GroupCode或GroupName属性</param>
+            <param name="displayLevel">标签类型</param>
+            <returns>已贴入实体的标签项</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagLogs``1(BIStudio.Framework.Tag.SYSTag,``0)">
+            <summary>
+            返回指定实体已贴入的标签日志
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="tagInfo">标签，需要指定ID属性</param>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagLogs``1(BIStudio.Framework.Tag.SYSTagClass,``0)">
+            <summary>
+            返回指定实体已贴入的标签组日志
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="tagClassInfo">查询条件，需要指定ID或ClassCode或ClassName属性</param>
+            <param name="entity">贴入标签的实体，需要指定ID属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagLogs(BIStudio.Framework.Tag.SYSTagLogs)">
+            <summary>
+            返回指定条件的标签日志
+            </summary>
+            <param name="tagLogsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagAuthority(System.Int64)">
+            <summary>
+            返回指定的标签权限
+            </summary>
+            <param name="tagAuthorityInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetTagAuthorities(BIStudio.Framework.Tag.SYSTagAuthority)">
+            <summary>
+            返回指定的标签权限
+            </summary>
+            <param name="tagAuthorityInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.SetTagAuthority(BIStudio.Framework.Tag.SYSTagConferAuthorityDTO)">
+            <summary>
+            授予标签权限
+            </summary>
+            <param name="dto"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.SetTagAuthority(BIStudio.Framework.Tag.SYSTagConferAuthorityDTO,System.Boolean)">
+            <summary>
+            授予标签权限
+            </summary>
+            <param name="dto"></param>
+            <param name="conferOrRevoke">是授予权限True,还是取消权限False</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.FixBrokenNodes(System.Collections.Generic.List{BIStudio.Framework.Tag.SYSTagNodeDTO})">
+            <summary>
+            修复断开的节点
+            </summary>
+            <param name="nodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.FixBrokenNodes(System.Collections.Generic.List{BIStudio.Framework.Tag.SYSTagGroup})">
+            <summary>
+            修复断开的节点
+            </summary>
+            <param name="nodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.FixBrokenNodes(System.Collections.Generic.List{BIStudio.Framework.Tag.SYSTagClass})">
+            <summary>
+            修复断开的节点
+            </summary>
+            <param name="nodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.FixBrokenNodes(System.Collections.Generic.List{BIStudio.Framework.Tag.SYSTag})">
+            <summary>
+            修复断开的节点
+            </summary>
+            <param name="nodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.Delete(BIStudio.Framework.Tag.SYSTagClass)">
+            <summary>
+            删除指定的标签，标签选项，标签日志，标签Apply数据
+            </summary>
+            <param name="tagClassInfo">查询条件，需要指定ID或ClassCode或ClassName属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.Delete(BIStudio.Framework.Tag.SYSTag)">
+            <summary>
+            删除指定的标签项，子级标签项，标签日志，标签Apply数据
+            </summary>
+            <param name="tagInfo">查询条件，需要指定ID或TagCode或TagName属性</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.Delete(BIStudio.Framework.Tag.SYSTagAuthority)">
+            <summary>
+            删除指定的标签权限
+            </summary>
+            <param name="tagAuthorityInfo"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.Save(BIStudio.Framework.Tag.SYSTagGroup)">
+            <summary>
+            保存指定的标签组
+            </summary>
+            <param name="tagGroupInfo"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.Save(BIStudio.Framework.Tag.SYSTagClass)">
+            <summary>
+            保存指定的标签
+            </summary>
+            <param name="tagClassInfo"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.Save(BIStudio.Framework.Tag.SYSTag)">
+            <summary>
+            保存指定的标签项
+            </summary>
+            <param name="tagInfo"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.Save(BIStudio.Framework.Tag.SYSTagAuthority)">
+            <summary>
+            保存指定的标签权限
+            </summary>
+            <param name="tagAuthorityInfo"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.Save(BIStudio.Framework.Tag.SYSTagLogs[])">
+            <summary>
+            保存标签日志
+            </summary>
+            <param name="tagLogsInfo"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.UpdateTagSequence(System.Collections.Generic.Dictionary{System.Int64,System.Int32})">
+            <summary>
+            更新标签项排序
+            </summary>
+            <param name="idAndSequence"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.UpdateTagClassSequence(System.Collections.Generic.Dictionary{System.Int64,System.Int32})">
+            <summary>
+            更新标签排序
+            </summary>
+            <param name="idAndSequence"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.UpdateTagGroupSequence(System.Collections.Generic.Dictionary{System.Int64,System.Int32})">
+            <summary>
+            更新标签组排序
+            </summary>
+            <param name="idAndSequence"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.Apply``1(BIStudio.Framework.Tag.SYSTag,``0)">
+            <summary>
+            将指定的标签项贴入实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="tagInfo">标签，需要指定ID属性</param>
+            <param name="entity">要贴入标签的实体，需要指定ID属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.Apply``1(System.Collections.Generic.List{BIStudio.Framework.Tag.SYSTag},``0)">
+            <summary>
+            将指定的标签项批量贴入实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="tagInfos"></param>
+            <param name="entity">要贴入标签的实体，需要指定ID属性</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.Apply``1(System.Collections.Generic.IEnumerable{System.Int64},``0)">
+            <summary>
+            将指定的标签项批量贴入实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="tagIDs"></param>
+            <param name="entity">要贴入标签的实体，需要指定ID属性</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.Apply``1(BIStudio.Framework.Tag.SYSTag,System.Collections.Generic.List{``0})">
+            <summary>
+            将指定的标签项贴入多个实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="tagInfo">标签，需要指定ID属性</param>
+            <param name="entity">要贴入标签的实体，需要指定ID属性</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.UnApply``1(``0,BIStudio.Framework.Tag.SYSTag)">
+            <summary>
+            删除已贴入实体的标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">要取消贴入标签的实体，需要指定ID属性</param>
+            <param name="tagInfo">查询条件，需要指定ID或TagCode或TagName属性</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.UnApply``1(``0,BIStudio.Framework.Tag.SYSTagClass)">
+            <summary>
+            删除已贴入实体的标签
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">要取消贴入标签的实体，需要指定ID属性</param>
+            <param name="tagClassInfo">查询条件，需要指定ID或ClassCode或ClassName属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.UnApply``1(``0,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            删除已贴入实体的标签
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">要取消贴入标签的实体，需要指定ID属性</param>
+            <param name="tagClassIDs">标签ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.UnApply``1(``0,BIStudio.Framework.Tag.SYSTagGroup)">
+            <summary>
+            删除已贴入实体的标签
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">要取消贴入标签的实体，需要指定ID属性</param>
+            <param name="tagGroupInfo">查询条件，需要指定ID或GroupCode或GroupName属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.UnApply``1(``0)">
+            <summary>
+            删除已贴入实体的全部标签项
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entity">要取消贴入标签的实体，需要指定ID属性</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.CreateSearch(System.String)">
+            <summary>
+            设置查询主表
+            </summary>
+            <param name="tableName">数据表名</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.CreateSearch(System.String,System.Int64[])">
+            <summary>
+            设置查询主表，并筛选出已贴入指定标签项的数据
+            </summary>
+            <param name="tableName">数据表名</param>
+            <param name="tagIDs">标签项ID列表</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.CreateSearch(System.String,BIStudio.Framework.Tag.EnumSYSTagSearch,System.Int64[])">
+            <summary>
+            设置查询主表，并筛选出已贴入指定标签项的数据
+            </summary>
+            <param name="tableName">数据表名</param>
+            <param name="matchType">匹配方式 EnumTagSearch</param>
+            <param name="tagIDs">标签项ID列表</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.CreateTarget(System.String)">
+            <summary>
+            返回指定表名的贴入对象编号
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.Tag.GetSpecification``1(System.Nullable{BIStudio.Framework.Tag.EnumSYSTagOperate})">
+            <summary>
+            获得指定类型的契约，如果目标包含多个类型，则使用AND连接
+            </summary>
+            <param name="operates"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.TagService.GetInstance(BIStudio.Framework.Domain.ISpecification{BIStudio.Framework.Domain.Entity})">
+            <summary>
+            返回标签管理接口，并筛选返回值为List&lt;DataEntityBase&gt;的查询
+            </summary>
+            <param name="specification">查询筛选器</param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTagSearchBO">
+            <summary>
+            标签搜索器
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagSearchBO.Parameters">
+            <summary>
+            返回当前查询参数
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.#ctor(System.String)">
+            <summary>
+            设置查询主表
+            </summary>
+            <param name="tableName">数据表名</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.#ctor(System.String,System.Int64[])">
+            <summary>
+            设置查询主表，并筛选出已贴入指定标签项的数据
+            </summary>
+            <param name="tableName">数据表名</param>
+            <param name="tagIDs">标签项ID列表</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.#ctor(System.String,BIStudio.Framework.Tag.EnumSYSTagSearch,System.Int64[])">
+            <summary>
+            设置查询主表，并筛选出已贴入指定标签项的数据
+            </summary>
+            <param name="tableName">数据表名</param>
+            <param name="matchType">匹配方式 EnumTagSearch</param>
+            <param name="tagIDs">标签项ID列表</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.#ctor(System.Int64,System.String)">
+            <summary>
+            设置查询主表
+            </summary>
+            <param name="systemID">单位ID</param>
+            <param name="tableName">数据表名</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.#ctor(System.Int64,System.String,System.Int64[])">
+            <summary>
+            设置查询主表，并筛选出已贴入指定标签项的数据
+            </summary>
+            <param name="systemID">单位ID</param>
+            <param name="tableName">数据表名</param>
+            <param name="tagIDs">标签项ID列表</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.#ctor(System.Int64,System.String,BIStudio.Framework.Tag.EnumSYSTagSearch,System.Int64[])">
+            <summary>
+            设置查询主表，并筛选出已贴入指定标签项的数据
+            </summary>
+            <param name="systemID">单位ID</param>
+            <param name="tableName">数据表名</param>
+            <param name="matchType">匹配方式 EnumTagSearch</param>
+            <param name="tagIDs">标签项ID列表</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.InnerJoin(System.String,System.String)">
+            <summary>
+            从指定数据表中筛选出已贴入指定标签项的数据，然后内连接到主表
+            </summary>
+            <param name="tableName">数据表名</param>
+            <param name="tableField">连接字段名</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.InnerJoin(System.String,System.String,System.Int64[])">
+            <summary>
+            从指定数据表中筛选出已贴入指定标签项的数据，然后内连接到主表
+            </summary>
+            <param name="tableName">数据表名</param>
+            <param name="tableField">连接字段名</param>
+            <param name="tagIDs">标签项ID列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.InnerJoin(System.String,System.String,System.String,System.Int64[])">
+            <summary>
+            从指定数据表中筛选出已贴入指定标签项的数据，然后内连接到主表
+            </summary>
+            <param name="joinField">连接字段名</param>
+            <param name="tableName">目标表名</param>
+            <param name="tableField">目标字段名</param>
+            <param name="tagIDs">标签项ID列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.LeftJoin(System.String,System.String)">
+            <summary>
+            从指定数据表中筛选出已贴入指定标签项的数据，然后左连接到主表
+            </summary>
+            <param name="tableName">数据表名</param>
+            <param name="tableField">连接字段名</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.LeftJoin(System.String,System.String,System.Int64[])">
+            <summary>
+            从指定数据表中筛选出已贴入指定标签项的数据，然后左连接到主表
+            </summary>
+            <param name="tableName">数据表名</param>
+            <param name="tableField">连接字段名</param>
+            <param name="tagIDs">标签项ID列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.LeftJoin(System.String,System.String,System.String,System.Int64[])">
+            <summary>
+            从指定数据表中筛选出已贴入指定标签项的数据，然后左连接到主表
+            </summary>
+            <param name="joinField">连接字段名</param>
+            <param name="tableName">目标表名</param>
+            <param name="tableField">目标字段名</param>
+            <param name="tagIDs">标签项ID列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.Join(System.String,System.String,System.String,System.String,System.Int64[])">
+            <summary>
+            从指定数据表中筛选出已贴入指定标签项的数据，然后连接到主表
+            </summary>
+            <param name="joinType">连接类型</param>
+            <param name="joinField">连接字段名</param>
+            <param name="tableName">目标表名</param>
+            <param name="tableField">目标字段名</param>
+            <param name="tagIDs">标签项ID列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.Where(System.String)">
+            <summary>
+            增加约束条件
+            </summary>
+            <param name="sql">查询语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.Where(System.String,System.Object)">
+            <summary>
+            增加约束条件，使用DbParameter参数
+            </summary>
+            <param name="sql">查询语句</param>
+            <param name="args">DbParameter查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.Where``1(``0)">
+            <summary>
+            增加约束条件，使用DbParameter参数
+            </summary>
+            <param name="query">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.Where(System.String,System.Object[])">
+            <summary>
+            增加约束条件，使用string.Format参数
+            </summary>
+            <param name="sql">查询语句</param>
+            <param name="args">string.Format查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.Select">
+            <summary>
+            执行搜索并返回全部字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.Select(System.String[])">
+            <summary>
+            执行搜索并返回指定的字段
+            </summary>
+            <param name="columns">查询字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.Select(System.Int32,System.Int32,System.String[])">
+            <summary>
+            执行分页搜索并返回指定的字段
+            </summary>
+            <param name="page">页码</param>
+            <param name="itemsPerPage">每页行数</param>
+            <param name="columns">查询字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.SelectAsync">
+            <summary>
+            异步执行分页搜索并返回全部字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.SelectAsync(System.String[])">
+            <summary>
+            异步执行分页搜索并返回指定的字段
+            </summary>
+            <param name="columns">查询字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.Select``1">
+            <summary>
+            执行搜索并返回实体集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.Select``1(System.String[])">
+            <summary>
+            执行搜索并返回指定的字段
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="columns">查询字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.Select``1(System.Int32,System.Int32,System.String[])">
+            <summary>
+            执行分页搜索并返回指定的字段
+            </summary>
+            <param name="page">页码</param>
+            <param name="itemsPerPage">每页行数</param>
+            <param name="columns">查询字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.SelectAsync``1">
+            <summary>
+            异步执行分页搜索并返回全部字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.SelectAsync``1(System.String[])">
+            <summary>
+            异步执行分页搜索并返回指定的字段
+            </summary>
+            <param name="columns">查询字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.SelectObject``1">
+            <summary>
+            执行搜索并返回实体集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.SelectObject``1(System.String[])">
+            <summary>
+            执行搜索并返回指定的字段
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="columns">查询字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.SelectObject``1(System.Int32,System.Int32,System.String[])">
+            <summary>
+            执行分页搜索并返回指定的字段
+            </summary>
+            <param name="page">页码</param>
+            <param name="itemsPerPage">每页行数</param>
+            <param name="columns">查询字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.SelectObjectAsync``1">
+            <summary>
+            异步执行分页搜索并返回全部字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.SelectObjectAsync``1(System.String[])">
+            <summary>
+            异步执行分页搜索并返回指定的字段
+            </summary>
+            <param name="columns">查询字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.OrderBy(System.String[])">
+            <summary>
+            设置搜索结果按指定字段正序排列
+            </summary>
+            <param name="columns">参与排序的字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.OrderByDescending(System.String[])">
+            <summary>
+            设置搜索结果按指定字段倒序排列
+            </summary>
+            <param name="columns">参与排序的字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.GroupBy(System.String[])">
+            <summary>
+            设置分组
+            </summary>
+            <param name="columns">参与分组的字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagSearchBO.resolveTableName(System.String)">
+            <summary>
+            将查询语句中的表名替换为t[index]格式
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagTargetBO.Item(System.String)">
+            <summary>
+            返回指定表名的贴入对象
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.GetTagByTagClass(System.String)">
+            <summary>
+            根据标签类型获得标签
+            </summary>
+            <param name="TagClass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.GetTagByTagClassID(System.String)">
+            <summary>
+            根据标签类型获得标签
+            </summary>
+            <param name="TagClassID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.GetTagByTagClassID(System.Int64,System.Nullable{System.Int64})">
+            <summary>
+            根据标签类型获得标签
+            </summary>
+            <param name="TagClassID"></param>
+            <param name="ParentTagID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.GetTagByTagClassID(System.Int64,System.String)">
+            <summary>
+            根据标签类型获得标签
+            </summary>
+            <param name="TagClassID"></param>
+            <param name="ParentTagName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.Save(BIStudio.Framework.Tag.SYSTag)">
+            <summary>
+            在Tag表中新建或编辑一条数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.DeleteTagByTagClass(System.String)">
+            <summary>
+            根据TagClass删除Tag表中的数据
+            </summary>
+            <param name="tagClassIDs"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.getIDByTagName(System.String,System.Nullable{System.Int64})">
+            <summary>
+            根据Tag名称获得ID
+            </summary>
+            <param name="TagCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.getIDByTagCode(System.String,System.Nullable{System.Int64})">
+            <summary>
+            根据Tag编号获得ID
+            </summary>
+            <param name="TagCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.GetIDByTag(BIStudio.Framework.Tag.SYSTag)">
+            <summary>
+            根据Tag获得ID
+            </summary>
+            <param name="tagInfo">查询条件，需要指定ID或TagCode或TagName属性</param>
+            <returns>标签项ID或NULL</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.GetTagByTagClassCode(System.String)">
+            <summary>
+            根据标签代码获得标签项
+            </summary>
+            <param name="TagClassCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.GetTagByTagClassCode(System.String,System.String)">
+            <summary>
+            根据标签代码获得标签项
+            </summary>
+            <param name="TagClassCode"></param>
+            <param name="tagName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.GetTagByTagClassCode(System.String,System.String,System.String)">
+            <summary>
+            根据标签代码获得标签项
+            </summary>
+            <param name="TagClassCode"></param>
+            <param name="tagName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.GetTagClass(System.String,System.Nullable{System.Int64})">
+            <summary>
+            取出Tag表中的一批数据
+            </summary>
+            <param name="classCodePrefix">目录前缀</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.GetTagsByParentID(System.Int64)">
+            <summary>
+            根据父节点查找【下一级】子节点
+            </summary>
+            <param name="parentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.GetTagsByParentID(System.String,System.Int64)">
+            <summary>
+            根据父节点查找【下一级】子节点
+            </summary>
+            <param name="TagClassCode"></param>
+            <param name="ParentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.GetTagsByParentID(System.String,System.String)">
+            <summary>
+            根据父节点查找【下一级】子节点
+            </summary>
+            <param name="TagClassCode"></param>
+            <param name="ParentName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.UpdateChildTagByParant(System.Nullable{System.Int64})">
+            <summary>
+            更新指定标签项的排序
+            </summary>
+            <param name="tagClassID"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Tag.SYSTagBO.UpdateSequence(System.Collections.Generic.Dictionary{System.Int64,System.Int32})">
+            <summary>
+            更新指定标签项的排序
+            </summary>
+            <param name="idAndSequence"></param>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.OperateFlagEnum">
+            <summary>
+            标签操作
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.OperateFlagEnum.TagAdd">
+            <summary>
+            添加
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.OperateFlagEnum.TagEdit">
+            <summary>
+            修改
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.OperateFlagEnum.TagDelete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.EnumSYSTagAPIVersion">
+            <summary>
+            标签库版本
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagAPIVersion.Classic">
+            <summary>
+            经典版
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagAPIVersion.Standard">
+            <summary>
+            标准版
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.EnumSYSTagDisplayLevel">
+            <summary>
+            标签类型
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagDisplayLevel.System">
+            <summary>
+            贴入标签
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagDisplayLevel.Custom">
+            <summary>
+            分类标签
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagDisplayLevel.Dict">
+            <summary>
+            字典
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.EnumSYSTagSearch">
+            <summary>
+            标签搜索方式
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagSearch.Fuzzy">
+            <summary>
+            模糊匹配，搜索结果至少需要包含一个标签
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagSearch.Smart">
+            <summary>
+            智能匹配，搜索结果包含相关度(tApply.MatchRate)字段
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagSearch.Exact">
+            <summary>
+            精确匹配，搜索结果必需包含全部标签
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.EnumSYSTagOperate">
+            <summary>
+            标签操作权限
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagOperate.Create">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagOperate.Update">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagOperate.Read">
+            <summary>
+            读取
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagOperate.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagOperate.FullControl">
+            <summary>
+            完全控制
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagOperate.FontRead">
+            <summary>
+            前台浏览
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.EnumSYSTagRange">
+            <summary>
+            标签权限范围
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagRange.Parents">
+            <summary>
+            父级标签节点
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagRange.Current">
+            <summary>
+            当前标签节点
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagRange.Children">
+            <summary>
+            子级标签节点
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.EnumSYSTagAuthorityType">
+            <summary>
+            标签权限类型
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagAuthorityType.User">
+            <summary>
+            用户权限
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagAuthorityType.Role">
+            <summary>
+            角色权限
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagAuthorityType.Dept">
+            <summary>
+            部门权限
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.EnumSYSTagNodeType">
+            <summary>
+            标签节点类型
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagNodeType.TagGroup">
+            <summary>
+            标签组
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagNodeType.TagClass">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.EnumSYSTagNodeType.Tag">
+            <summary>
+            标签项
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTagApply">
+            <summary>
+            标签贴入日志
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagApply.TagID">
+            <summary>
+            标签编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagApply.TargetID">
+            <summary>
+            贴入对象
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagApply.TargetObjectID">
+            <summary>
+            贴入对象的主键值
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagApply.SystemID">
+            <summary>
+            单位ID
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTagAuthorityDTO">
+            <summary>
+            权限所有者
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthorityDTO.AuthorityText">
+            <summary>
+            权限所有者
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthorityDTO.AuthorityValue">
+            <summary>
+            权限所有者编号
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTagAuthority">
+            <summary>
+            标签权限
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.SystemID">
+            <summary>
+            单位ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.ObjectType">
+            <summary>
+            被授权的目标(TagGroup,TagClass,Tag)
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.ObjectValue">
+            <summary>
+            被授权的目标编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.ObjectText">
+            <summary>
+            被授权的目标
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.AuthorityType">
+            <summary>
+            权限所有者(User,Role,Dept)
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.AuthorityValue">
+            <summary>
+            权限所有者编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.AuthorityText">
+            <summary>
+            权限所有者
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.AcceptOperate">
+            <summary>
+            允许的操作,EnumTagOperate
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.RejectOperate">
+            <summary>
+            拒绝的操作,EnumTagOperate
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.Inputer">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.InputerID">
+            <summary>
+            创建人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagAuthority.InputTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTagClass">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.SystemID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.AppID">
+            <summary>
+            标签组编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.ClassName">
+            <summary>
+            类型名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.ClassCode">
+            <summary>
+            code标示符
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.DisplayLevel">
+            <summary>
+            标签类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.IsBuiltIn">
+            <summary>
+            标签等级
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.Sequence">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.Remark">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.Inputer">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.InputerID">
+            <summary>
+            创建人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.InputTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.ClassValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagClass.Views">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagConferAuthorityDTO.TargetType">
+            <summary>
+            授权的目标类型（用户，角色，部门）
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagConferAuthorityDTO.TargetContent">
+            <summary>
+            授权的目标
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagConferAuthorityDTO.AuthorityOperate">
+            <summary>
+            授权类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagConferAuthorityDTO.AuthorityRange">
+            <summary>
+            授权范围
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagConferAuthorityDTO.TagNode">
+            <summary>
+            授予权限的标签
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagConferAuthorityDTO.TagDisplayLevel">
+            <summary>
+            授予权限的标签类型（留空则授予所有类型）
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagConferAuthorityDTO.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTag">
+            <summary>
+            标签选项
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.SystemID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.AppID">
+            <summary>
+            标签组编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.TagClass">
+            <summary>
+            标签类型名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.TagClassID">
+            <summary>
+            标签类型ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.TagName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.TagCode">
+            <summary>
+            code标示符
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.TagValue">
+            <summary>
+            标签值范围,例如(0~10000)
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.Path">
+            <summary>
+            标签的全路径
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.Layer">
+            <summary>
+            当前所在层
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.ParentID">
+            <summary>
+            多级分类标签时上级标签id，默认为0
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.IsLeaf">
+            <summary>
+            是否叶子，1表示是叶子，不是为0，只有没有子节点时才是叶子
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.IsBuiltIn">
+            <summary>
+            标签项等级
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.Sequence">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.Remark">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.Inputer">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.InputerID">
+            <summary>
+            创建人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.InputTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.ComputedSequence">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTag.Views">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTagLogs">
+            <summary>
+             在这里添加类说明。
+            </summary>
+            <remarks>
+            上海拜特信息技术有限公司[2011/5/12]
+            </remarks>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagLogs.SystemID">
+            <summary>
+            单位ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagLogs.TagName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagLogs.TagID">
+            <summary>
+            标签ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagLogs.TagClass">
+            <summary>
+            标签类型名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagLogs.TagClassID">
+            <summary>
+            标签类型ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagLogs.TargetObject">
+            <summary>
+            目标对象的名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagLogs.TargetObjectID">
+            <summary>
+            目标对象的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagLogs.Inputer">
+            <summary>
+            登记人的姓名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagLogs.InputTime">
+            <summary>
+            登记时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagLogs.InputIP">
+            <summary>
+            登记人主机的IP地址
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagLogs.OperateFlag">
+            <summary>
+            1.新增 2.删除 3.修改
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTagNodeDTO">
+            <summary>
+            标签节点信息，包含标签和标签项
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeDTO.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeDTO.NodeType">
+            <summary>
+            节点类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeDTO.ParentID">
+            <summary>
+            父级主键ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeDTO.ParentNodeType">
+            <summary>
+            父级节点类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeDTO.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeDTO.Code">
+            <summary>
+            标示符
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeDTO.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeDTO.IsBuiltIn">
+            <summary>
+            是否内置标签
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeDTO.DisplayLevel">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeDTO.Sequence">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeDTO.Remark">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagNodeDTO.DataSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTagObjectDTO">
+            <summary>
+            被授权的目标
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagObjectDTO.ObjectType">
+            <summary>
+            被授权的目标(TagGroup,TagClass,Tag)
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagObjectDTO.ObjectValue">
+            <summary>
+            被授权的目标编号
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tag.SYSTagTarget">
+            <summary>
+            标签贴入对象
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagTarget.SystemID">
+            <summary>
+            单位ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagTarget.TargetName">
+            <summary>
+            贴入对象名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagTarget.TargetCode">
+            <summary>
+            对象标识，通常是数据库表名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagTarget.Sequence">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tag.SYSTagTarget.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.SYSTagApplySql.GetTargetObjectIDWithMatchRateSql">
+            <summary>
+            按匹配程度匹配
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tag.SYSTagApplySql.GetTargetObjectIDWithGroupSql">
+            <summary>
+            按标签分组匹配
+            </summary>
+        </member>
+    </members>
+</doc>

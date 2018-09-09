@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.BestPractice.Impl</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.BestPractice.Impl.UserEntity">
+            <summary>
+            用户表，已实现输入审计，逻辑删除
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.BestPractice.Impl.UserEntity.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.BestPractice.Impl.UserEntity.Inputer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.BestPractice.Impl.UserEntity.InputerID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.BestPractice.Impl.UserEntity.InputTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.BestPractice.Impl.UserEntity.IsDelete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.BestPractice.Impl.CreateUserCommandHandler">
+            <summary>
+            准备创建用户
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.BestPractice.Impl.CreateUserCommand">
+            <summary>
+            请求创建用户
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.BestPractice.Impl.CreateUserCommand.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.BestPractice.Impl.CreateUserCommand.UserID">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.BestPractice.Impl.UserCreatedEventHandler.Handle(BIStudio.Framework.BestPractice.Impl.UserCreatedEvent)">
+            <summary>
+            更新缓存字段
+            </summary>
+            <param name="evt"></param>
+        </member>
+        <member name="T:BIStudio.Framework.BestPractice.Impl.UserCreatedEvent">
+            <summary>
+            用户已创建
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.BestPractice.Impl.CQRSService">
+            <summary>
+            应用模块服务层，由Web API调用
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.BestPractice.Impl.CQRSService.CreateUser(System.String)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.BestPractice.Impl.CQRSService.FindUser(System.String)">
+            <summary>
+            查询订单
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.BestPractice.Impl.UserNameSpecification">
+            <summary>
+            按用户名称查询订单
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.BestPractice.Impl.DDDService.CreateUser(System.String)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.BestPractice.Impl.DDDService.FindUser(System.String)">
+            <summary>
+            查询用户
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.BestPractice.Impl.ISampleService">
+            <summary>
+            表示应用模块服务层，由Web API调用
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.BestPractice.Impl.ISampleService.CreateUser(System.String)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.BestPractice.Impl.ISampleService.FindUser(System.String)">
+            <summary>
+            查询用户
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

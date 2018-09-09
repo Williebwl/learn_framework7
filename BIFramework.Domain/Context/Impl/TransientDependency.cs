@@ -1,0 +1,69 @@
+﻿using BIStudio.Framework;
+using BIStudio.Framework.Data;
+using BIStudio.Framework.Domain;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
+using System.Reflection;
+using System.Diagnostics;
+using System.Threading;
+
+namespace BIStudio.Framework.Domain
+{
+    /// <summary>
+    /// 瞬态依赖
+    /// </summary>
+    public abstract class TransientDependency : ITransientDependency
+    {
+        public TransientDependency()
+        {
+            this.OnInject();
+            this.DependOn(BoundedContext.Create(new UnitOfWorkOptions { IsTransactional = false }));
+        }
+
+        /// <summary>
+        /// 将工作单元注入到实现了ITransientDependency接口的私有属性
+        /// </summary>
+        public virtual void OnInject()
+        {
+            CFConfig.Default.ScanField<ITransientDependency>(this.GetType(), field => field.SetValue(this, CFAspect.Resolve(field.FieldType)));
+        }
+
+        /// <summary>
+        /// 将工作单元注入到实现了ITransientDependency接口的私有属性
+        /// </summary>
+        /// <param name="uow"></param>
+        public virtual void DependOn(IBoundedContext uow)
+        {
+            this.Context = uow;
+            CFConfig.Default.ScanField<ITransientDependency>(this.GetType(), field => (field.GetValue(this) as ITransientDependency).DependOn(uow));
+        }
+        
+        /// <summary>
+        /// 限界上下文
+        /// </summary>
+        [IgnoreDataMember, XmlIgnore, Column(IsExtend = true)]
+        protected IBoundedContext Context
+        {
+            get;
+            private set;
+        }
+        /// <summary>
+        /// 工作单元
+        /// </summary>
+        [IgnoreDataMember, XmlIgnore, Column(IsExtend = true)]
+        public IUnitOfWork UnitOfWork
+        {
+            get
+            {
+                return this.Context.UnitOfWork;
+            }
+        }
+
+    }
+}

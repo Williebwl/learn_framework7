@@ -1,0 +1,21 @@
+﻿<div class="contentpanel" ng-controller="GroupContainerCtrl">
+    <div class="maintop">
+        <div class="maintop-title clearfix">
+            <h2>{{Info.GroupName}}（<span ng-bind="Info.GroupCode"></span>）</h2>
+            <span>[来源：<em class="dangger">系统</em>]</span>
+        </div>
+        <p>所有用户公共的角色，新用户默认加入该角色，并拥有默认的功能和权限。</p>
+    </div>
+    <div class="tabs">
+        <ul class="nav nav-pills nav-tabs-primary">
+            <li class="active" ng-click="">角色用户</li>
+            <li>模块权限</li>
+            <li>操作权限</li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" ng-include="'System/Group/group.user.html'" ng-controller="GroupUserContainerCtrl"></div>
+            <div class="tab-pane" ng-include="'System/Group/group.module.html'" ng-controller="GroupModuleContainerCtrl"></div>
+            <div class="tab-pane" ng-include="'System/Group/group.operating.html'" ng-controller="GroupOperatingContainerCtrl"></div>
+        </div>
+    </div>
+</div>

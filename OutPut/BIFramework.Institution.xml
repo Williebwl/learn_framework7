@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.Institution</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.Institution.SYSDept">
+            <summary>
+             在这里添加类说明。
+            </summary>
+            <remarks>
+            上海拜特信息技术有限公司[2009-8-25]
+            </remarks>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSDept.SystemID">
+            <summary>
+            单位id
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSDept.Name">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSDept.ShortName">
+            <summary>
+            部门名称简称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSDept.ParentID">
+            <summary>
+            上级部门id
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSDept.Layer">
+            <summary>
+            层级 1开始计算
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSDept.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSDept.Sequence">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSDept.LeaderID">
+            <summary>
+            部门上级领导id
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSDept.ManagerID">
+            <summary>
+            部门负责人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSDept.Code">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSDept.IsStop">
+            <summary>
+            是否停用 1启用 0 停用
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSDept.IsUnit">
+            <summary>
+            是否单位 0部门 1单位
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Institution.SYSGroup">
+            <summary>
+            平台用户组
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.SystemID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.AppID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.GroupCode">
+            <summary>
+            用户组代码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.GroupName">
+            <summary>
+            用户组名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.GroupType">
+            <summary>
+            用户组类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.GroupTypeID">
+            <summary>
+            用户组类型代码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.GroupFlag">
+            <summary>
+            所有者标志
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.GroupFlagID">
+            <summary>
+            所有者标志代码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.Sequence">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.Inputer">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.InputerID">
+            <summary>
+            创建人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroup.InputTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Institution.SYSGroupUser">
+            <summary>
+            角色账户
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroupUser.GroupID">
+            <summary>
+            关联Group的角色ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSGroupUser.UserId">
+            <summary>
+            角色用户ID
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Institution.SYSPosition">
+            <summary>
+            职位
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSPosition.SystemID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSPosition.PositionName">
+            <summary>
+            职位
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSPosition.UserID">
+            <summary>
+            账号ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSPosition.UserName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSPosition.DeptID">
+            <summary>
+            部门ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSPosition.DeptName">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSPosition.LeaderID">
+            <summary>
+            上级领导ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSPosition.LeaderName">
+            <summary>
+            上级领导名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSPosition.Sequence">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSPosition.IsValid">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Institution.SYSPosition.IsDelete">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Institution.IGroupService.GroupAccountAssign(BIStudio.Framework.Institution.SYSGroupUserAssignDTO)">
+            <summary>
+            分配账户角色
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Institution.IGroupService.Remove(BIStudio.Framework.Institution.SYSGroupUser)">
+            <summary>
+            撤销账户角色
+            </summary>
+            <param name="groupAccount"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Institution.IGroupService.GroupInject(BIStudio.Framework.Institution.SYSGroupInjectDTO)">
+            <summary>
+            将角色附加到资源点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Institution.IGroupService.Remove(BIStudio.Framework.Institution.SYSGroup)">
+            <summary>
+            删除资源点角色
+            </summary>
+            <param name="group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Institution.IGroupService.GetUserGroups(System.Int64)">
+            <summary>
+            获得用户角色
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Institution.SYSGroupUserRepository">
+            <summary>
+            角色账户
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Institution.SYSGroupUserRepository.AccountAssign(BIStudio.Framework.Institution.SYSGroupUserAssignDTO)">
+            <summary>
+            分配账户角色
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Institution.SYSGroupRepository">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Institution.SYSGroupRepository.Add(BIStudio.Framework.Institution.SYSGroupInjectDTO)">
+            <summary>
+            将角色附加到资源点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Institution.GroupService.GroupAccountAssign(BIStudio.Framework.Institution.SYSGroupUserAssignDTO)">
+            <summary>
+            分配账户角色
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Institution.GroupService.Remove(BIStudio.Framework.Institution.SYSGroupUser)">
+            <summary>
+            撤销账户角色
+            </summary>
+            <param name="groupAccount"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Institution.GroupService.GroupInject(BIStudio.Framework.Institution.SYSGroupInjectDTO)">
+            <summary>
+            将角色附加到资源点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Institution.GroupService.Remove(BIStudio.Framework.Institution.SYSGroup)">
+            <summary>
+            删除资源点角色
+            </summary>
+            <param name="group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Institution.GroupService.GetUserGroups(System.Int64)">
+            <summary>
+            获得用户角色
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Institution.SYSGroupInjectDTO">
+            <summary>
+            将角色附加到资源点
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Institution.SYSGroupInjectResult">
+            <summary>
+            将角色附加到资源点
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Institution.SYSGroupInjectResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Institution.SYSGroupInjectResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Institution.SYSGroupInjectResult.SystemCodeInvalid">
+            <summary>
+            系统代码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Institution.SYSGroupInjectResult.NameOrCodeNotFound">
+            <summary>
+            未指定操作名称或代码
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Institution.SYSGroupInjectResult.ResourceTagInvalid">
+            <summary>
+            资源点无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Institution.SYSGroupInjectResult.CodeAlreadyExists">
+            <summary>
+            操作代码已存在
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Institution.SYSGroupUserAssignDTO">
+            <summary>
+            分配用户角色
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Institution.SYSGroupUserAssignResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Institution.SYSGroupUserAssignResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Institution.SYSGroupUserAssignResult.SystemCodeInvalid">
+            <summary>
+            系统代码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Institution.SYSGroupUserAssignResult.GroupNotFound">
+            <summary>
+            角色未找到
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Institution.SYSGroupUserAssignResult.AccountNotFound">
+            <summary>
+            账户未找到
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Institution.SYSGroupUserAssignResult.GroupAccountAlreadyExists">
+            <summary>
+            用户角色已分配
+            </summary>
+        </member>
+    </members>
+</doc>

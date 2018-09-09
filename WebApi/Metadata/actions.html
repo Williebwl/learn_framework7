@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Web Api 信息</title>
+    <meta charset="utf-8" />
+    <link href="Css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="content">
+        <div id="back"><a href="index.html" title="控制器列表">控制器列表</a></div>
+        <p class="heading1">
+        </p>
+        <br />
+        <ul></ul>
+    </div>
+    <script src="Js/jquery.min.js"></script>
+    <script src="Js/js.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var op = request("op")
+            $("p").append(FirstToUpper(op) + "服务");
+            $.get("/Core/Metadata/GetActions?controller=" + op, function (result) {
+                if (Array.isArray(result)) {
+                    $.each(result, function (i, field) {
+                        var content_li = "<li>";
+                        var content_a = "<a href='action.html?controller=" + op + "&action=" + field + "'>" + FirstToUpper(field) + "</a>";
+                        var content_span = "";
+                        if (field.desc != null) {
+                            content_span = "<span id='content_span'><br/>" + field + "</span>";
+                        }
+                        var content_end_li = "</li>";
+                        var content = content_li + content_a + content_span + content_end_li;
+
+                        $("ul").append(content);
+                    });
+                }
+                else {
+                    alert(result.message);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

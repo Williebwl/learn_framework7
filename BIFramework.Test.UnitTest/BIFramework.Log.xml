@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.Log</name>
+    </assembly>
+    <members>
+        <member name="M:BIStudio.Framework.Log.ILog.WriteLog(BIStudio.Framework.Log.STDLog)">
+            <summary>
+            写日志
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Log.ILog.ReadLogs(BIStudio.Framework.Log.LogCondtiton)">
+            <summary>
+            根据条件读日志
+            </summary>
+            <param name="condtion"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Log.LogCondtiton">
+            <summary>
+            日志的查询条件
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.LogCondtiton.EntityModule">
+            <summary>
+                内容模块
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.LogCondtiton.EntityType">
+            <summary>
+                内容类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.LogCondtiton.EntityID">
+            <summary>
+                内容主键
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.LogCondtiton.EntityTitle">
+            <summary>
+                内容标题
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.LogCondtiton.OperateType">
+            <summary>
+                操作类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.LogCondtiton.OperateContent">
+            <summary>
+                操作内容
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.LogCondtiton.OperateSummary">
+            <summary>
+                操作摘要
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.LogCondtiton.OperateDetail">
+            <summary>
+                操作详情
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.LogCondtiton.UserIP">
+            <summary>
+                用户IP
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.LogCondtiton.UserName">
+            <summary>
+                用户名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.LogCondtiton.UserID">
+            <summary>
+                用户代码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.LogCondtiton.LogLevel">
+            <summary>
+                日志级别
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Log.Common.Internal.LogFactory">
+            <summary>
+            日志工厂
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Log.Common.Internal.LogFactory._logs">
+            <summary>
+            缓存logprovider 
+            key为子类的描述特性
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Log.STDLog">
+            <summary>
+                日志需要支持基础字段和自定义字段，需要支持按任意字段查询
+                存储时要考虑性能，例如按日期存放
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.EntityModule">
+            <summary>
+                内容模块
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.EntityType">
+            <summary>
+                内容类型，对应数据表名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.EntityID">
+            <summary>
+                内容主键，对应数据表主键
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.EntityTitle">
+            <summary>
+                内容标题，对应数据标题，可为空
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.OperateType">
+            <summary>
+                操作类型，操作类型，CRUD或绑定到权限系统，表示用户点击了指定的按钮
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.OperateContent">
+            <summary>
+                操作内容，用户输入
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.OperateSummary">
+            <summary>
+                操作摘要，用户输入，可为空
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.OperateDetail">
+            <summary>
+                操作详情，从Trace或Exception中获取
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.UserIP">
+            <summary>
+                用户IP，ALHttpIO.UserHostAddress
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.UserName">
+            <summary>
+                用户名称，ALCurrentUser.UserName
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.UserID">
+            <summary>
+                用户代码，ALCurrentUser.UserID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.CreateTime">
+            <summary>
+                写入时间，DateTime.Now
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.LogLevel">
+            <summary>
+                日志级别,从方法名中获取
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Log.STDLog.Additional">
+            <summary>
+            附加参数
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Log.DBLogProvider.ReadLogs(BIStudio.Framework.Log.LogCondtiton)">
+            <summary>
+                读取日志
+            </summary>
+            <param name="condtion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Log.DBLogProvider.GetFieldAndValues(BIStudio.Framework.Log.STDLog)">
+            <summary>
+                获取属性名和属性值
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Log.DBLogProvider.AnalysisInfos(System.Data.DataTable)">
+            <summary>
+            解析实体
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="F:BIStudio.Framework.Log.LocalLogProvider.LineSplitString">
+            <summary>
+            分割行的标识串
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Log.LocalLogProvider.FieldSplitString">
+            <summary>
+            分割字段的标识串
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Log.LocalLogProvider.ValueSplitString">
+            <summary>
+            分割字段名和字段值的标识串
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Log.LocalLogProvider.GetLogFile(System.String,System.Diagnostics.TraceLevel)">
+            <summary>
+            获取log文件的路径
+            </summary>
+            <param name="entityModule"></param>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Log.LocalLogProvider.FormatInfo(BIStudio.Framework.Log.STDLog)">
+            <summary>
+                格式化行
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Log.LocalLogProvider.DeFormatInfo(System.String)">
+            <summary>
+                解析行
+            </summary>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Log.LogService.WriteLog(BIStudio.Framework.Log.STDLog)">
+            <summary>
+                写日志，所有写日志的入口
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Log.LogService.WriteTrace(System.String,System.String,System.String,System.Int64,System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                写调试和跟踪消息
+            </summary>
+            <param name="context">操作内容</param>
+            <param name="moduleName">内容模块</param>
+            <param name="entityType">对应数据表名</param>
+            <param name="entityId">对应数据表主键</param>
+            <param name="entityTitle">内容标题，对应数据标题，可为空</param>
+            <param name="summary">操作摘要</param>
+            <param name="operatetype">操作类型，操作类型，CRUD或绑定到权限系统，表示用户点击了指定的按钮</param>
+            <param name="additional">附加字段</param>
+        </member>
+        <member name="M:BIStudio.Framework.Log.LogService.WriteInfo(System.String,System.String,System.String,System.Int64,System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                写信息性消息、警告和错误处理消息。
+            </summary>
+            <param name="context">操作内容</param>
+            <param name="moduleName">内容模块</param>
+            <param name="entityType">对应数据表名</param>
+            <param name="entityId">对应数据表主键</param>
+            <param name="entityTitle">内容标题，对应数据标题，可为空</param>
+            <param name="summary">操作摘要</param>
+            <param name="operatetype">操作类型，操作类型，CRUD或绑定到权限系统，表示用户点击了指定的按钮</param>
+            <param name="additional">附加字段</param>
+        </member>
+        <member name="M:BIStudio.Framework.Log.LogService.WriteWarning(System.String,System.String,System.String,System.Int64,System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                写警告消息
+            </summary>
+            <param name="context">操作内容</param>
+            <param name="moduleName">内容模块</param>
+            <param name="entityType">对应数据表名</param>
+            <param name="entityId">对应数据表主键</param>
+            <param name="entityTitle">内容标题，对应数据标题，可为空</param>
+            <param name="summary">操作摘要</param>
+            <param name="operatetype">操作类型，操作类型，CRUD或绑定到权限系统，表示用户点击了指定的按钮</param>
+            <param name="additional">附加字段</param>
+        </member>
+        <member name="M:BIStudio.Framework.Log.LogService.WriteError(System.String,System.String,System.String,System.Int64,System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                写错误处理消息。
+            </summary>
+            <param name="context">操作内容</param>
+            <param name="moduleName">内容模块</param>
+            <param name="entityType">对应数据表名</param>
+            <param name="entityId">对应数据表主键</param>
+            <param name="entityTitle">内容标题，对应数据标题，可为空</param>
+            <param name="summary">操作摘要</param>
+            <param name="operatetype">操作类型，操作类型，CRUD或绑定到权限系统，表示用户点击了指定的按钮</param>
+            <param name="additional">附加字段</param>
+        </member>
+        <member name="M:BIStudio.Framework.Log.LogService.Read(BIStudio.Framework.Log.LogCondtiton)">
+            <summary>
+                读取日志
+            </summary>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Log.LogService.ReadAllLevel(BIStudio.Framework.Log.ILog,BIStudio.Framework.Log.LogCondtiton)">
+            <summary>
+                读取所有级别的日志
+            </summary>
+            <param name="log"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Log.LogService.GetStackTace">
+            <summary>
+                获取堆栈的内容
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,33 @@
+<div ng-controller="AppNavCtrl">
+    <div class="nav breadcrumb-wrapper">
+        <a href="javascript:;">应用</a>/<span ng-bind="View.AppName"></span>
+    </div>
+    <div class="content">
+        <div class="subtitle">
+            应用列表
+            <i class="fa fa-question-circle" title="提示信息在这"></i>
+
+            <div class="right drop">
+                <a class="fa fa-plus-circle" data-toggle="tooltip" title="添加" ng-click="fnAdd()"></a>
+                <div bi-dialog src="System/App/app.edit.html" class="dropdown-box dropdown-right-bottom dropdown-sm" />
+            </div>
+        </div>
+        <div class="subcontent">
+            <div class="input">
+                <input type="text" class="form-control" placeholder="应用名称|代码">
+                <span class="input-group-btn"><button type="button" class="btn btn-default"><i class="fa fa-search"></i></button></span>
+            </div>
+            <ul>
+                <li ng-repeat="app in apps" ng-class="{active:app.ID==View.ID,disabled:!app.IsValid}" ng-click="fnActive(app)">
+                    <span>{{app.AppName}} <span ng-if="app.AppCode">(<em class="sword" ng-bind="app.AppCode"></em>)</span></span>
+                    <div class="band-sys right" ng-hide="app.AppTypeID">[系统]</div>
+                    <div class="icon-group right" ng-show="app.AppTypeID">
+                        <a href="javascript:;" class="icon-items fa fa-edit" data-toggle="tooltip modal" data-placement="left" data-target="#modal" ng-click="fnEdit(app)" title="编辑"></a>
+                        <a href="javascript:;" class="icon-items fa fa-close" data-toggle="tooltip" data-placement="left" ng-click="fnDel($event,app)" title="{{app.IsValid?'禁用':'启用'}}"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div bi-dialog src="System/App/app.edit.html" id="modal" class="modal fade bs-modal-sm" />
+</div>

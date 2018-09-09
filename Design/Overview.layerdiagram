@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="97e01acb-6ae6-4e0a-aedb-466fba0a74c1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="870afa0f-0a17-495f-9f7d-1307088a4108" name="租户&#xD;&#xA;承载：IIS站点&#xD;&#xA;软件：OA&#xD;&#xA;oa.site1.com">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="157824d7-6521-4be6-b421-b6b3697c9bb6" direction="Forward">
+          <layerMoniker Id="2803f9cb-435f-4292-bd03-8a955683579e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="da640959-ee3a-4178-8d2a-22c8c61aae75" name="租户&#xD;&#xA;承载：IIS站点&#xD;&#xA;软件：Z6&#xD;&#xA;z6.site1.com">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="26d21e26-ad66-45e5-b8b8-76806447daa8" direction="Forward">
+          <layerMoniker Id="2803f9cb-435f-4292-bd03-8a955683579e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="2803f9cb-435f-4292-bd03-8a955683579e" name="VPC 区域运营中心&#xD;&#xA;承载：ECS+RDS&#xD;&#xA;软件：DAS+Portal&#xD;&#xA;入口：ops.site1.com">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="94b0e0ac-43d6-4227-b546-fa6597b35a52" direction="Forward">
+          <layerMoniker Id="a111df80-52d9-4b97-b7c4-29f3ea4bb1c4" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="a111df80-52d9-4b97-b7c4-29f3ea4bb1c4" name="SAAS 运维监控中心&#xD;&#xA;承载：ECS+RDS+SLB&#xD;&#xA;软件：调用阿里云API开通虚机&#xD;&#xA;入口：ops.bitech.cn">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="a98e1173-b583-48cf-a1fb-6ba74dad58c3" direction="Forward">
+          <layerMoniker Id="3477192f-27ab-4ad0-bf37-e122a56a46ba" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="88c7ce6a-529b-4437-bbf0-db5d33d5141b" direction="Forward">
+          <layerMoniker Id="60907e2b-d297-4da6-a694-b2ba4988fe47" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="3477192f-27ab-4ad0-bf37-e122a56a46ba" name="BOSS 拜特云平台官网&#xD;&#xA;承载：ECS+RDS+SLB&#xD;&#xA;软件：CRM管理客户订单和服务&#xD;&#xA;入口：cloud.bitech.cn">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="916c5cfa-e403-470e-a7d0-2da479d9522c" direction="Forward">
+          <layerMoniker Id="60907e2b-d297-4da6-a694-b2ba4988fe47" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="53575325-3bc1-45d3-82c9-e24eeaa62043" name="VPC 区域运营中心&#xD;&#xA;承载：ECS+RDS&#xD;&#xA;软件：DAS+Portal&#xD;&#xA;入口：ops.site2.com">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="0872f039-5704-4771-8309-d8e3c0d1c4a9" direction="Forward">
+          <layerMoniker Id="a111df80-52d9-4b97-b7c4-29f3ea4bb1c4" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="1249f97b-46c2-4845-b6b9-85e3d115d85a" direction="Forward">
+          <layerMoniker Id="60907e2b-d297-4da6-a694-b2ba4988fe47" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="fee0bcab-85b0-4d2c-a462-ab9b6dac39a5" name="租户&#xD;&#xA;承载：IIS站点&#xD;&#xA;软件：CMS:PC&#xD;&#xA;site2.com">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="97a2aca2-0c44-41f2-89d7-eca1fe4a8222" direction="Forward">
+          <layerMoniker Id="53575325-3bc1-45d3-82c9-e24eeaa62043" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="0919c32e-1ff8-497a-bfaa-8bc0f54cad36" name="租户&#xD;&#xA;承载：IIS站点&#xD;&#xA;软件：CMS:AP&#xD;&#xA;m.site2.com">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="449372db-d6cc-4fde-a463-4b691d2e23d6" direction="Forward">
+          <layerMoniker Id="53575325-3bc1-45d3-82c9-e24eeaa62043" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="60907e2b-d297-4da6-a694-b2ba4988fe47" name="BAAS 后端服务中心&#xD;&#xA;承载：ECS+RDS+SLB+CDN&#xD;&#xA;软件：含消息推送、文件存储、支付网关等&#xD;&#xA;入口：api.bitech.cn">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="fb396d4a-cd18-4c2c-93dc-1ef6811cd108" direction="Forward">
+          <layerMoniker Id="7dfa7817-19f5-4911-9e11-e8dbe56d6b80" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="6a4a3ef3-e204-4bb3-a6e5-95eadd207926" direction="Forward">
+          <layerMoniker Id="09e0dc11-0b6a-4649-aac2-3ec899850c9a" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="2933a682-e509-44fa-9f36-442aa1887ee4" direction="Forward">
+          <layerMoniker Id="98d6bd45-1310-44b0-8f3c-f3984f1f6c0c" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="6ae64f0a-527e-4418-add5-266c4b1f6b38" direction="Forward">
+          <layerMoniker Id="293bb092-6516-4c7b-811f-8c7cb61b9c5a" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="7dfa7817-19f5-4911-9e11-e8dbe56d6b80" name="微信企业号" />
+    <layer Id="09e0dc11-0b6a-4649-aac2-3ec899850c9a" name="微信公众号" />
+    <layer Id="98d6bd45-1310-44b0-8f3c-f3984f1f6c0c" name="极光推送" />
+    <layer Id="293bb092-6516-4c7b-811f-8c7cb61b9c5a" name="短信网关" />
+  </layers>
+</layerModel>

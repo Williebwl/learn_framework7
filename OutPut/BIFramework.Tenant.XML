@@ -1,0 +1,830 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.Tenant</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.Tenant.SYSApp">
+            <summary>
+            标签组
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.SystemID">
+            <summary>
+            系统标示
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.AppName">
+            <summary>
+            标签组名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.AppCode">
+            <summary>
+            标签组前缀
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.AppTypeID">
+            <summary>
+            类目编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.AppType">
+            <summary>
+            类目名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.IsBuiltIn">
+            <summary>
+            是否内置（1-是；0-否）
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.IsValid">
+            <summary>
+            是否有效（1-有效，0-停用）
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.Sequence">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.Views">
+            <summary>
+            点击量
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.Inputer">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.InputerID">
+            <summary>
+            创建人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSApp.InputTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.SYSAppAccess">
+            <summary>
+            模块权限
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSAppAccess.AppID">
+            <summary>
+            对应得模块ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSAppAccess.GroupID">
+            <summary>
+            用户或角色ID
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.SYSMenu">
+            <summary>
+            模块
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.SystemID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.AppID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.MenuName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.ShortName">
+            <summary>
+            模块简称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.MenuCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.ParentID">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.Layer">
+            <summary>
+            处于第几层，第一层为1，最多5层
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.Path">
+            <summary>
+            路径，格式为,1,2,3,4,5,
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.IconBackGround">
+            <summary>
+            图标背景
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.Remarks">
+            <summary>
+            简要说明
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.Sequence">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.IsShow">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.NavUrl">
+            <summary>
+            导航
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.ToolBarUrl">
+            <summary>
+            工具栏
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.ContainerUrl">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.PageRoute">
+            <summary>
+            路由标示
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.DisplayModeID">
+            <summary>
+            显示模式 : 0:默认 ; 1:主页型 ;2:自定义导航 ;3: 二级菜单导航
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.DisplayMode">
+            <summary>
+            显示模式：默认 / 主页型 / 自定义导航 / 二级菜单导航
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.IsPopUp">
+            <summary>
+            是否弹出
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSMenu.OutsideUrl">
+            <summary>
+            外部地址
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.SYSSystem">
+            <summary>
+            平台应用
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystem.SystemCode">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystem.SystemName">
+            <summary>
+             服务提供商名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystem.SystemVersion">
+            <summary>
+            程序版本
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystem.ProviderName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystem.ProviderUrl">
+            <summary>
+            供应商主页
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystem.IconPath">
+            <summary>
+            图标路径
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystem.Sequence">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystem.Status">
+            <summary>
+            程序运行状态(1=未安装，2=停用，3=启用）
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystem.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystem.Inputer">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystem.InputerID">
+            <summary>
+            创建人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystem.InputTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.SYSSystem.GetVersion">
+            <summary>
+            尝试获得版本信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.SYSSystemCertificate">
+            <summary>
+            客户端访问证书，用于客户端访问平台的证书
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemCertificate.SystemID">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemCertificate.CertificateName">
+            <summary>
+            证书名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemCertificate.ApiKey">
+            <summary>
+            客户端识别码，由客户端提供
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemCertificate.Secret">
+            <summary>
+            客户端密钥，由系统自生成
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemCertificate.IsValid">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemCertificate.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemCertificate.Inputer">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemCertificate.InputerID">
+            <summary>
+            创建人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemCertificate.InputTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.AppService">
+            <summary>
+            app Service
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.AppService.GetSystemInfo(System.String)">
+            <summary>
+            获取系统信息
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.AppService.GetSystemInfo(System.Int64)">
+            <summary>
+            获取系统信息
+            </summary>
+            <param name="systemId"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.AppService.SystemRegist(BIStudio.Framework.Tenant.SYSSystemRegistDTO)">
+            <summary>
+            系统注册
+            </summary>
+            <param name="dto"></param>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.AppService.UnRegisterSystem(System.String)">
+            <summary>
+            删除系统
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.AppService.CertificateIssue(BIStudio.Framework.Tenant.SYSSystemCertificateIssueDTO)">
+            <summary>
+            为指定系统颁发新证书
+            </summary>
+            <param name="dto"></param>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.AppService.RecyleCertificate(System.String)">
+            <summary>
+            删除证书
+            </summary>
+            <param name="apiKey"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.AppService.SaveApp(BIStudio.Framework.Tenant.SYSAppRegistDTO)">
+            <summary>
+            保存应用信息
+            </summary>
+            <param name="dto">应用信息</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.AppService.SaveApp(BIStudio.Framework.Domain.IBoundedContext,BIStudio.Framework.Tenant.SYSAppRegistDTO)">
+            <summary>
+            保存应用信息
+            </summary>
+            <param name="dbContext">上下文对象</param>
+            <param name="dto">应用信息</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.AppService.InitApp(BIStudio.Framework.Tenant.SYSApp)">
+            <summary>
+            初始化应用参数
+            </summary>
+            <param name="app">应用信息</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.AppService.SaveMenu(BIStudio.Framework.Domain.IBoundedContext,BIStudio.Framework.Tenant.SYSAppRegistDTO)">
+            <summary>
+            保存应用菜单信息
+            </summary>
+            <param name="dbContext">上下文对象</param>
+            <param name="dto">应用信息</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.AppService.InitMenu(BIStudio.Framework.Tenant.SYSApp,BIStudio.Framework.Tenant.SYSMenu)">
+            <summary>
+            初始化应用菜单信息
+            </summary>
+            <param name="app">应用信息</param>
+            <param name="menu">菜单信息</param>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.AppService.SaveAppAccess(BIStudio.Framework.Domain.IBoundedContext,BIStudio.Framework.Tenant.SYSAppRegistDTO)">
+            <summary>
+            保存应用用户组关联信息
+            </summary>
+            <param name="dbContext">上下文对象</param>
+            <param name="dto">应用信息</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.IAppService">
+            <summary>
+            app
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.IAppService.GetSystemInfo(System.String)">
+            <summary>
+            获取系统信息
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.IAppService.GetSystemInfo(System.Int64)">
+            <summary>
+            获取系统信息
+            </summary>
+            <param name="systemId"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.IAppService.SystemRegist(BIStudio.Framework.Tenant.SYSSystemRegistDTO)">
+            <summary>
+            系统注册
+            </summary>
+            <param name="dto"></param>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.IAppService.UnRegisterSystem(System.String)">
+            <summary>
+            注销系统
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.IAppService.CertificateIssue(BIStudio.Framework.Tenant.SYSSystemCertificateIssueDTO)">
+            <summary>
+            为指定系统颁发新证书
+            </summary>
+            <param name="dto"></param>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.IAppService.RecyleCertificate(System.String)">
+            <summary>
+            回收证书
+            </summary>
+            <param name="apiKey"></param>
+            <returns></returns>
+            <exception cref="T:BIStudio.Framework.DefinedException"></exception>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.IAppService.SaveApp(BIStudio.Framework.Tenant.SYSAppRegistDTO)">
+            <summary>
+            保存应用信息
+            </summary>
+            <param name="dto">应用信息</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.MenuService">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetRoot(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="groupID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetRoot(System.Collections.Generic.IList{System.Int64})">
+            <summary>
+            
+            </summary>
+            <param name="groupIDs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetInfoByAppId(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="appID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetInfosByGroup(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="groupID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetInfosByGroup(System.Collections.Generic.IList{System.Int64})">
+            <summary>
+            
+            </summary>
+            <param name="groupIDs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetRoute(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="groupID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetRoute(System.Collections.Generic.IList{System.Int64})">
+            <summary>
+            
+            </summary>
+            <param name="groupIDs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetChildren(System.Int64,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="groupID"></param>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetChildren(System.Collections.Generic.IList{System.Int64},System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="groupIDs"></param>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetChildrens(System.Int64,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="groupID"></param>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetChildrens(System.Collections.Generic.IList{System.Int64},System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="groupIDs"></param>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetChildrensAndSelf(System.Int64,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="groupID"></param>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetChildrensAndSelf(System.Collections.Generic.IList{System.Int64},System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="groupIDs"></param>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetChildrenAndSelf(System.Int64,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="groupID"></param>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetChildrenAndSelf(System.Collections.Generic.IList{System.Int64},System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="groupIDs"></param>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetInfos(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetInfos(System.Collections.Generic.IList{System.Int64})">
+            <summary>
+            
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.GetInfo(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.Delete(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.Delete(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.Delete(System.Collections.Generic.IList{System.Int64})">
+            <summary>
+            
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.Save(BIStudio.Framework.Tenant.SYSMenu)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.Save(BIStudio.Framework.Tenant.SYSMenu[])">
+            <summary>
+            
+            </summary>
+            <param name="infos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.MenuService.Save(BIStudio.Framework.Domain.IRepository{BIStudio.Framework.Tenant.SYSMenu},BIStudio.Framework.Tenant.SYSMenu)">
+            <summary>
+            
+            </summary>
+            <param name="bo"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.EnumSYSSystemStatus">
+            <summary>
+            系统运行状态
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.EnumSYSSystemStatus.NotInstalled">
+            <summary>
+            未安装
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.EnumSYSSystemStatus.Stop">
+            <summary>
+            停用
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.EnumSYSSystemStatus.Running">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.SYSAppRegistResult">
+            <summary>
+            应用编辑操作
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.SYSAppRegistResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.SYSAppRegistResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.SYSAppRegistResult.SystemCodeInvalid">
+            <summary>
+            系统代码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.SYSAppRegistResult.UIDInvalid">
+            <summary>
+            用户标识无效
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.SYSSystemCertificateIssueDTO">
+            <summary>
+            为指定系统创建新证书
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemCertificateIssueDTO.SystemCode">
+            <summary>
+            系统代码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemCertificateIssueDTO.CertificateName">
+            <summary>
+            证书别名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemCertificateIssueDTO.ApiKey">
+            <summary>
+            证书代码
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.STDCertificateIssueResult">
+            <summary>
+            证书颁发结果
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.STDCertificateIssueResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.STDCertificateIssueResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.STDCertificateIssueResult.SystemCodeInvalid">
+            <summary>
+            系统代码无效
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.STDCertificateIssueResult.NameOrCodeNotFound">
+            <summary>
+            未指定证书名称或代码
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.STDCertificateIssueResult.CodeAlreadyExists">
+            <summary>
+            证书代码已存在
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.SYSSystemRegistDTO">
+            <summary>
+            系统注册
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemRegistDTO.SystemCode">
+            <summary>
+             服务提供商ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemRegistDTO.SystemName">
+            <summary>
+             服务提供商名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemRegistDTO.SystemVersion">
+            <summary>
+            程序版本
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemRegistDTO.ProviderName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemRegistDTO.ProviderUrl">
+            <summary>
+            供应商主页
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemRegistDTO.IconPath">
+            <summary>
+            图标路径
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemRegistDTO.Sequence">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Tenant.SYSSystemRegistDTO.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Tenant.SYSSystemRegistDTO.GetVersion">
+            <summary>
+            尝试获得版本信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Tenant.SYSSystemRegistResult">
+            <summary>
+            系统注册结果
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.SYSSystemRegistResult.Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.SYSSystemRegistResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.SYSSystemRegistResult.NameOrCodeNotFound">
+            <summary>
+            未指定系统名称或代码
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Tenant.SYSSystemRegistResult.CodeAlreadyExists">
+            <summary>
+            系统代码已存在
+            </summary>
+        </member>
+    </members>
+</doc>

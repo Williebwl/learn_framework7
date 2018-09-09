@@ -1,0 +1,1419 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.Utils</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.Utils.ALCommon">
+            <summary>
+            基于工具类的工具类
+            </summary>
+            <remarks>
+            [2012-03-11]
+            </remarks>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALCommon.ConvertTo``1(System.Object,``0)">
+            <summary>
+            将对象转换为目标类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="src"></param>
+            <param name="def"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALCommon.ConvertTo(System.Object,System.Type)">
+            <summary>
+            将对象转换为目标类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="src"></param>
+            <param name="def"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALCommon.Default(System.Type)">
+            <summary>
+            返回对应类型的默认值
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALCommon.DefaultOf``1">
+            <summary>
+            获取指定类型的非空默认值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALCommon.ExpandList``1(System.Collections.Generic.List{``0},System.Int32)">
+            <summary>
+            将集合扩展到指定长度
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <param name="rowCount"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALMail">
+            <summary>
+            收发邮件
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALMail.Send(System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            发邮件
+            </summary>
+            <param name="title">邮件标题</param>
+            <param name="htmlContent">邮件HTML内容</param>
+            <param name="recipientEmail">收件人 Email</param>
+            <returns>是否发送成功</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALMail.Send(System.String,System.String,System.String,System.String)">
+            <summary>
+            发邮件
+            </summary>
+            <param name="title">邮件标题</param>
+            <param name="htmlContent">邮件HTML内容</param>
+            <param name="recipient">收件人</param>
+            <param name="recipientEmail">收件人 Email</param>
+            <returns>是否发送成功</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALMail.Send(System.String,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Net.Mail.Attachment})">
+            <summary>
+            发邮件
+            </summary>
+            <param name="title">邮件标题</param>
+            <param name="htmlContent">邮件HTML内容</param>
+            <param name="recipientEmail">收件人 Email</param>
+            <param name="attachs">附件</param>
+            <returns>是否发送成功</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALMail.Send(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.List{System.Net.Mail.Attachment})">
+            <summary>
+            发邮件
+            </summary>
+            <param name="title">邮件标题</param>
+            <param name="htmlContent">邮件HTML内容</param>
+            <param name="recipients">收件人 Email/姓名</param>
+            <param name="attachs">附件</param>
+            <returns>是否发送成功</returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALMail.ALMailAccount">
+            <summary>
+            邮件账户信息
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.Username">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.Sysemail">
+            <summary>
+            邮件地址
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.Signature">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.Pop">
+            <summary>
+            收信服务器
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.PopPort">
+            <summary>
+            收信服务器端口
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.PopAccount">
+            <summary>
+            收信用户名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.PopPassword">
+            <summary>
+            收信密码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.PopEnableSsl">
+            <summary>
+            收信SSL通道
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.Smtp">
+            <summary>
+            发信服务器
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.SmtpPort">
+            <summary>
+            发信服务器端口
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.SmtpAccount">
+            <summary>
+            发信用户名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.SmtpPassword">
+            <summary>
+            发信密码
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALMail.ALMailAccount.SmtpEnableSsl">
+            <summary>
+            发信SSL通道
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALSpell">
+            <summary>
+            汉字转拼音静态类,包括功能全拼和缩写，方法全部是静态的
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALSpell.pyValue">
+            <summary>
+            汉字的机内码数组
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALSpell.pyName">
+            <summary>
+            机内码对应的拼音数组
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSpell.GetSpells(System.String)">
+            <summary>
+            把汉字转换成拼音(全拼)
+            </summary>
+            <param name="hzString">汉字字符串</param>
+            <returns>转换后的拼音(全拼)字符串</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSpell.GetSpells(System.String,System.Char)">
+            <summary>
+            把汉字转换成拼音(全拼)
+            </summary>
+            <param name="hzString">汉字字符串</param>
+            <param name="spliter">字符间隔</param>
+            <returns>转换后的拼音(全拼)字符串</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSpell.GetSpells(System.Char)">
+            <summary>
+            把汉字转换成拼音(全拼)
+            </summary>
+            <param name="c">汉字字符串</param>
+            <returns>转换后的拼音(全拼)字符串</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSpell.GetSpell(System.String)">
+            <summary>
+            汉字转拼音缩写 (大写)
+            </summary>
+            <param name="str">要转换的汉字字符串</param>
+            <returns>拼音缩写</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSpell.GetSpell(System.String,System.Char)">
+            <summary>
+            汉字转拼音缩写  (字符串)(大写)(空格间隔)
+            </summary>
+            <param name="str">要转换的汉字字符串</param>
+            <returns>拼音缩写</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSpell.GetSpell(System.Char)">
+            <summary>
+            取单个字符的拼音声母
+            </summary>
+            <param name="c">要转换的单个汉字</param>
+            <returns>拼音声母</returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALUtils">
+            <summary>
+            其他杂七杂八的工具类方法
+            </summary>
+            <remarks>
+            提取工作中比较通用的工具类方法，且无法进行合理的归类
+            [2012-03-11]
+            </remarks>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALUtils.FillTableNumber(System.Data.DataTable,System.String)">
+            <summary>
+            填充Table行号
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALUtils.LimitStringLength(System.String,System.Int32)">
+            <summary>
+            输出限长字符串
+            </summary>
+            <param name="sText">字符串</param>
+            <param name="iLength">限制的长度</param>
+            <returns>限长后的字符串</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALUtils.GetGUID">
+            <summary>
+            取全球唯一码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALUtils.GetGUIDShort">
+            <summary>
+            取较短的全球唯一码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALUtils.GetRandom">
+            <summary>
+            获得随机字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALUtils.GetHtmlContentByControl(System.Web.UI.Control)">
+            <summary>
+            根据服务器控件生成html代码并返回
+            </summary>
+            <param name="ctl">服务端控件</param>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALUtils.GetInitialSpells(System.String)">
+            <summary>
+            获得中文字符串的首字母
+            </summary>
+            <param name="str">中文字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALUtils.GetInitialSpell(System.String)">
+            <summary>
+            用来获得一个字的拼音首字母
+            </summary>
+            <param name="cnChar">一个字</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALUtils.GetNameSpells(System.String)">
+            <summary>
+            获得姓名的缩写，例如zhangs
+            </summary>
+            <param name="cnChar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALUtils.ExpandList``1(System.Collections.Generic.List{``0},System.Int32)">
+            <summary>
+            将集合扩展到指定长度
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <param name="rowCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALUtils.SetVisible(System.Web.UI.ControlCollection,System.Boolean)">
+            <summary>
+            设置页面控件的显示和隐藏，isEdit 为 True 时，为编辑状态，文本框显示，Label隐藏，反之则反。
+            </summary>
+            <param name="controls"></param>
+            <param name="isEdit"></param>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALConfig">
+            <summary>
+            配置类
+            </summary>
+            <remarks>
+            [2012-03-11]
+            </remarks>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALConfig.AppSettings">
+            <summary>
+            获取AppSettings下的节点值
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALConfig.ConnectionStrings">
+            <summary>
+            获取ConnectionStrings下的节点值
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALConfig.DllConfigs">
+            <summary>
+            获取DLL配置文件
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConfig.GetRelativePath(System.String)">
+            <summary>
+            获取DllConfig的相对路径
+            </summary>
+            <param name="dllConfigName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConfig.GetAbsolutePath(System.String)">
+            <summary>
+            获取DllConfig的绝对路径
+            </summary>
+            <param name="dllConfigName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.AppSet">
+            <summary>
+            管理AppSettings节点
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.AppSet.Item(System.String)">
+            <summary>
+            获取AppSettings下的节点值
+            </summary>
+            <param name="configName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ConnSet">
+            <summary>
+            管理连接字符串
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ConnSet.Item(System.String)">
+            <summary>
+            读取连接字符串
+            </summary>
+            <param name="configName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.DllItem">
+            <summary>
+            管理配置文件条目下的配置项
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.DllItem.Item(System.String)">
+            <summary>
+            读取或设置配置文件条目下的配置项
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.DllItem.Save">
+            <summary>
+            保存配置信息
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.DllItem.Refresh">
+            <summary>
+            重新读取配置信息
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.DllItem.ToDictionary">
+            <summary>
+            返回全部配置项的键值对
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.DllSet">
+            <summary>
+            管理配置文件
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.DllSet.Item(System.String)">
+            <summary>
+            读取或设置配置文件
+            </summary>
+            <param name="configName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.DllSet.Current">
+            <summary>
+            读取当前DLL的配置文件
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.DllSet.IsExists(System.String)">
+            <summary>
+            检查DllConfig是否存在
+            </summary>
+            <param name="dllConfigName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.DllTable">
+            <summary>
+            管理配置文件条目
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.DllTable.Item(System.String)">
+            <summary>
+            读取或设置配置文件条目
+            </summary>
+            <param name="configItemName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALEnumDescription">
+            <summary>
+            把枚举值按照指定的文本显示
+            <remarks>
+            一般通过枚举值的ToString()可以得到变量的文本，
+            但是有时候需要的到与之对应的更充分的文本，
+            这个类帮助达到此目的
+            Date: 2012-1-11 
+            </remarks>
+            </summary>
+            <example>
+            [ALEnumDescription("中文数字")]
+            enum MyEnum
+            {
+            	[ALEnumDescription("数字一")]
+            	One = 1, 
+            
+            	[ALEnumDescription("数字二")]
+            	Two, 
+            
+            	[ALEnumDescription("数字三")]
+            	Three
+            }
+            ALEnumDescription.GetEnumText(typeof(MyEnum));
+            ALEnumDescription.GetFieldText(MyEnum.Two);
+            ALEnumDescription.GetFieldTexts(typeof(MyEnum)); 
+            绑定到下拉框：
+            comboBox1.DataSource = ALEnumDescription.GetFieldTexts(typeof(OrderStateEnum));
+            comboBox1.ValueMember = "EnumValue";
+            comboBox1.DisplayMember = "EnumDisplayText";
+            comboBox1.SelectedValue = (int)OrderStateEnum.Finished;  //选中值
+            </example>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEnumDescription.#ctor(System.String,System.Int32)">
+            <summary>
+            描述枚举值
+            </summary>
+            <param name="enumDisplayText">描述内容</param>
+            <param name="enumRank">排列顺序</param>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEnumDescription.#ctor(System.String)">
+            <summary>
+            描述枚举值，默认排序为5
+            </summary>
+            <param name="enumDisplayText">描述内容</param>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALEnumDescription.SortType">
+            <summary>
+            排序类型
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALEnumDescription.SortType.Default">
+             <summary>
+            按枚举顺序默认排序
+             </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALEnumDescription.SortType.DisplayText">
+            <summary>
+            按描述值排序
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALEnumDescription.SortType.Rank">
+            <summary>
+            按排序熵
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEnumDescription.GetEnumText(System.Type)">
+            <summary>
+            得到对枚举的描述文本
+            </summary>
+            <param name="enumType">枚举类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEnumDescription.GetFieldText(System.Type,System.Int32,System.Boolean)">
+            <summary>
+            获得指定枚举类型中，指定值的描述文本
+            </summary>
+            <param name="enumType">传入枚举大类型（如：GenderEnum）</param>
+            <param name="enumItem">所指定枚举项的value值</param>
+            <param name="isFormatStr">格式化描述文本，即去掉文本前的数字</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEnumDescription.GetFieldText(System.Object,System.Boolean)">
+            <summary>
+            获得指定枚举类型中，指定值的描述文本
+            </summary>
+            <param name="enumValue">枚举值，不要作任何类型转换</param>
+            <param name="isFormatStr">格式化描述文本，即格式化掉显示字符串前边的数字以及空格 例："1 合理咯"==>"合理咯"</param>
+            <returns>描述字符串</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEnumDescription.GetEnumText(System.Object)">
+            <summary>
+            获得指定枚举类型中，指定值对应的对象。
+            </summary>
+            <param name="enumValue">枚举值，不要作任何类型转换</param>
+            <returns>枚举对象</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEnumDescription.GetFieldTexts(System.String)">
+            <summary>
+            得到枚举类型定义的所有文本，按定义的顺序返回
+            </summary>
+            <param name="enumTypeName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEnumDescription.GetFieldTexts(System.Type)">
+            <summary>
+            得到枚举类型定义的所有文本，按定义的顺序返回
+            </summary>
+            <exception cref="T:System.NotSupportedException"></exception>
+            <param name="enumType">枚举类型</param>
+            <returns>所有定义的文本</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEnumDescription.GetFieldTexts(System.Type,BIStudio.Framework.Utils.ALEnumDescription.SortType)">
+            <summary>
+            得到枚举类型定义的所有文本
+            </summary>
+            <exception cref="T:System.NotSupportedException"></exception>
+            <param name="enumType">枚举类型</param>
+            <param name="sortType">指定排序类型</param>
+            <returns>所有定义的文本</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEnumDescription.GetEnumValueByDisplayText(System.Type,System.String)">
+            <summary>
+            根据某个枚举项的描述文本，得到枚举的值(ID)
+            </summary>
+            <param name="enumType"></param>
+            <param name="DisplayText"></param>
+            <returns>
+            找到则返回枚举的值(ID)
+            没找到返回int.MinValue</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEnumDescription.GetEnumValueByDBText(System.Type,System.String)">
+            <summary>
+            根据某个枚举项的描述文本，得到枚举的值(ID)
+            </summary>
+            <param name="enumType"></param>
+            <param name="DisplayText"></param>
+            <returns>
+            找到则返回枚举的值(ID)
+            没找到返回enumDisplayText</returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.GetCustomPageData">
+            <summary>
+            异步查询请求，支持分页
+            </summary>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页行数</param>
+            <param name="rowCount">总行数</param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.GetCustomSortPageData">
+            <summary>
+            异步查询请求，支持分页、排序
+            </summary>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页行数</param>
+            <param name="rowCount">总行数</param>
+            <param name="sortExpressionDirection">排序字段</param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALCondition">
+            <summary>
+            查询条件处理类
+            </summary>
+            <remarks>
+            [2012-03-11]
+            </remarks>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALCondition.GetDateCondition(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            获取日期查询条件 如：yyyy-MM-dd
+            </summary>
+            <param name="field">字段名</param>
+            <param name="begDate">开始日期</param>
+            <param name="endTime">结束日期</param>
+            <returns>返回查询条件</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALCondition.GetDateTimeCondition(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            获取日期时间查询条件 如：yyyy-MM-dd HH:mm:ss
+            </summary>
+            <param name="field">字段名</param>
+            <param name="begDateTime">开始日期时间</param>
+            <param name="endDateTime">结束日期时间</param>
+            <returns>返回查询条件</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALCondition.GetSqlCondition(System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            获取金额条件(默认带And条件)
+            </summary>
+            <param name="field"></param>
+            <param name="minMoney"></param>
+            <param name="maxMoney"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALCondition.GetSqlCondition(System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Boolean)">
+            <summary>
+            获取金额条件
+            </summary>
+            <param name="field"></param>
+            <param name="minMoney"></param>
+            <param name="maxMoney"></param>
+            <param name="hasAnd">是否包含And</param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALConvert">
+            <summary>
+            转换类
+            </summary>
+            <remarks>
+            用于各种类型之间的转换
+            [2012-3-11]
+            </remarks>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToList``1(System.String)">
+            <summary>
+            将字符串转变成List集合类型
+            </summary>
+            <typeparam name="T">类型，目前只支持int,string</typeparam>
+            <param name="str">要转换的字符串</param>
+            <returns>List集合</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToList``1(System.String,System.Char)">
+            <summary>
+            将字符串转变成List集合类型
+            </summary>
+            <typeparam name="T">类型，目前只支持int,string</typeparam>
+            <param name="str">要转换的字符串</param>
+            <param name="split">分隔符</param>
+            <returns>List集合</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToList(System.String,System.Char)">
+            <summary>
+            将字符串转变成List集合类型
+            </summary>
+            <param name="str">要转换的字符串</param>
+            <param name="split">分隔符</param>
+            <returns>List集合</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToString``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            将指定集合按照“分隔符”拼成字符串
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="lst">List集合</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ListToString``1(System.Collections.Generic.IEnumerable{``0},System.Char)">
+            <summary>
+            将指定集合按照“分隔符”拼成字符串
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="lst">List集合</param>
+            <param name="separator">分隔符</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToDictionary``2(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1})">
+            <summary>
+            将键值对集合拼成字典
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToDictionary``2(System.String,System.String)">
+            <summary>
+            将键值对集合拼成字典
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="strKey"></param>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToDictionary``2(System.String,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="strKey"></param>
+            <param name="strValue"></param>
+            <param name="deleterepeat">自动删除重复的key</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.MoneyToRMB(System.Double)">
+            <summary>
+            将金额转换成大写人民币
+            </summary>
+            <param name="money">金额/数字</param>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.NumberToChinese(System.Double,System.Boolean)">
+            <summary>
+            将数字转换为小写中文汉字
+            </summary>
+            <param name="num">数字</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.NumberToChinese(System.Double)">
+            <summary>
+            将数字转换为大写中文汉字
+            </summary>
+            <param name="num">数字</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.XMLToDataSet(System.String)">
+            <summary>
+            将xml转换成DataSet
+            </summary>
+            <param name="xmlData">XML</param>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.XMLToDataTable(System.String)">
+            <summary>
+            将xml转换成DataTable
+            </summary>
+            <param name="xmlData">XML</param>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToInt(System.Object)">
+            <summary>
+            将value转换为int?如果为空字符串返回null，其它转换错误返回Null
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToLong(System.Object)">
+            <summary>
+            将value转换为long?如果为空字符串返回null，其它转换错误返回Null
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToFloat(System.Object)">
+            <summary>
+            将value转换为float?如果为空字符串返回null，其它转换错误返回Null
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToDecimal(System.Object)">
+            <summary>
+            将value转换为decimal?如果为空字符串返回null，其它转换错误返回Null
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToDouble(System.Object)">
+            <summary>
+            将value转换为double?如果为空字符串返回null，其它转换错误返回Null
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToDateTime(System.Object)">
+            <summary>
+            将value转换为DateTime?如果为空字符串返回null，其它转换错误返回Null
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToGuid(System.Object)">
+            <summary>
+            将value转换为Guid?如果为空字符串返回null，其它转换错误返回Null
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToBool(System.Object)">
+            <summary>
+            将value转换为bool?如果为空字符串返回null，其它转换错误返回Null
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToInt0(System.Object)">
+            <summary>
+            将value转换为int如果为null或转换错误则返回0
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToLong0(System.Object)">
+            <summary>
+            将value转换为long如果为null或转换错误则返回0
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToFloat0(System.Object)">
+            <summary>
+            将value转换为float如果为null或转换错误则返回0
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToDecimal0(System.Object)">
+            <summary>
+            将value转换为decimal如果为null或转换错误则返回0
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToDouble0(System.Object)">
+            <summary>
+            将value转换为double如果为null或转换错误则返回0
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ToBool0(System.Object)">
+            <summary>
+            将value转换为bool如果为null或转换错误则返回False
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:BIStudio.Framework.Utils.ALConvert.ListToDataTable``1(System.Collections.Generic.List{``0})" -->
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ConvertToStartTime(System.DateTime)">
+            <summary>
+            将DateTime转化为一个开始时间，格式为 yyyy-MM-dd 00:00:00
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALConvert.ConvertToEndTime(System.DateTime)">
+            <summary>
+            将DateTime转化为一个结束时间，格式为 yyyy-MM-dd 23:59:59
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALEncrypt">
+            <summary>
+            支持三种加密：TripleDES，MD5，BASE64
+            </summary>
+            <remarks>
+            密码一般采用MD5加密，业务数据一般采用BASE64加密
+            [2012-03-11]
+            </remarks>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALEncrypt.key">
+            <summary>
+            主密钥
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALEncrypt.InstanceKey">
+            <summary>
+            实例密钥，系统加载时随机生成
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEncrypt.TripleDESEnCode(System.String)">
+            <summary>
+            使用TripleDES加密
+            </summary>
+            <param name="??">需要加密的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEncrypt.TripleDESEnCode(System.String,System.String)">
+            <summary>
+            使用TripleDES加密
+            </summary>
+            <param name="str">需要加密的字符串</param>
+            <param name="key">16或24位密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEncrypt.TripleDESDeCode(System.String)">
+            <summary>
+            使用TripleDES解密
+            </summary>
+            <param name="str">需要解密的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEncrypt.TripleDESDeCode(System.String,System.String)">
+            <summary>
+            使用TripleDES解密
+            </summary>
+            <param name="str">需要解密的字符串</param>
+            <param name="key">16或24位密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEncrypt.Md5hash(System.String)">
+            <summary>
+            Md5加密，用于密码非可逆加密
+            </summary>
+            <param name="str">字符串参数</param>
+            <returns>返回字符串值</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEncrypt.HMAC(System.String)">
+            <summary>
+            HMAC加密，用于密码非可逆加密
+            </summary>
+            <param name="str">字符串参数</param>
+            <returns>返回字符串值</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEncrypt.Base64EnCode(System.String)">
+            <summary>
+            base64加密字符串，一般性可逆加密,采用utf8编码方式加密
+            </summary>
+            <param name="str">需要加密的字符串</param>
+            <returns>加密后的字符串</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEncrypt.Base64DeCode(System.String)">
+            <summary>
+            base64解密字符串
+            </summary>
+            <param name="str">需要解密的字符串</param>
+            <returns>解密后的字符串</returns>
+        </member>
+        <member name="P:BIStudio.Framework.Utils.ALEncrypt.Crc12Table">
+            <summary>
+            Crc12密码表
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEncrypt.Crc12(System.Byte[])">
+            <summary>
+            计算Crc12校验码
+            </summary>
+            <param name="buffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEncrypt.UrlDecode(System.String,System.Text.Encoding)">
+            <summary>
+            URL解码，默认UTF-8解码
+            </summary>
+            <param name="str">需要解码的字符串</param>
+            <param name="encodingType">解码类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALEncrypt.UrlDecode(System.String)">
+            <summary>
+            URL解码，默认UTF-8解码
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALFormater">
+            <summary>
+            格式化类
+            </summary>
+            <remarks>
+            [2012-03-11]
+            </remarks>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.FormatDate(System.Nullable{System.DateTime})">
+            <summary>
+            格式化短日期
+            </summary>
+            <param name="t">日期</param>
+            <returns>返回字符串日期 格式:yyyy-MM-dd</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.FormatDate(System.Object)">
+            <summary>
+            格式化短日期
+            </summary>
+            <param name="t">日期对象</param>
+            <returns>返回字符串日期 格式:yyyy-MM-dd</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.FormatDateTime(System.Nullable{System.DateTime})">
+            <summary>
+            格式化长日期
+            </summary>
+            <param name="t">日期</param>
+            <returns>返回字符串日期 格式:yyyy-MM-dd HH:mm:ss</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.FormatDateTime(System.Object)">
+            <summary>
+            格式化长日期
+            </summary>
+            <param name="t">日期对象</param>
+            <returns>返回字符串日期 格式:yyyy-MM-dd HH:mm:ss</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.FormatStringNumber(System.String)">
+            <summary>
+            格式化掉显示字符串前边的数字以及空格 例："1 合理咯"==>"合理咯"
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.TrimStart(System.String,System.String)">
+            <summary>
+            去除指定字符串起始空格
+            </summary>
+            <param name="str"></param>
+            <param name="suffix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.TrimEnd(System.String,System.String)">
+            <summary>
+            去除指定字符串末尾空格
+            </summary>
+            <param name="str"></param>
+            <param name="suffix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.FormatDecimal(System.Nullable{System.Decimal})">
+            <summary>
+            格式:#,###,##0.00
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.FormatDecimal(System.Object)">
+            <summary>
+            格式:#,###,##0.00
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.FormatPercent(System.Nullable{System.Decimal})">
+            <summary>
+            格式:#,###,##0.00+%
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.FormatPercent(System.Object)">
+            <summary>
+            格式:#,###,##0.00+%
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.FormatPercents(System.Nullable{System.Decimal})">
+            <summary>
+            报表格式:(#,###,##0.00*100)+%
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.FormatPercents(System.Object)">
+            <summary>
+            报表格式:(#,###,##0.00*100)+%
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.FormatMultiText(System.String)">
+            <summary>
+            多行文本字符串格式化为HTML，如备注信息
+            </summary>
+            <param name="multiText">多行文本字符串</param>
+            <returns>HTML</returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALFormater.ReplaceOptions">
+            <summary>
+            HTML替换规则
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALFormater.ReplaceOptions.All">
+            <summary>
+            全部HTML元素
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALFormater.ReplaceOptions.ExternalEmbeds">
+            <summary>
+            外部元素，包括script,style,iframe等
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALFormater.ReplaceOptions.Styles">
+            <summary>
+            HTML元素样式，包括class,style等
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALFormater.ReplaceOptions.Media">
+            <summary>
+            多媒体内容，包括所有标签
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALFormater.ReplaceOptions.SpecialCharacter">
+            <summary>
+            特殊字符，包括&amp;nbsp;,&amp;gt;等
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALFormater.ReplaceOptions.OutputAsMultiline">
+            <summary>
+            输出为多行文本
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.ReplaceHtml(System.String)">
+            <summary>
+            除去HTML中特殊脚本
+            </summary>
+            <param name="s">HTML文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.ReplaceHtml(System.String,BIStudio.Framework.Utils.ALFormater.ReplaceOptions)">
+            <summary>
+            除去HTML中特殊脚本
+            </summary>
+            <param name="s">HTML文本</param>
+            <param name="replaceOptions">替换规则</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:BIStudio.Framework.Utils.ALFormater.ReplaceSpace(System.String)" -->
+        <member name="M:BIStudio.Framework.Utils.ALFormater.ReplaceSpaceLine(System.String)">
+            <summary>
+            替换HMLT之空行及换行
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALFormater.ReplaceTag(System.String)">
+            <summary>
+            替换C#单引号、换行等标签
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALSecurityToken">
+            <summary>
+            安全令牌
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALSecurityToken.EncryMode">
+            <summary>
+            加密算法
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALSecurityToken.EncryMode.HMAC">
+            <summary>
+            使用HMAC加密算法
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALSecurityToken.EncryMode.MD5">
+            <summary>
+            使用MD5加密算法
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALSecurityToken.EncryEncoding">
+            <summary>
+            加密编码
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALSecurityToken.EncryEncoding.Default">
+            <summary>
+            使用Default编码
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Utils.ALSecurityToken.EncryEncoding.UTF8">
+            <summary>
+            使用UTF8编码
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSecurityToken.#ctor(System.Int32)">
+            <summary>
+            初始化新的安全令牌
+            </summary>
+            <param name="timeoutMinutes">超时时间</param>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSecurityToken.#ctor(BIStudio.Framework.Utils.ALSecurityToken.EncryMode,BIStudio.Framework.Utils.ALSecurityToken.EncryEncoding)">
+            <summary>
+            初始化新的安全令牌
+            </summary>
+            <param name="encryMode">加密方式</param>
+            <param name="encryEncoding">加密编码</param>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSecurityToken.#ctor(BIStudio.Framework.Utils.ALSecurityToken.EncryMode,BIStudio.Framework.Utils.ALSecurityToken.EncryEncoding,System.String)">
+            <summary>
+            初始化新的安全令牌
+            </summary>
+            <param name="encryMode">加密方式</param>
+            <param name="encryEncoding">加密编码</param>
+            <param name="masterKey">公钥</param>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSecurityToken.#ctor(BIStudio.Framework.Utils.ALSecurityToken.EncryMode,BIStudio.Framework.Utils.ALSecurityToken.EncryEncoding,System.Int32)">
+            <summary>
+            初始化新的安全令牌
+            </summary>
+            <param name="encryMode">加密方式</param>
+            <param name="encryEncoding">加密编码</param>
+            <param name="timeoutMinutes">超时时间</param>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSecurityToken.#ctor(BIStudio.Framework.Utils.ALSecurityToken.EncryMode,BIStudio.Framework.Utils.ALSecurityToken.EncryEncoding,System.String,System.Int32)">
+            <summary>
+            初始化新的安全令牌
+            </summary>
+            <param name="encryMode">加密方式</param>
+            <param name="encryEncoding">加密编码</param>
+            <param name="masterKey">公钥</param>
+            <param name="timeoutMinutes">超时时间</param>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSecurityToken.#ctor(BIStudio.Framework.Utils.ALSecurityToken.EncryMode,System.Text.Encoding)">
+            <summary>
+            初始化新的安全令牌
+            </summary>
+            <param name="encryMode">加密方式</param>
+            <param name="encryEncoding">加密编码</param>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSecurityToken.#ctor(BIStudio.Framework.Utils.ALSecurityToken.EncryMode,System.Text.Encoding,System.Int32)">
+            <summary>
+            初始化新的安全令牌
+            </summary>
+            <param name="encryMode">加密方式</param>
+            <param name="encryEncoding">加密编码</param>
+            <param name="timeoutMinutes">超时时间</param>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSecurityToken.Create(System.String)">
+            <summary>
+            为指定的数据创建安全令牌
+            </summary>
+            <param name="key">动态密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSecurityToken.Create(System.String,System.DateTime)">
+            <summary>
+            为指定的数据创建安全令牌
+            </summary>
+            <param name="key">动态密钥</param>
+            <param name="time">令牌创建时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSecurityToken.Verify(System.String,System.String)">
+            <summary>
+            验证指定的安全令牌是否可用
+            </summary>
+            <param name="key">动态密钥</param>
+            <param name="token">安全令牌</param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALSerialize">
+            <summary>
+            序列化类
+            </summary>
+            <remarks>
+            主要包括XML序列化，文件序列化，JSON序列化
+            [2012-03-11]
+            </remarks>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSerialize.XMLSerialize``1(``0)">
+            <summary>
+            对象序列化成xml字符串
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSerialize.XMLDeserialize``1(System.String)">
+            <summary>
+            xml字符串反序列化为对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSerialize.FileSerialize``1(``0,System.String)">
+            <summary>
+            对象序列化文件
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="t">对象</param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSerialize.FileDeserialize``1(System.String)">
+            <summary>
+            文件反序列化对象
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSerialize.JsonSerialize``1(``0)">
+            <summary>
+            对象序列化成Json
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSerialize.JsonDeserialize``1(System.String)">
+            <summary>
+            JSON反序列化成对象
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSerialize.JsonDeserialize(System.String,System.Type)">
+            <summary>
+            JSON反序列化成对象
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSerialize.ConvertJsonToString(System.Text.RegularExpressions.Match)">
+            <summary>
+            将Json时间转为时间字符串
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSerialize.ConvertDateToJson(System.Text.RegularExpressions.Match)">
+            <summary>
+            将时间字符串转为Json时间
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSerialize.DataTabelSerialize(System.Data.DataTable)">
+            <summary>
+            把DataTable转化成 JSON 字符串 
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALSerialize.DataTableDeserialize(System.String)">
+            <summary>
+            把JSON 字符串转化成DataTable
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Utils.ALValidator">
+            <summary>
+            Intro:验证 网址，IP，邮箱，电话，手机，数字，英文，日期，身份证，邮编
+            </summary>
+            <remarks>
+            针对某个值进行有效性验证
+            [2012-03-11]
+            </remarks>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsEmail(System.String)">
+            <summary>
+            验证邮箱
+            </summary>
+            <param name="email">Email地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsUrl(System.String)">
+            <summary>
+            验证网址是否有效
+            </summary>
+            <param name="url">网址</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsDateTime(System.String)">
+            <summary>
+            验证日期格式是否有效
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsMobile(System.String)">
+            <summary>
+            验证手机号，目前只支持中国手机号码
+            </summary>
+            <param name="mobile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsIP(System.String)">
+            <summary>
+            验证IP是否有效
+            </summary>
+            <param name="ip">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsIDCard(System.String)">
+            <summary>
+            验证身份证是否有效，目前只支持中国身份证号码
+            </summary>
+            <param name="Id">身份证号码</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsInt(System.String)">
+            <summary>
+            是不是Int型的
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsLengthStr(System.String,System.Int32,System.Int32)">
+            <summary>
+            看字符串的长度是不是在限定数之间（一个中文为两个字符）
+            </summary>
+            <param name="source">字符串</param>
+            <param name="begin">大于等于</param>
+            <param name="end">小于等于</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsTel(System.String)">
+            <summary>
+            目前只支持中国电话，格式010-85849685
+            </summary>
+            <param name="str">电话号码</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsPostCode(System.String)">
+            <summary>
+            目前只支持中国邮政编码，即6个数字
+            </summary>
+            <param name="str">邮编号码</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsChineseChar(System.String)">
+            <summary>
+            验证字符是否为中文汉字
+            </summary>
+            <param name="str">汉字字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsNormalChar(System.String)">
+            <summary>
+            验证是不是正常字符 字母，数字，下划线的组合
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Utils.ALValidator.IsImage(System.String)">
+            <summary>
+            验证给定的URL是否为图片
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1014 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.Domain.IDeleteAudited">
+            <summary>
+            表示删除审计
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IDeleteAudited.Deleter">
+            <summary>
+            删除人姓名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IDeleteAudited.DeleterID">
+            <summary>
+            删除人编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IDeleteAudited.DeleteTime">
+            <summary>
+            删除时间
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.ITenantAudited">
+            <summary>
+            表示多租户支持
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.ITenantAudited.SystemID">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.ISoftDelete">
+            <summary>
+            表示逻辑删除
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.ISoftDelete.IsDelete">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.IUpdateAudited">
+            <summary>
+            表示更新审计
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IUpdateAudited.Updater">
+            <summary>
+            更新人姓名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IUpdateAudited.UpdaterID">
+            <summary>
+            更新人编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IUpdateAudited.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.IInputAudited">
+            <summary>
+            表示录入审计
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IInputAudited.Inputer">
+            <summary>
+            录入人姓名
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IInputAudited.InputerID">
+            <summary>
+            录入人编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IInputAudited.InputTime">
+            <summary>
+            录入时间
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.IContextResolver">
+            <summary>
+            表示上下文依赖解析器
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.DomainResolver">
+            <summary>
+            领域依赖解析器
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.DomainResolver.Repository``1">
+            <summary>
+            从当前上下文中获取仓储
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.DomainResolver.Add``1(``0)">
+            <summary>
+            将实体标记为新增状态
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.DomainResolver.Modify``1(``0)">
+            <summary>
+            将实体标记为变更状态
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.DomainResolver.Remove``1(``0)">
+            <summary>
+            将实体标记为删除状态
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.DomainResolver.Get``1(System.Int64)">
+            <summary>
+            从当前上下文中获取实体
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.IDomainResolver">
+            <summary>
+            表示领域依赖解析器
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IDomainResolver.Repository``1">
+            <summary>
+            从当前上下文中获取仓储
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IDomainResolver.Add``1(``0)">
+            <summary>
+            将实体标记为新增状态
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IDomainResolver.Modify``1(``0)">
+            <summary>
+            将实体标记为变更状态
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IDomainResolver.Remove``1(``0)">
+            <summary>
+            将实体标记为删除状态
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IDomainResolver.Get``1(System.Int64)">
+            <summary>
+            从当前上下文中获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.ContextResolver">
+            <summary>
+            瞬态依赖解析器
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.ExtendFields">
+            <summary>
+            扩展属性
+            </summary>
+            <example> 在DataEntityBase中使用扩展字段
+            <code>
+            public string Remarks { get; set; }
+            
+            public ExtendFields ExtendFields;
+            
+            public DataEntityBase()
+            {
+                ExtendFields = new ExtendFields(this, "Remarks");
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ExtendFields.#ctor(System.Object,System.String)">
+            <summary>
+            使用指定的xml字段装载扩展属性
+            </summary>
+            <param name="entity"></param>
+            <param name="xmlFieldName"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ExtendFields.GetValue(System.String)">
+            <summary>
+            获得扩展属性的值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ExtendFields.SetValue(System.String,System.String)">
+            <summary>
+            设置扩展属性的值
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.ExtendFields.Item(System.String)">
+            <summary>
+            设置或获取扩展属性的值
+            </summary>
+            <param name="fieldName">扩展字段名称</param>
+            <returns>扩展字段的值</returns>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.IAggregateRoot">
+            <summary>
+            表示聚合根
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IAggregateRoot.ApplyEvent``1(``0)">
+            <summary>
+            分发领域消息
+            </summary>
+            <param name="domainEvent"></param>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.IEntity">
+            <summary>
+            表示领域实体
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IEntity.ID">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.AggregateRoot">
+            <summary>
+            聚合根
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.AggregateRoot.ApplyEvent``1(``0)">
+            <summary>
+            分发领域消息
+            </summary>
+            <param name="domainEvent"></param>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.Entity">
+            <summary>
+            数据实体类
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.Entity.Property">
+            <summary>
+            数据实体定义
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.Entity.ID">
+            <summary>
+            DataEntity主键
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.Entity.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            调用系统验证方法
+            </summary>
+            <param name="validationContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.DomainEvent">
+            <summary>
+            领域事件
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.DomainEvent.AggregateRootID">
+            <summary>
+            聚合根标识
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.DomainEvent.AggregateRootType">
+            <summary>
+            聚合根类别
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.IDomainEvent">
+            <summary>
+            表示领域事件
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IDomainEvent.AggregateRootID">
+            <summary>
+            聚合根标识
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IDomainEvent.AggregateRootType">
+            <summary>
+            聚合根类别
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.RepositoryUtils.As``1(System.Data.DataRow,BIStudio.Framework.Domain.IUnitOfWork)">
+            <summary>
+            将DataRow转换为数据实体
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="dr">要转换的数据行</param>
+            <param name="ev">需要应用的事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.RepositoryUtils.ToList``1(System.Data.DataTable,BIStudio.Framework.Domain.IUnitOfWork)">
+            <summary>
+            将DataTable转换为数据实体列表
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="dt">要转换的数据表</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.RepositoryUtils.As``1(System.Data.Common.DbDataReader,BIStudio.Framework.Domain.IUnitOfWork)">
+            <summary>
+            将DataReader转换为数据实体
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="dr">要转换的数据流</param>
+            <param name="ev">需要应用的事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.RepositoryUtils.ToList``1(System.Data.Common.DbDataReader,BIStudio.Framework.Domain.IUnitOfWork)">
+            <summary>
+            将DataReader转换为数据实体列表
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="dr">要转换的数据流</param>
+            <param name="ev">需要应用的事务</param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.RepositoryBase`1">
+            <summary>
+            仓储
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.Repository`1">
+            <summary>
+            仓储
+            </summary>
+        </member>
+        <member name="E:BIStudio.Framework.Domain.Repository`1.OnAdd">
+            <summary>
+            当准备新增实体时触发
+            </summary>
+        </member>
+        <member name="E:BIStudio.Framework.Domain.Repository`1.OnModify">
+            <summary>
+            当准备更新实体时触发
+            </summary>
+        </member>
+        <member name="E:BIStudio.Framework.Domain.Repository`1.OnRemove">
+            <summary>
+            当准备删除实体时触发
+            </summary>
+        </member>
+        <member name="E:BIStudio.Framework.Domain.Repository`1.OnGet">
+            <summary>
+            当准备获取实体时触发
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.RepositoryAddHandler`1">
+            <summary>
+            表示准备新增实体事件
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.RepositoryModifyHandler`1">
+            <summary>
+            表示准备更新实体事件
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <param name="specification"></param>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.RepositoryRemoveHandler`1">
+            <summary>
+            表示准备删除实体事件
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="specification"></param>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.RepositoryGetHandler`1">
+            <summary>
+            表示准备获取实体事件
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="specification"></param>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.IDomainService">
+            <summary>
+            领域服务
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.DomainService">
+            <summary>
+            领域服务
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.TransientDependency">
+            <summary>
+            瞬态依赖
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.TransientDependency.OnInject">
+            <summary>
+            将工作单元注入到实现了ITransientDependency接口的私有属性
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.TransientDependency.DependOn(BIStudio.Framework.Domain.IBoundedContext)">
+            <summary>
+            将工作单元注入到实现了ITransientDependency接口的私有属性
+            </summary>
+            <param name="uow"></param>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.TransientDependency.Context">
+            <summary>
+            限界上下文
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.TransientDependency.UnitOfWork">
+            <summary>
+            工作单元
+            </summary>
+        </member>
+        <member name="E:BIStudio.Framework.Domain.IRepository`1.OnAdd">
+            <summary>
+            当准备新增实体时触发
+            </summary>
+        </member>
+        <member name="E:BIStudio.Framework.Domain.IRepository`1.OnModify">
+            <summary>
+            当准备更新实体时触发
+            </summary>
+        </member>
+        <member name="E:BIStudio.Framework.Domain.IRepository`1.OnRemove">
+            <summary>
+            当准备删除实体时触发
+            </summary>
+        </member>
+        <member name="E:BIStudio.Framework.Domain.IRepository`1.OnGet">
+            <summary>
+            当准备获取实体时触发
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.Add(`0)">
+            <summary>
+                新增实体
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.Remove(`0)">
+            <summary>
+                删除实体
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.Remove(System.Int64)">
+            <summary>
+                删除实体
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                删除实体
+            </summary>
+            <param name="predicate"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.Remove(BIStudio.Framework.Domain.ISpecification{`0})">
+            <summary>
+                删除实体
+            </summary>
+            <param name="specification"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.Modify(`0)">
+            <summary>
+                更新实体
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.Modify(`0,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                批量更新更新实体
+            </summary>
+            <param name="entity"></param>
+            <param name="predicate"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.Modify(`0,BIStudio.Framework.Domain.ISpecification{`0})">
+            <summary>
+                批量更新更新实体
+            </summary>
+            <param name="entity"></param>
+            <param name="specification"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.Get(System.Int64)">
+            <summary>
+                获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+               根据条件获取单个实体
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.Get(BIStudio.Framework.Domain.ISpecification{`0})">
+            <summary>
+               根据条件获取单个实体
+            </summary>
+            <param name="specification"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.GetAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},BIStudio.Framework.Domain.SortExpression{`0})">
+            <summary>
+                根据条件获取实体
+            </summary>
+            <param name="predicate"></param>
+            <param name="sortExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.GetAll(BIStudio.Framework.Domain.ISpecification{`0},BIStudio.Framework.Domain.SortExpression{`0})">
+            <summary>
+                根据条件获取实体
+            </summary>
+            <param name="specification"></param>
+            <param name="sortExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.GetPaged(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,BIStudio.Framework.Domain.SortExpression{`0})">
+            <summary>
+                获取分页实体
+            </summary>
+            <param name="predicate"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="sortExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.GetPaged(BIStudio.Framework.Domain.ISpecification{`0},System.Int32,System.Int32,BIStudio.Framework.Domain.SortExpression{`0})">
+            <summary>
+                获取分页实体
+            </summary>
+            <param name="specification"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="sortExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.GetPagedAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                获取分页实体的委托
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IRepository`1.GetPagedAsync(BIStudio.Framework.Domain.ISpecification{`0})">
+            <summary>
+                获取分页实体的委托
+            </summary>
+            <param name="specification"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IRepository`1.Entities">
+            <summary>
+            查询仓储实体（不使用审计功能）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.DefaultSortExpression`1">
+            <summary>
+            空的排序表达式
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.EntitySpec`1">
+            <summary>
+            按数据实体查询
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.EntitySpecExtensions.AsSpec``1(``0)">
+            <summary>
+            将数据实体转换为规约
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.FalseSpec`1">
+            <summary>
+                永远为假的查询
+            </summary>
+            <typeparam name="TEntity">Type of entity in this specification</typeparam>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.UnitOfWorkBase">
+            <summary>
+            工作单元
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.IUnitOfWork">
+            <summary>
+            工作单元，请使用BoundedContext.Create管理工作单元
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.AndSpecification`1">
+            <summary>
+                A logic AND Specification
+            </summary>
+            <typeparam name="T">Type of entity that check this specification</typeparam>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.AndSpecification`1.#ctor(BIStudio.Framework.Domain.ISpecification{`0},BIStudio.Framework.Domain.ISpecification{`0})">
+            <summary>
+                Default constructor for AndSpecification
+            </summary>
+            <param name="leftSide">Left side specification</param>
+            <param name="rightSide">Right side specification</param>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.CompositeSpecification`1">
+            <summary>
+            组合规约
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.Spec`1">
+            <summary>
+            定义一个规约
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.Spec`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            定义基于Lambda表达式的规约
+            </summary>
+            <param name="matchingCriteria"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.Spec`1.#ctor(System.String,System.Object)">
+            <summary>
+            定义基于Sql表达式的规约
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.Spec`1.#ctor(BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            定义基于Sql表达式的规约
+            </summary>
+            <param name="sql"></param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.Spec`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},BIStudio.Framework.Data.DBBuilder)">
+            <summary>
+            定义基于Lambda表达式和Sql表达式的规约
+            </summary>
+            <param name="sql"></param>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.SortExpression`1.SortList">
+            <summary>
+            key:属性名，value,true为升序，false为降序
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.SortExpression`1.#ctor(System.String)">
+            <summary>
+            排序
+            </summary>
+            <param name="sortExpression">排序表达式，例如：ID Desc, Sequence Asc</param>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.IDSpec`1">
+            <summary>
+            按主键值查询
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.FieldSpec`2">
+            <summary>
+            按属性值查询
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.ExpressionBuilder">
+            <summary>
+                Extension methods for adding AND and OR with parameters rebinder
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ExpressionBuilder.Compose``1(System.Linq.Expressions.Expression{``0},System.Linq.Expressions.Expression{``0},System.Func{System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Linq.Expressions.Expression})">
+            <summary>
+                Compose two expressions and merge all in a new expression
+            </summary>
+            <typeparam name="T">Type of params in expression</typeparam>
+            <param name="first">Expression instance</param>
+            <param name="second">Expression to merge</param>
+            <param name="merge">Function to merge</param>
+            <returns>New merged expression</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ExpressionBuilder.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+                And operator
+            </summary>
+            <typeparam name="T">Type of params in expression</typeparam>
+            <param name="first">Right Expression in AND operation</param>
+            <param name="second">Left Expression in And operation</param>
+            <returns>New AND expression</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ExpressionBuilder.Or``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+                Or operator
+            </summary>
+            <typeparam name="T">Type of param in expression</typeparam>
+            <param name="first">Right expression in OR operation</param>
+            <param name="second">Left expression in OR operation</param>
+            <returns>New Or expressions</returns>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.ISpecification`1.Lambda">
+            <summary>
+                内存中的查询，或者ef/hn这种orm的查询方式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.ISpecification`1.Sql">
+            <summary>
+                将契约编译为查询表达式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.NotSpecification`1">
+            <summary>
+            表示否定规约
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.NotSpecification`1.#ctor(BIStudio.Framework.Domain.ISpecification{`0})">
+            <summary>
+            初始化否定规约
+            </summary>
+            <param name="originalSpecification"></param>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.OrSpecification`1">
+            <summary>
+                A Logic OR Specification
+            </summary>
+            <typeparam name="T">Type of entity that check this specification</typeparam>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.OrSpecification`1.#ctor(BIStudio.Framework.Domain.ISpecification{`0},BIStudio.Framework.Domain.ISpecification{`0})">
+            <summary>
+                Default constructor for AndSpecification
+            </summary>
+            <param name="leftSide">Left side specification</param>
+            <param name="rightSide">Right side specification</param>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.ParameterRebinder">
+            <summary>
+                Helper for rebinder parameters without use Invoke method in expressions
+                ( this methods is not supported in all linq query providers,
+                for example in Linq2Entities is not supported)
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ParameterRebinder.#ctor(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression})">
+            <summary>
+                Default construcotr
+            </summary>
+            <param name="map">Map specification</param>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ParameterRebinder.ReplaceParameters(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression},System.Linq.Expressions.Expression)">
+            <summary>
+                Replate parameters in expression with a Map information
+            </summary>
+            <param name="map">Map information</param>
+            <param name="exp">Expression to replace parameters</param>
+            <returns>Expression with parameters replaced</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ParameterRebinder.VisitParameter(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+                Visit pattern method
+            </summary>
+            <param name="p">A Parameter expression</param>
+            <returns>New visited expression</returns>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.SpecificationBase`1">
+            <summary>
+            规约
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.SpecificationBase`1.Sql">
+            <summary>
+                按照sql的方式去查询
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.SpecificationBase`1.Lambda">
+            <summary>
+                Specification 的表达式模式,
+            </summary>
+            <returns>Expression that satisfy this specification</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.SpecificationBase`1.op_BitwiseAnd(BIStudio.Framework.Domain.SpecificationBase{`0},BIStudio.Framework.Domain.SpecificationBase{`0})">
+            <summary>
+                And operator
+            </summary>
+            <param name="leftSideSpecification">left operand in this AND operation</param>
+            <param name="rightSideSpecification">right operand in this AND operation</param>
+            <returns>New specification</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.SpecificationBase`1.op_BitwiseOr(BIStudio.Framework.Domain.SpecificationBase{`0},BIStudio.Framework.Domain.SpecificationBase{`0})">
+            <summary>
+                Or operator
+            </summary>
+            <param name="leftSideSpecification">left operand in this OR operation</param>
+            <param name="rightSideSpecification">left operand in this OR operation</param>
+            <returns>New specification </returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.SpecificationBase`1.op_LogicalNot(BIStudio.Framework.Domain.SpecificationBase{`0})">
+            <summary>
+                Not specification
+            </summary>
+            <param name="specification">Specification to negate</param>
+            <returns>New specification</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.SpecificationBase`1.op_False(BIStudio.Framework.Domain.SpecificationBase{`0})">
+            <summary>
+                Override operator false, only for support AND OR operators
+            </summary>
+            <param name="specification">Specification instance</param>
+            <returns>See False operator in C#</returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.SpecificationBase`1.op_True(BIStudio.Framework.Domain.SpecificationBase{`0})">
+            <summary>
+                Override operator True, only for support AND OR operators
+            </summary>
+            <param name="specification">Specification instance</param>
+            <returns>See True operator in C#</returns>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.TrueSpec`1">
+            <summary>
+                永远为真的查询
+            </summary>
+            <typeparam name="TEntity">Type of entity in this specification</typeparam>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.ITransientDependency">
+            <summary>
+            表示瞬态依赖
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ITransientDependency.OnInject">
+            <summary>
+            将工作单元注入到实现了ITransientDependency接口的私有属性
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ITransientDependency.DependOn(BIStudio.Framework.Domain.IBoundedContext)">
+            <summary>
+            设置当前类依赖的工作单元
+            </summary>
+            <param name="uow"></param>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.ITransientDependency.UnitOfWork">
+            <summary>
+            工作单元
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.BoundedContext">
+            <summary>
+            限界上下文
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.BoundedContext.Create">
+            <summary>
+            开启事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.BoundedContext.Create(System.String)">
+            <summary>
+            开启事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.BoundedContext.Create(BIStudio.Framework.Domain.UnitOfWorkOptions)">
+            <summary>
+            开启事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.BoundedContext.Commit">
+            <summary>
+            执行事务
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.BoundedContext.Rollback">
+            <summary>
+            取消事务
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.IBoundedContext">
+            <summary>
+            表示限界上下文
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.IBoundedContext.UnitOfWork">
+            <summary>
+            设置或获取工作单元
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IBoundedContext.Commit">
+            <summary>
+            执行事务
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IBoundedContext.Rollback">
+            <summary>
+            取消事务
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.UnitOfWorkOptions">
+            <summary>
+            工作单元初始配置
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.UnitOfWorkOptions.ConnectionName">
+            <summary>
+            连接字符串名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Domain.UnitOfWorkOptions.IsTransactional">
+            <summary>
+            是否开启事务
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.ModelValidator">
+            <summary>
+            基于 Data Annotations的验证 
+            使用IValidatableObject 
+            和使用ValidationAttribute来进行验证
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Domain.ModelValidator.Default">
+            <summary>
+            获得默认的验证器
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ModelValidator.IsValid(System.ComponentModel.DataAnnotations.IValidatableObject)">
+            <summary>
+            验证
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ModelValidator.Validate(System.ComponentModel.DataAnnotations.IValidatableObject)">
+            <summary>
+            获取错误消息
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ModelValidator.GetPropertyValidationJson(System.Type)">
+            <summary>
+            获取验证表达式
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Domain.IModelValidator">
+            <summary>
+            实体验证
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IModelValidator.IsValid(System.ComponentModel.DataAnnotations.IValidatableObject)">
+            <summary>
+            验证
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IModelValidator.Validate(System.ComponentModel.DataAnnotations.IValidatableObject)">
+            <summary>
+            获取验证信息
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.IModelValidator.GetPropertyValidationJson(System.Type)">
+            <summary>
+            获取验证表达式
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ModelValidatorExtension.Validate(System.ComponentModel.DataAnnotations.IValidatableObject)">
+            <summary>
+            获取验证信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Domain.ModelValidatorExtension.IsValid(System.ComponentModel.DataAnnotations.IValidatableObject)">
+            <summary>
+            验证
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

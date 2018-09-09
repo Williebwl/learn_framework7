@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Web Api 调用</title>
+    <meta charset="utf-8" />
+    <link href="Css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="content">
+        <div id="back"><a href="index.html" title="控制器列表">控制器列表</a><a href="javascript:history.back();" title="返回">返回</a></div>
+        <p class="heading1">
+        </p>
+        <br />
+        <div id="actions"></div>
+        <br />
+        <span></span>
+    </div>
+    <script src="Js/jquery.min.js"></script>
+    <script src="Js/js.js"></script>
+    <script type="text/javascript">
+        var controller = request("controller"), action = request("action");
+        $("p").append(FirstToUpper(controller) + '.' + FirstToUpper(action) + " 服务");
+        $.get('/Core/Metadata/GetAction?controller=' + controller + '&action=' + action, function (a) {
+            $.each(a, function (i, d) {
+
+                var link = GetHost() + '/' + d.Link, html = '<table class="actionInfo" border="0" cellpadding="0" cellspacing="0"><tr><td class="title">接 口：</td><td colspan="2">' + d.Name + '</td></tr>';
+                html += '<tr><td class="title">控 制 器：</td><td colspan="2">' + d.Controller + '</td></tr>';
+                html += '<tr><td class="title">请求方式：</td><td colspan="2">' + d.PostMethod + '</td></tr>';
+                html += '<tr><td class="title">链 接 地 址：</td><td colspan="2"><a href="' + link + '" target="_blank">' + link + '</a></td></tr>';
+
+                if (d.RouteParams.length) {
+                    html += '<tr><td rowspan="' + (d.RouteParams.length + 1) + '" class="title">路由参数：</td><td>参数名称</td><td>数据类型</td></tr>';
+                    $.each(d.RouteParams, function (i, p) {
+                        html += '<tr><td>' + p.Name + '</td><td>' + p.Type + '</td></tr>'
+                    })
+                }
+
+                if (d.UrlParams.length) {
+                    html += '<tr><td rowspan="' + (d.UrlParams.length + 1) + '" class="title">Url参数：</td><td>参数名称</td><td>数据类型</td></tr>';
+                    $.each(d.UrlParams, function (i, p) {
+                        html += '<tr><td>' + p.Name + '</td><td>' + p.Type + '</td></tr>'
+                    })
+                }
+
+                if (d.FromBody) {
+                    html += '<tr><td rowspan="2" class="title">数据内容参数：</td><td>参数名称</td><td>数据类型</td></tr>';
+                    html += '<tr><td>' + d.FromBody.Name + '</td><td>' + d.FromBody.Type + '</td></tr>'
+                }
+
+                html += '</table>';
+
+                $('#actions').append(html);
+            })
+        })
+    </script>
+</body>
+</html>

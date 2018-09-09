@@ -1,0 +1,408 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.UI</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.UI.AuthorizeAttribute">
+            <summary>
+            指定用于验证请求的 System.Security.Principal.IPrincipal 的授权筛选器
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.AuthorizeAttribute.Roles">
+            <summary>
+            获取或设置授权角色
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.AuthorizeAttribute.Users">
+            <summary>
+            获取或设置授权用户
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.AuthorizeAttribute.Operation">
+            <summary>
+            指定当前操作代码
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.UI.AuthorizeAttribute.HandleUnauthorizedRequest(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            处理授权失败的请求
+            </summary>
+            <param name="actionContext">上下文</param>
+        </member>
+        <member name="M:BIStudio.Framework.UI.AuthorizeAttribute.IsAuthorized(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            指示指定的控件是否已获得授权
+            </summary>
+            <param name="actionContext">上下文</param>
+            <returns>如果控件已获得授权，则为 true；否则为 false</returns>
+        </member>
+        <member name="T:BIStudio.Framework.UI.TreeHelp">
+            <summary>
+            TreeHelp
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.UI.TreeHelp.GetTree``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            将数据转换为树结构
+            </summary>
+            <typeparam name="T">要转换的数据类型</typeparam>
+            <param name="infos">需要转换的数据集</param>
+            <returns>数据树结构</returns>
+        </member>
+        <member name="T:BIStudio.Framework.UI.NamespaceHttpRouteConstraint">
+            <summary>
+            智能匹配路由规则中的action和id参数
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.UI.ApplicationService`3">
+            <summary>
+            应用服务
+            </summary>
+            <typeparam name="TEntity">数据对象</typeparam>
+            <typeparam name="TQuery">查询对象</typeparam>
+            <typeparam name="TViewModel">数据交互模型</typeparam>
+        </member>
+        <member name="F:BIStudio.Framework.UI.ApplicationService`3._repository">
+            <summary>
+            数据操作对象
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.UI.ApplicationService`3.searchFields">
+            <summary>
+            模糊查询字段
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService`3.#ctor(System.String[])">
+            <summary>
+            需要查询的字段
+            </summary>
+            <param name="searchFields">字段名称</param>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService`3.GetQueryParams``1(``0)">
+            <summary>
+            获得视图模型查询表达式
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService`3.GetQueryParams``1(``0,System.Int32@,System.Int32@)">
+            <summary>
+            获得视图模型查询表达式
+            </summary>
+            <param name="info"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.UI.ApplicationService">
+            <summary>
+            应用服务
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService.OnInject">
+            <summary>
+            将工作单元注入到实现了ITransientDependency接口的私有属性
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService.DependOn(BIStudio.Framework.Domain.IBoundedContext)">
+            <summary>
+            将工作单元注入到实现了ITransientDependency接口的私有属性
+            </summary>
+            <param name="uow"></param>
+        </member>
+        <member name="P:BIStudio.Framework.UI.ApplicationService.Context">
+            <summary>
+            限界上下文
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.ApplicationService.UnitOfWork">
+            <summary>
+            工作单元
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.UI.ApplicationService`2.validator">
+            <summary>
+            视图验证器
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService`2.#ctor">
+            <summary>
+            需要查询的字段
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService`2.GetAll(`1)">
+            <summary>
+            查询视图模型
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService`2.Get(`1)">
+            <summary>
+            分页查询视图模型
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService`2.Get(System.Int64)">
+            <summary>
+            获取视图模型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService`2.Validate(`0)">
+            <summary>
+            验证视图模型
+            </summary>
+            <param name="vm"></param>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService`2.Post(`0)">
+            <summary>
+            创建视图模型
+            </summary>
+            <param name="vm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService`2.Put(System.Int64,`0)">
+            <summary>
+            更新视图模型
+            </summary>
+            <param name="id"></param>
+            <param name="vm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService`2.Delete(System.String)">
+            <summary>
+            删除视图模型
+            </summary>
+            <param name="id">id或ids（id用,隔开）</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ApplicationService`2.Sequence(System.Collections.Generic.List{BIStudio.Framework.UI.SortVM})">
+            <summary>
+            排序视图模型
+            </summary>
+            <param name="vm">需要保存的数据</param>
+            <returns>是否保存成功</returns>
+        </member>
+        <member name="T:BIStudio.Framework.UI.ViewModelExt">
+            <summary>
+            视图模型拓展
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ViewModelExt.Clone``1(``0)">
+            <summary>
+            创建当前对象的浅表副本。
+            </summary>
+            <typeparam name="T">当前对象类型</typeparam>
+            <param name="vm">需要创建浅表副本的对象</param>
+            <returns>当前对象的浅表副本。</returns>
+        </member>
+        <member name="T:BIStudio.Framework.UI.ITreeVM">
+            <summary>
+            树节点
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.ITreeVM.ID">
+            <summary>
+            节点标示
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.ITreeVM.ParentID">
+            <summary>
+            父节点标示
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.ITreeVM.Path">
+            <summary>
+            节点路径
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.ITreeVM.Layer">
+            <summary>
+            节点所属层级
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.ITreeVM.Children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.SortVM.ID">
+            <summary>
+            唯一标示
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.SortVM.Sequence">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.UI.Models.TreeVM">
+            <summary>
+            树数据结构
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.Children">
+            <summary>
+            节点的子节点数据集合。 默认值：无
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.CHKDisabled">
+            <summary>
+            设置节点的 checkbox / radio 是否禁用 默认值：false
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.HalfCheck">
+            <summary>
+            强制节点的 checkBox / radio 的 半勾选状态 默认值：false
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.IsParent">
+            <summary>
+            记录 treeNode 节点是否为父节点
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.Name">
+            <summary>
+            节点名称
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.Value">
+            <summary>
+            节点值
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.Open">
+            <summary>
+            记录 treeNode 节点的 展开 / 折叠 状态 默认值：false
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.Checked">
+            <summary>
+            节点的 checkBox / radio 的 勾选状态 默认值：false
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.Nocheck">
+            <summary>
+            设置节点是否隐藏 checkbox / radio
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.Target">
+            <summary>
+            设置点击节点后在何处打开 url 默认值：无
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.URL">
+            <summary>
+            节点链接的目标 URL 默认值：无
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.ParentID">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.ID">
+            <summary>
+            节点标识
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.Path">
+            <summary>
+            节点路径
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.TreeVM.Layer">
+            <summary>
+            所属层级
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.UI.Models.SmartTreeVM">
+            <summary>
+            树模型接口
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.SmartTreeVM.Text">
+            <summary>
+            显示文本
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.SmartTreeVM.Value">
+            <summary>
+            节点值
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.SmartTreeVM.ID">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.SmartTreeVM.ParentID">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.SmartTreeVM.Path">
+            <summary>
+            节点路径
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.SmartTreeVM.ShowCheck">
+            <summary>
+            是否显示选择框
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.SmartTreeVM.IsExpand">
+            <summary>
+            是否展开节点
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.SmartTreeVM.HasChildren">
+            <summary>
+            是否有子节点
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.SmartTreeVM.CheckState">
+            <summary>
+            节点选中状态
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.SmartTreeVM.Children">
+            <summary>
+            子节点集合
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.UI.Models.SmartTreeVM.Layer">
+            <summary>
+            所属层级
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.UI.IViewModel">
+            <summary>
+            表示视图模型
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.UI.ViewModel">
+            <summary>
+            视图模型
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ViewModel.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            调用系统验证方法
+            </summary>
+            <param name="validationContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.UI.ViewModel.Clone``1">
+            <summary>
+             创建当前对象的浅表副本。
+            </summary>
+            <typeparam name="T">当前对象类型</typeparam>
+            <returns>当前对象的浅表副本。</returns>
+        </member>
+    </members>
+</doc>

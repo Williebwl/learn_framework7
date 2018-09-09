@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework.Data.Sql2005</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.Data.Sql2005.DBAnalyzer">
+            <summary>
+            Sql语法解析器 标准版，需要Sql2005以上版本
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Data.Sql2005.DBAnalyzer.pageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Data.Sql2005.DBAnalyzer.pageIndex">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Data.Sql2005.DBAnalyzer.sql">
+            <summary>
+            原始Sql语句
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAnalyzer.Init(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            初始化Sql语法解析器
+            </summary>
+            <param name="sql">输入字符串</param>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页大小</param>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAnalyzer.Init(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Int32,System.Collections.Generic.Dictionary{System.Char,System.Char})">
+            <summary>
+            初始化Sql语法解析器
+            </summary>
+            <param name="sql">输入字符串</param>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页大小</param>
+            <param name="startAt">起始位置</param>
+            <param name="pairs">成对的字符</param>
+        </member>
+        <member name="F:BIStudio.Framework.Data.Sql2005.DBAnalyzer.input">
+            <summary>
+            已处理过的Sql语句
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Data.Sql2005.DBAnalyzer.currentPos">
+            <summary>
+            当前查找位置
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Data.Sql2005.DBAnalyzer.stack">
+            <summary>
+            当前查找堆栈
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Data.Sql2005.DBAnalyzer.startPos">
+            <summary>
+            起始查找位置
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.Data.Sql2005.DBAnalyzer.pairs">
+            <summary>
+            闭合的字符对
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAnalyzer.GetLastPosition">
+            <summary>
+            返回最后一次匹配结果的终止位置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BIStudio.Framework.Data.Sql2005.DBAnalyzer.LastPosition">
+            <summary>
+            最后一次匹配结果的终止位置
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.Sql2005.DBAnalyzer.OrderBy">
+            <summary>
+            获得Order By语句
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.Sql2005.DBAnalyzer.OrderByWithoutTableName">
+            <summary>
+            获得排除了表名的Order By语句
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.Data.Sql2005.DBAnalyzer.SelectWithoutOrderBy">
+            <summary>
+            排除OrderBy语句之后的查询语句
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAnalyzer.Count">
+            <summary>
+            获得Count语句
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAnalyzer.Select">
+            <summary>
+            获得SELECT语句
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.CreateConnection">
+            <summary>
+            创建一个连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.CreateConnection(System.String)">
+            <summary>
+            使用指定的连接字符串创建连接
+            </summary>
+            <param name="connectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.CreateCommand">
+            <summary>
+            创建一个命令
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.CreateCommand(System.String)">
+            <summary>
+            使用指定的文本创建命令
+            </summary>
+            <param name="commandText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.CreateParameter">
+            <summary>
+            创建一个参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.CreateParameter(System.String,System.Object)">
+            <summary>
+            使用指定的键值对创建参数
+            </summary>
+            <param name="parmeterName">参数名称,无需@或?</param>
+            <param name="parmValue">参数值,如果为NULL则自动转换为DBNull.Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.CreateDataAdapter">
+            <summary>
+            创建一个数据适配器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.CreateDataAdapter(System.Data.Common.DbCommand)">
+            <summary>
+            使用指定的命令创建数据适配器
+            </summary>
+            <param name="cmd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.FormatTable(System.String)">
+            <summary>
+            格式化字段名
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.FormatField(System.String)">
+            <summary>
+            格式化字段名
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.FormatParameter(System.String)">
+            <summary>
+            格式化参数名
+            </summary>
+            <param name="parameterName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.FormatValue(System.Object)">
+            <summary>
+            格式化字符串
+            </summary>
+            <param name="objValue"></param>
+            <returns></returns>
+        </member>
+        <member name="F:BIStudio.Framework.Data.Sql2005.DBAdapter.sysFunctionMapper">
+            <summary>
+            自定义函数
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.FormatFunction(System.String)">
+            <summary>
+            格式化自定义函数
+            </summary>
+            <param name="functionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.Data.Sql2005.DBAdapter.FormatFunction(System.String,System.String[])">
+            <summary>
+            格式化自定义函数
+            </summary>
+            <param name="functionName"></param>
+            <param name="parms"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

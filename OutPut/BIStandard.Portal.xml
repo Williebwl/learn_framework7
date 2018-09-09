@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIStandard.Portal</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Standard.Portal.STDArticle">
+            <summary>
+            文档
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.Title">
+            <summary>
+            文章标题
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.Summary">
+            <summary>
+            文章摘要
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.ArticleUrl">
+            <summary>
+            文章链接
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.CoverUrl">
+            <summary>
+            封面图片链接
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.TagIDs">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.TagNames">
+            <summary>
+            文章标签
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.Source">
+            <summary>
+            文章来源
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.SourceUrl">
+            <summary>
+            文章来源链接
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.Views">
+            <summary>
+            浏览量
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.IsValid">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.IsDelete">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.ArchiveStatus">
+            <summary>
+            归档状态
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.Publisher">
+            <summary>
+            发布人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.PublisherID">
+            <summary>
+            发布人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.PublishTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.ExpirationTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.Inputer">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.InputerID">
+            <summary>
+            创建人的ID
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.InputTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.Updater">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.UpdaterID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.RefferID">
+            <summary>
+            引用来源
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.Sequence">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticle.UnitID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BIStudio.Standard.Portal.STDArticleContent">
+            <summary>
+            文档内容
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticleContent.ArticleID">
+            <summary>
+            文章编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticleContent.ContentHTML">
+            <summary>
+            文章内容
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticleContent.ContentXML">
+            <summary>
+            文章扩展内容
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticleContent.TemplateID">
+            <summary>
+            文章模板编号
+            </summary>
+        </member>
+        <member name="P:BIStudio.Standard.Portal.STDArticleContent.UnitID">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,734 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BIFramework</name>
+    </assembly>
+    <members>
+        <member name="T:BIStudio.Framework.IAspectResolver">
+            <summary>
+            解析器
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.IAspectResolver`1">
+            <summary>
+            解析器
+            </summary>
+            <typeparam name="TInterface"></typeparam>
+        </member>
+        <member name="T:BIStudio.Framework.CFAspect">
+            <summary>
+            IOC容器
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.CFAspect.Current">
+            <summary>
+                Get the current configured container
+            </summary>
+            <returns>Configured container</returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFAspect.RegisterType(System.Type,System.Type)">
+            <summary>
+            注册类型
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.CFAspect.RegisterType(System.Type,System.Type,Microsoft.Practices.Unity.LifetimeManager,Microsoft.Practices.Unity.InjectionMember[])">
+            <summary>
+            注册类型
+            </summary>
+            <param name="target">目标</param>
+            <param name="source">源</param>
+            <param name="lifetimeManager">生命周期</param>
+            <param name="injectionMembers">注入aop方法</param>
+        </member>
+        <member name="M:BIStudio.Framework.CFAspect.RegisterType``2">
+            <summary>
+            注册类型
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.CFAspect.RegisterType``2(System.String)">
+            <summary>
+            注册类型
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.CFAspect.RegisterType``2(Microsoft.Practices.Unity.LifetimeManager,Microsoft.Practices.Unity.InjectionMember[])">
+            <summary>
+            注册类型
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.CFAspect.Constructor(System.Object[])">
+            <summary>
+            定义构造函数
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFAspect.Constructor``1(System.Object[])">
+            <summary>
+            定义构造函数
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFAspect.Resolve(System.Type,System.Object[])">
+            <summary>
+            创建实例
+            </summary>
+            <param name="target"></param>
+            <param name="values">构造函数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFAspect.Resolve``1(System.Object[])">
+            <summary>
+            创建泛型实例
+            </summary>
+            <param name="values">构造函数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFAspect.RegisterAopContainer(BIStudio.Framework.CFConfig)">
+            <summary>
+            扫描并注册AOP容器
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:BIStudio.Framework.CFAspect.GetLifetimeManager(BIStudio.Framework.LifetimeManagerType)">
+            <summary>
+            获取生命周期
+            </summary>
+            <param name="lifetimeManagerType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFAspect.GetInjectionMembers(BIStudio.Framework.AopType,System.Type)">
+            <summary>
+            注入aop方法
+            </summary>
+            <param name="aopType"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.Configuration.CFAspectConfig">
+            <summary>
+            AOP容器配置
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.Configuration.CFAspectConfig.RegisterContainer(BIStudio.Framework.CFConfig)">
+            <summary>
+            注册AOP容器
+            </summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.EditableKeyValuePair`2">
+            <summary>
+            可设置Key和Value的键值对
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="T:BIStudio.Framework.CFConfig">
+            <summary>
+            全局应用设置
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.CFConfig.Default">
+            <summary>
+            实例化应用程序配置器
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.CFConfig.ScanAssemblies(System.Action{System.Reflection.Assembly})">
+            <summary>
+            扫描程序集
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFConfig.ScanTypes(System.Action{System.Reflection.TypeInfo})">
+            <summary>
+            扫描程序集中定义的类型
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFConfig.ParallelGetTypes(System.Func{System.Reflection.TypeInfo,System.Boolean})">
+            <summary>
+            扫描程序集中定义的类型
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFConfig.ParallelScanTypes(System.Action{System.Reflection.TypeInfo})">
+            <summary>
+            扫描程序集中定义的类型
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFConfig.ParallelScanAttributes``1(System.Action{System.Reflection.TypeInfo,``0})">
+            <summary>
+            使用并行扫描程序集中定义的属性
+            </summary>
+            <typeparam name="T">属性类型</typeparam>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFConfig.ScanAttributes``1(System.Action{System.Reflection.TypeInfo,``0})">
+            <summary>
+            扫描程序集中定义的属性
+            </summary>
+            <typeparam name="T">属性类型</typeparam>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFConfig.ScanField``1(System.Type,System.Action{System.Reflection.FieldInfo})">
+            <summary>
+            扫描类中定义的字段
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="classType"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="F:BIStudio.Framework.CFConfig.DefaultConnectionName">
+            <summary>
+            默认数据库连接名称
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.CFConfig.GetConnection(System.String)">
+            <summary>
+            获得数据库连接字符串
+            </summary>
+            <param name="connectionName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.CFContext">
+            <summary>
+            请求上下文
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.CFContext.Current">
+            <summary>
+            当前默认实例
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.CFContext.SetCurrent(BIStudio.Framework.IContext)">
+            <summary>
+            设置当前线程的请求上下文
+            </summary>
+            <param name="current"></param>
+        </member>
+        <member name="P:BIStudio.Framework.CFContext.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.CFContext.Server">
+            <summary>
+            服务器信息
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.CFContext.Page">
+            <summary>
+            页面信息
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.IContext">
+            <summary>
+            请求上下文
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.IContext.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.IContext.Server">
+            <summary>
+            服务器信息
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.IContext.Page">
+            <summary>
+            表示当前请求的页面
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.ContextPage">
+            <summary>
+            页面信息
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.ContextPage.ResolveFullUrl(System.String)">
+            <summary>
+            获得完整的绝对路径
+            </summary>
+            <param name="relativeUrl">与 System.Web.UI.Control.TemplateSourceDirectory 属性相关联的 URL。</param>
+            <returns>转换后的 URL。</returns>
+        </member>
+        <member name="M:BIStudio.Framework.ContextPage.ResolveUrl(System.String)">
+            <summary>
+            获得网站的绝对路径
+            </summary>
+            <param name="relativeUrl">与 System.Web.UI.Control.TemplateSourceDirectory 属性相关联的 URL。</param>
+            <returns>转换后的 URL。</returns>
+        </member>
+        <member name="M:BIStudio.Framework.ContextPage.ResolveSiteUrl(System.String)">
+            <summary>
+            获得项目的绝对路径
+            </summary>
+            <param name="relativeUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.ContextServer.UrlEncode(System.String)">
+            <summary>
+            对链接地址进行编码
+            </summary>
+            <param name="input">输入字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.ContextServer.UrlEncode(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            对链接地址进行编码
+            </summary>
+            <param name="query">需要编码的请求参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.ContextServer.UrlEncode(System.Collections.Specialized.NameValueCollection,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            对链接地址进行编码
+            </summary>
+            <param name="query">需要编码的请求参数</param>
+            <param name="args">需要替换的请求参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.ContextServer.MapPath(System.String)">
+            <summary>
+            检索虚拟路径（绝对的或相对的）或应用程序相关的路径映射到的物理路径。
+            </summary>
+            <param name="virtualPath">表示虚拟路径的 System.String。</param>
+            <returns>与虚拟路径或应用程序相关的路径关联的物理路径。</returns>
+        </member>
+        <member name="T:BIStudio.Framework.EmptyContext">
+            <summary>
+            无法获取到当前请求上下文
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.ContextUserToken">
+            <summary>
+            表示当前登录用户的令牌
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.ContextUser">
+            <summary>
+            表示当前登录用户
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.IContextServer.UrlEncode(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            对链接地址进行编码
+            </summary>
+            <param name="input">输入字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.IContextServer.UrlEncode(System.Collections.Specialized.NameValueCollection,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            对链接地址进行编码
+            </summary>
+            <param name="query">需要编码的请求参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.IContextServer.UrlEncode(System.String)">
+            <summary>
+            对链接地址进行编码
+            </summary>
+            <param name="query">需要编码的请求参数</param>
+            <param name="args">需要替换的请求参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.IContextServer.MapPath(System.String)">
+            <summary>
+            检索虚拟路径（绝对的或相对的）或应用程序相关的路径映射到的物理路径。
+            </summary>
+            <param name="virtualPath">表示虚拟路径的 System.String。</param>
+            <returns>与虚拟路径或应用程序相关的路径关联的物理路径。</returns>
+        </member>
+        <member name="M:BIStudio.Framework.IContextServer.MapPath(System.String,System.String)">
+            <summary>
+            检索虚拟路径（绝对的或相对的）或应用程序相关的路径映射到的物理路径。
+            </summary>
+            <param name="virtualPath">表示虚拟路径的 System.String。</param>
+            <returns>与虚拟路径或应用程序相关的路径关联的物理路径。</returns>
+        </member>
+        <member name="T:BIStudio.Framework.IContextPage">
+            <summary>
+            页面信息
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.IContextPage.ResolveFullUrl(System.String)">
+            <summary>
+            获得完整的绝对路径
+            </summary>
+            <param name="relativeUrl">与 System.Web.UI.Control.TemplateSourceDirectory 属性相关联的 URL。</param>
+            <returns>转换后的 URL。</returns>
+        </member>
+        <member name="M:BIStudio.Framework.IContextPage.ResolveSiteUrl(System.String)">
+            <summary>
+            获得网站的绝对路径
+            </summary>
+            <param name="relativeUrl">与 System.Web.UI.Control.TemplateSourceDirectory 属性相关联的 URL。</param>
+            <returns>转换后的 URL。</returns>
+        </member>
+        <member name="M:BIStudio.Framework.IContextPage.ResolveUrl(System.String)">
+            <summary>
+            获得项目的绝对路径
+            </summary>
+            <param name="relativeUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.CFException">
+            <summary>
+            创建一个可预见的异常
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.CFException.Create(BIStudio.Framework.OperateResult,System.Exception)">
+            <summary>
+            使用指定的错误枚举创建异常
+            </summary>
+            <param name="errorCode"></param>
+            <param name="innerException"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFException.Create``1(``0,System.Exception)">
+            <summary>
+            使用指定的错误枚举创建异常
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <param name="errorCode"></param>
+            <param name="innerException"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFException.Create(BIStudio.Framework.OperateResult,System.String,System.Exception)">
+            <summary>
+            使用指定的错误代码创建异常
+            </summary>
+            <param name="errorCode"></param>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFException.Create``1(``0,System.String,System.Exception)">
+            <summary>
+            使用指定的错误代码创建异常
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <param name="errorCode"></param>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFException.GetDescription(System.Object)">
+            <summary>
+            获得描述信息
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="F:BIStudio.Framework.OperateResult.NotFound">
+            <summary>
+            请求的信息未找到
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.OperateResult.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.EntityExtension.ShallowClone``1(``0)">
+            <summary>
+            对象的浅复制
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.EntityExtension.With``1(``0,System.Action{``0})">
+            <summary>
+            对指定对象执行委托
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="item"></param>
+            <param name="work"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.LinqExtension.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            扩展List的ForEach到IEnumerable
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="items"></param>
+            <param name="action"></param>
+        </member>
+        <member name="T:BIStudio.Framework.CFMapper">
+            <summary>
+            类型转换
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.CFMapper.CreateMap``2(BIStudio.Framework.MapTo{``0,``1})">
+            <summary>
+            注册对象类型转换器
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TResult"></typeparam>
+            <param name="fn"></param>
+        </member>
+        <member name="M:BIStudio.Framework.CFMapper.Map``2(``0)">
+            <summary>
+            将对象转换为制定的类型
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TTarget"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFMapper.Map``2(``0,``1,System.String[])">
+            <summary>
+             用source 更新target
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TTarget"></typeparam>
+            <param name="entity"></param>
+            <param name="target"></param>
+            <param name="ignoreMembers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFMapper.DynamicMap``2(``0,``1,System.String[])">
+            <summary>
+            获得默认的映射器
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TTarget"></typeparam>
+            <param name="entity"></param>
+            <param name="target"></param>
+            <param name="ignoreMembers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFMapper.DynamicMap``2(``0)">
+            <summary>
+            获得默认的映射器
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TTarget"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFMapper.DataRowMapper``1(System.Data.DataRow,``0,System.String[])">
+            <summary>
+            将DataRow映射到对象
+            </summary>
+            <typeparam name="TTarget"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFMapper.DataRowMapper``1(System.Data.DataRow)">
+            <summary>
+            将DataRow映射到对象
+            </summary>
+            <typeparam name="TTarget"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFMapper.DataReaderMapper``1(System.Data.Common.DbDataReader,``0,System.String[])">
+            <summary>
+            将DataRow映射到对象
+            </summary>
+            <typeparam name="TTarget"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFMapper.DataReaderMapper``1(System.Data.Common.DbDataReader)">
+            <summary>
+            将DataRow映射到对象
+            </summary>
+            <typeparam name="TTarget"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFMapper.ObjectMapper``2(``0)">
+            <summary>
+            将对象映射到对象
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TTarget"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.CFMapper.ObjectMapper``2(``0,``1,System.String[])">
+            <summary>
+             用source 更新target
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TTarget"></typeparam>
+            <param name="source"></param>
+            <param name="target"></param>
+            <param name="ignoreMembers"> 忽略的属性</param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.MapTo`2">
+            <summary>
+            将指定的数据类型转换为其他数据类型
+            </summary>
+            <typeparam name="T">原始数据类型</typeparam>
+            <typeparam name="TResult">目标数据类型</typeparam>
+            <param name="source">原始数据</param>
+            <param name="target">目标数据</param>
+            <returns></returns>
+        </member>
+        <member name="T:BIStudio.Framework.ApplicationModule">
+            <summary>
+            模块入口
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.ApplicationModule.RegisterIocContainer(BIStudio.Framework.CFConfig)">
+            <summary>
+            扫描并注册Ioc容器
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:BIStudio.Framework.ApplicationModule.Init">
+            <summary>
+            在当前模块中注册接口的实现
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.ApplicationModule.Load">
+            <summary>
+            在当前模块中注册应用程序启动事件
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.EventArgs`1">
+            <summary>
+            泛型事件参数
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:BIStudio.Framework.IocAttribute.RegisterType">
+            <summary>
+            依赖注入的类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.IocAttribute.Condition">
+            <summary>
+            注册条件
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.IocAttribute.AopType">
+            <summary>
+            aop类型
+            </summary>
+        </member>
+        <member name="P:BIStudio.Framework.IocAttribute.LifetimeManagerType">
+            <summary>
+            生命周期类型
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.AopType">
+            <summary>
+            拦截器类型
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.AopType.VirtualMethodInterceptor">
+            <summary>
+            对virtual函数进行拦截。缺点是如果被拦截类型没有virtual函数则无法拦截，这个时候如果类型实现了某个特定接口可以改用
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.AopType.InterfaceInterceptor">
+            <summary>
+            只能对一个接口做拦截，好处是只要目标类型实现了指定接口就可以拦截。
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.AopType.TransparentProxyInterceptor">
+            <summary>
+            代理实现基于.NET Remoting技术，它可拦截对象的所有函数。缺点是被拦截类型必须派生于MarshalByRefObject。
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.LifetimeManagerType">
+            <summary>
+            生命周期
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.LifetimeManagerType.Transient">
+            <summary>
+            短暂的
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.LifetimeManagerType.ContainerControlled">
+            <summary>
+            容器受控制的
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.LifetimeManagerType.Hierarchica">
+            <summary>
+            分层的
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.LifetimeManagerType.Externally">
+            <summary>
+            外形上
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.LifetimeManagerType.PerThread">
+            <summary>
+             每人
+            </summary>
+        </member>
+        <member name="F:BIStudio.Framework.LifetimeManagerType.PerResolve">
+            <summary>
+            坚决
+            </summary>
+        </member>
+        <member name="T:BIStudio.Framework.AopAttribute">
+            <summary>
+            拦截器
+            </summary>
+        </member>
+        <member name="M:BIStudio.Framework.AopAttribute.GetRequiredInterfaces">
+            <summary>
+            获取当前行为需要拦截的对象类型接口。
+            </summary>
+            <returns>所有需要拦截的对象类型接口。</returns>
+        </member>
+        <member name="M:BIStudio.Framework.AopAttribute.OnAfter(Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation)">
+            <summary>
+            调用之后的实现逻辑
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.AopAttribute.OnBefore(Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation)">
+            <summary>
+            调用之前的实现逻辑
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.AopAttribute.OnException(Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation,System.Exception)">
+            <summary>
+            调用出现异常的实现逻辑
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BIStudio.Framework.AopAttribute.Invoke(Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation,Microsoft.Practices.Unity.InterceptionExtension.GetNextHandlerDelegate)">
+            <summary>
+            接口注入时候的拦截方法(通过实现此方法来拦截调用并执行所需的拦截行为。)
+            </summary>
+            <param name="input">调用拦截目标时的输入信息。</param>
+            <param name="nextMethod">通过行为链来获取下一个拦截行为的委托。</param>
+            <returns>从拦截目标获得的返回信息。</returns>
+        </member>
+        <member name="M:BIStudio.Framework.AopAttribute.Invoke(Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation,Microsoft.Practices.Unity.InterceptionExtension.GetNextInterceptionBehaviorDelegate)">
+            <summary>
+            虚方法注入的拦截方法
+            </summary>
+            <param name="input"></param>
+            <param name="nextMethod"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BIStudio.Framework.AopAttribute.WillExecute">
+            <summary>
+            该值表示当前拦截行为被调用时，是否真的需要执行某些操作。
+            </summary>
+        </member>
+    </members>
+</doc>
